@@ -1,0 +1,60 @@
+.hidden-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: end;
+  padding: 20px 0;
+  font-family: 'IBMPlexSansKR-Regular';
+}
+
+.hidden-header button {
+  position: relative;
+  background: none;
+  font-weight: bold;
+  border: 0;
+  font-size: 0.8rem;
+  margin: 0 10px;
+  cursor: pointer;
+  font-family: 'IBMPlexSansKR-Regular';
+}
+
+.hidden-header-link {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 5px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 10px 0;
+}
+
+.hidden-header-link * {
+  margin-bottom: 10px;
+  text-align: start;
+}
+
+.hidden-header-project:hover .hidden-header-link,
+.hidden-header-link:hover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.hidden-header-link *:hover {
+  text-decoration: underline;
+}
+
+@font-face {
+  font-family: 'IBMPlexSansKR-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Regular.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+}

@@ -1,0 +1,201 @@
+.my-container {
+  background: none;
+}
+
+.my-project {
+  color: #000;
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  font-family: 'IBMPlexSansKR-Regular';
+  white-space: break-spaces;
+}
+
+.my-project-title {
+  margin: 50px 0;
+  line-height: 5.3rem;
+  font-size: 5rem;
+  font-weight: 600;
+}
+
+.my-project-update {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px 0;
+}
+
+.my-project-update p {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  color: #00000090;
+}
+
+.my-project-update p:nth-child(2) {
+  margin: 0 20px;
+}
+
+.my-project-intro p {
+  word-break: keep-all;
+  font-size: 1.7rem;
+  line-height: 3rem;
+  font-weight: 500;
+}
+
+/*-------------------------------------*/
+
+.my-project-link {
+  margin: 0 0 0 20px;
+}
+
+.my-project-link a {
+  margin: 0 20px;
+}
+
+.my-project-link svg {
+  height: 30px;
+  width: 30px;
+  fill: #00000090;
+}
+
+.my-project-link svg:hover {
+  fill: #000;
+}
+
+/*-------------------------------------*/
+
+.my-project-stack {
+  margin: 50px 0;
+}
+
+.my-project-skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.my-project-skills div {
+  border-radius: 25px;
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  margin-right: 10px;
+}
+
+.my-project-skills div p {
+  font-size: 1rem;
+}
+
+.my-project-image {
+  position: relative;
+  width: 1200px;
+  height: 800px;
+  border: 1px solid #000;
+  overflow: hidden;
+  animation: opc 1s linear forwards;
+}
+
+@keyframes opc {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.my-project-image-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  z-index: 90;
+  border: 0;
+  width: 50px;
+  height: 100px;
+  background-color: #00000020;
+  cursor: pointer;
+  color: white;
+}
+
+.my-project-image-button svg {
+  fill: white;
+}
+
+.my-project-img {
+  display: flex;
+  transition: all 1s;
+}
+
+.my-project-img :hover {
+  cursor: zoom-in;
+}
+
+.my-project-img img {
+  width: 1200px;
+  height: 800px;
+  -o-object-fit: fill;
+  object-fit: fill;
+}
+
+.my-project-result {
+  margin: 0 0 100px;
+}
+
+.my-project-result li {
+  margin: 10px 0;
+  list-style-type: circle;
+  font-size: 1.7rem;
+}
+
+.my-project-result p {
+  font-size: 1.7rem;
+  word-break: keep-all;
+  line-height: 3rem;
+}
+/* transform: translateY(-50%);
+top: 50%; */
+
+.my-project-next {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  padding: 0 5%;
+  min-width: 1680px;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  transition: all 1s;
+}
+
+.my-project-next div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.my-project-next button {
+  border: 0;
+  background: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.my-project-next svg {
+  height: 100px;
+  width: 70px;
+}
