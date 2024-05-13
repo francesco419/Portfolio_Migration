@@ -1,8 +1,11 @@
-# React + Vite
+# React + Vite + SWC
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+vite.config.js
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- `assetsInclude: ['**/*.PNG']` PNG 파일 포멧 사용.
+
+- vite-plugin-svgr 설치, plugins: [react(), svgr()],
+  - `import JavaScript from '../pages/skill/asset/svg/js.svg?react';` 형태로 SVG를 컴포넌트 형태로 import 가능
+  - 기존의 `{ReactComponent as ..}` 대신 사용
