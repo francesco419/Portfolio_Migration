@@ -1,7 +1,7 @@
 import { useRef, useEffect, useState } from 'react';
 import styles from './projectPage.module.css';
-import Right from './assets/right.svg';
-import Left from './assets/left.svg';
+import Right from './assets/right.svg?react';
+import Left from './assets/left.svg?react';
 import ImageZoom from './imageZoom';
 
 export default function ProjectImage({ project }) {

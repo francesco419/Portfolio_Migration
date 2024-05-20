@@ -143,26 +143,26 @@
   margin: 0 0 100px;
 }
 
+.my-project-result ul {
+  margin: 30px 0 0;
+}
+
 .my-project-result li {
   margin: 10px 0;
   list-style-type: circle;
-  font-size: 1.7rem;
+  width: 70%;
 }
 
 .my-project-result p {
-  font-size: 1.7rem;
+  font-size: 1rem;
   word-break: keep-all;
-  line-height: 3rem;
+  line-height: 2rem;
 }
 /* transform: translateY(-50%);
 top: 50%; */
 
 .my-project-next {
-  position: absolute;
-  width: 100%;
-  left: 0;
   padding: 0 5%;
-  min-width: 1680px;
   box-sizing: border-box;
   display: -webkit-box;
   display: -ms-flexbox;

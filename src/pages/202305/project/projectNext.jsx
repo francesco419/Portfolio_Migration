@@ -1,7 +1,7 @@
 import styles from './projectPage.module.css';
 import { useNavigate } from 'react-router-dom';
-import Right from '../../../assets/svg/right.svg';
-import Left from '../../../assets/svg/left.svg';
+import Right from '../../../assets/svg/right.svg?react';
+import Left from '../../../assets/svg/left.svg?react';
 import { useEffect, useRef } from 'react';
 
 export default function ProjectNext({ project }) {
@@ -10,7 +10,7 @@ export default function ProjectNext({ project }) {
   const refRight = useRef();
   const container = useRef();
 
-  useEffect(() => {
+  /*  useEffect(() => {
     moveIndicator();
     return () => {
       moveIndicator();
@@ -24,7 +24,7 @@ export default function ProjectNext({ project }) {
       }px`;
     });
   };
-
+ */
   const prevHandler = () => {
     if (project.prev) {
       nav(`/project/${project.prev}`);

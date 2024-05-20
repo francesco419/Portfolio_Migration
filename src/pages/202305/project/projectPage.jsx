@@ -32,7 +32,6 @@ export default function ProjectPage() {
       getGithub(projectRedux);
     }
     window.scrollTo(0, 0);
-    Aos.init();
   }, []);
 
   const getGithub = async (title) => {

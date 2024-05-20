@@ -1,6 +1,6 @@
-import Right from './assets/right.svg';
-import Left from './assets/left.svg';
-import Close from './assets/close.svg';
+import Right from './assets/right.svg?react';
+import Left from './assets/left.svg?react';
+import Close from './assets/close.svg?react';
 import styles from './projectPage.module.css';
 import { useState } from 'react';
 

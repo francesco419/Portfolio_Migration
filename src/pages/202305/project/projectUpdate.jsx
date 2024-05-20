@@ -1,7 +1,7 @@
 import styles from './projectPage.module.css';
 import { newDate } from '../../../function/newDate';
-import Git from '../../../assets/svg/project/github.svg';
-import Url from '../../../assets/svg/project/url.svg';
+import Git from '../../../assets/svg/project/github.svg?react';
+import Url from '../../../assets/svg/project/url.svg?react';
 
 export default function ProjectUpdate({ git, project }) {
   return (
