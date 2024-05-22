@@ -29,7 +29,7 @@ export default function Three({
     setRotate((rotate) => false);
   };
 
-  useEffect(() => {});
+  useEffect(() => {}, []);
 
   return (
     <>

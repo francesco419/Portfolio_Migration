@@ -1,0 +1,9 @@
+.projectContainer {
+  margin: 80px 0;
+}
+
+.projectContainer-innerbox {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}

@@ -1,6 +1,7 @@
 import { Suspense, useRef, useState, lazy } from 'react';
 import styles from './front.module.css';
 import useInterval from 'use-interval';
+import _ from 'lodash';
 
 const Three = lazy(() => import('./frontThree'));
 const ControlButton = lazy(() => import('./controlButton'));
@@ -8,43 +9,28 @@ const ModelCar = lazy(() => import('./3dModel/Scene'));
 const EightBall = lazy(() => import('./3dModel/eightBall'));
 const Reaper = lazy(() => import('./3dModel/reap'));
 
-const damn = [
-  <Suspense>
-    <Three
-      model={
-        <Suspense>
-          <ModelCar position={[0, -0.5, 0]} />
-        </Suspense>
-      }
-      speed={2}
-      lightType={true}
-    />
-    ,
-  </Suspense>,
-  <Suspense>
-    <Three
-      model={
-        <Suspense>
-          <EightBall position={[0, -2, 0]} />
-        </Suspense>
-      }
-      speed={2}
-      lightType={false}
-    />
-  </Suspense>,
-  <Suspense>
-    <Three
-      model={
-        <Suspense>
-          <Reaper position={[0, -3, 0]} />
-        </Suspense>
-      }
-      camera={[7, 0, 7]}
-      speed={2}
-      autoR={false}
-      lightType={true}
-    />
-  </Suspense>
+const models = [
+  {
+    model: <ModelCar position={[0, -0.5, 0]} />,
+    camera: [5, 5, 5],
+    autoR: true,
+    speed: 2,
+    lightType: true
+  },
+  {
+    model: <EightBall position={[0, -2, 0]} />,
+    camera: [5, 5, 5],
+    autoR: true,
+    speed: 2,
+    lightType: false
+  },
+  {
+    model: <Reaper position={[0, -3, 0]} />,
+    camera: [7, 0, 7],
+    autoR: false,
+    speed: 2,
+    lightType: true
+  }
 ];
 
 export default function Front() {
@@ -57,7 +43,7 @@ export default function Front() {
       return;
     }
     if (swipe < 2) setSwipe((swipe) => swipe + 1);
-    else if (swipe === damn.length - 1) setSwipe((swipe) => 0);
+    else if (swipe === models.length - 1) setSwipe((swipe) => 0);
   }, 4000);
 
   const changeMouseEnter = () => {
@@ -85,42 +71,19 @@ export default function Front() {
         className={styles['front_cover']}
         style={{ width: '3600px', transform: `translateX(${-swipe * 1200}px)` }}
       >
-        <Suspense>
-          <Three
-            model={
-              <Suspense>
-                <ModelCar position={[0, -0.5, 0]} />
-              </Suspense>
-            }
-            speed={2}
-            lightType={true}
-          />
-          ,
-        </Suspense>
-        <Suspense>
-          <Three
-            model={
-              <Suspense>
-                <EightBall position={[0, -2, 0]} />
-              </Suspense>
-            }
-            speed={2}
-            lightType={false}
-          />
-        </Suspense>
-        <Suspense>
-          <Three
-            model={
-              <Suspense>
-                <Reaper position={[0, -3, 0]} />
-              </Suspense>
-            }
-            camera={[7, 0, 7]}
-            speed={2}
-            autoR={false}
-            lightType={true}
-          />
-        </Suspense>
+        {_.map(models, (o) => {
+          return (
+            <Suspense>
+              <Three
+                model={o.model}
+                camera={o.camera}
+                autoR={o.autoR}
+                speed={o.speed}
+                lightType={o.lightType}
+              />
+            </Suspense>
+          );
+        })}
       </div>
     </div>
   );

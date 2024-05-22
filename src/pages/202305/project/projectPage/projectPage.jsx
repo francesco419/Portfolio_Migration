@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react';
-import MyHeader from '../myHeader';
+import MyHeader from '../../myHeader';
 import styles from './projectPage.module.css';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
-import { ProjectDetailText } from '../../../context/ProjectText';
-import FooterContact from '../contact/footer';
-import TopIndicator from '../top/toTop';
+import { ProjectDetailText } from '../../../../context/ProjectText';
+import FooterContact from '../../contact/footer';
+import TopIndicator from '../../top/toTop';
 import { useDispatch, useSelector } from 'react-redux';
-import { setProject } from '../../../redux/project';
+import { setProject } from '../../../../redux/project';
 import ProjectImage from './projectImage';
 import ProjectSkill from './projectSkill';
 import ProjectUpdate from './projectUpdate';

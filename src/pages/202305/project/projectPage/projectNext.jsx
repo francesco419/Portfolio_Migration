@@ -1,7 +1,7 @@
 import styles from './projectPage.module.css';
 import { useNavigate } from 'react-router-dom';
-import Right from '../../../assets/svg/right.svg?react';
-import Left from '../../../assets/svg/left.svg?react';
+import Right from '../../../../assets/svg/right.svg?react';
+import Left from '../../../../assets/svg/left.svg?react';
 import { useEffect, useRef } from 'react';
 
 export default function ProjectNext({ project }) {

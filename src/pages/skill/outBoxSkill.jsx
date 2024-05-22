@@ -2,6 +2,7 @@ import styles from './skills.module.css';
 import SkillBox from './skillNew';
 import _ from 'lodash';
 import { useState } from 'react';
+import { MiddleTitle } from '../../components/midTitle';
 
 export default function OutBoxSkill({ skillContents }) {
   const [node, setNode] = useState(null);
@@ -12,7 +13,7 @@ export default function OutBoxSkill({ skillContents }) {
 
   return (
     <div className={styles['skill_section']}>
-      <p className={styles['skill_title']}>SKILL</p>
+      <MiddleTitle title={'SKILL'} />
       <div className={styles['skill_cardBox']}>
         {_.map(skillContents, (o, index) => {
           return (

@@ -2,8 +2,6 @@
 import port1 from '../assets/image/projectImgNew/portfolio/1.PNG';
 import port2 from '../assets/image/projectImgNew/portfolio/2.PNG';
 import port3 from '../assets/image/projectImgNew/portfolio/3.PNG';
-import port4 from '../assets/image/projectImgNew/portfolio/4.PNG';
-import port5 from '../assets/image/projectImgNew/portfolio/5.PNG';
 /**youtube */
 import youtube1 from '../assets/image/projectImgNew/youtube/youtube1.PNG';
 import youtube2 from '../assets/image/projectImgNew/youtube/youtube2.PNG';
@@ -56,58 +54,8 @@ const GROWTHSTEXT = [
   '지속적인 학습과 적용을 통해 기술에 익숙해지며, 사용 이유와 작동 원리를 이해하고자 노력합니다.',
   '새로운 기술에 접근시, 필요성 및 사용방식 등의 구체적인 의미를 가져 기술사용에 정확한 이유를 가지고자 합니다.'
 ];
-const SYSTEMATICTEXT = [
-  '문제해결을 위해 절차적 순서를 정하고 이를 통해 구체적인 해결 방안을 모색하고자 합니다.',
-  '새로운 기술에 대해 접근시, 필요성 및 사용방식 등의 구체적인 의미를 가져 기술사용에 정확한 이유를 가지고자 합니다.'
-];
 
-export const TEXTARRAY = [
-  COMMUNICATIONTEXT,
-  CREATIVITYTEXT,
-  GROWTHSTEXT,
-  SYSTEMATICTEXT
-];
-
-const COMMUNICATIONCOMP = (
-  <div>
-    <p>BACKEND</p>
-    <p>FRONTEND</p>
-  </div>
-);
-
-const CREATIVITYCOMP = (
-  <div>
-    <img src='' />
-    <p>project idea</p>
-  </div>
-);
-
-const GROWTHSCOMP = (
-  <div>
-    <p>SKILLS</p>
-    <p>SKILLS</p>
-    <p>SKILLS</p>
-  </div>
-);
-
-const SYSTEMATICCOMP = (
-  <div>
-    <p>문제해결</p>
-  </div>
-);
-
-export const DRAGCOMP = [
-  COMMUNICATIONCOMP,
-  CREATIVITYCOMP,
-  GROWTHSCOMP,
-  SYSTEMATICCOMP
-];
-
-export const name =
-  '안녕하세요 저는 사람들에게 멋진 가치를 제공 하는 것을 추구하는 개발자 이상현입니다.';
-
-export const introduction =
-  '실제 누구나 사용하는 프로덕트를 개발하여 사람들의 삶의 질을 높여 줄수 있는 개발자가 되고자 하며, 최고의 프로덕트를 위해 최고의 코드를 고민하며, 경험을 통해 성장하며 발전하고자 합니다. 또한, 무엇을? 왜? 어떻게? 라는 프로세스를 통해 문제해결에 대해 자신만의 차별화된 솔루션을 만들고자 하며, 이를위해 새로운 기술을 적극 활용하고 다양한 경험을 쌓아 폭넓은 사고를 보유하고자 합니다.';
+export const TEXTARRAY = [COMMUNICATIONTEXT, CREATIVITYTEXT, GROWTHSTEXT];
 
 export const ProjectDetailText = [
   {
@@ -280,37 +228,6 @@ export const ProjectDetailText = [
   }
 ];
 
-export const ProjectTXT = [
-  {
-    id: 0,
-    imgs: youtube1,
-    eng: 'Youtube Clone',
-    title: '유튜브 클론',
-    text: 'Youtube API를 사용하여 유튜브의 페이지 및 기능을 제작한 프로젝트로,\n React를 기반으로 제작하였습니다.'
-  },
-  {
-    id: 1,
-    imgs: travel1,
-    eng: 'TravelAway',
-    title: '여행정보사이트',
-    text: '여러 국가의 일반정보, 여행경보, 환율 등\n코로나 시국 이후에 여행을 준비하는 사람들을 위한\n여행정보 사이트를 제작했습니다.'
-  },
-  {
-    id: 2,
-    imgs: social1,
-    eng: 'Movie Theater',
-    title: '영화 모음집',
-    text: '영화의 간단한 내용과 러닝타임, 포스터와\n배우의 정보를 담아 다양한 영화를 소개하는\n영화 모음 프로젝트로 HTML, CSS,\nJavaScript 와 React를 사용해 제작했습니다.'
-  },
-  {
-    id: 3,
-    imgs: port1,
-    eng: 'My Portfolio',
-    title: '나의 포트폴리오',
-    text: '개인 포트폴리오를 제작한 프로젝트로\n HTML, CSS, JS와 REACT를 사용했습니다'
-  }
-];
-
 export const myProjects = [
   {
     name: 'Finedition',
@@ -338,18 +255,7 @@ export const myProjects = [
   }
 ];
 
-export const SkillsText = [
-  {
-    id: 0,
-    text: '</skills>'
-  },
-  {
-    id: 1,
-    text: '총 8개의 개발언어 사용이 가능하며,\n 그 중에서도 Frontend 개발관련\n HTML, CSS, JavaScript와\n React를 메인으로 사용합니다.'
-  }
-];
-
-export const IntroText = {
+/* export const IntroText = {
   id: 0,
   name: 'strength',
   text: [
@@ -357,7 +263,7 @@ export const IntroText = {
     '피드백을 듣고 개선하려는 노력과 변화에 민첩하게 반응하는 자세',
     '항상 새로운 기술에 대해 긍정적이며 이를 통해 업무 능력을 발전시키는 자세'
   ]
-};
+}; */
 
 export const ProjectResultNew = [
   {
@@ -380,7 +286,7 @@ export const ProjectResultNew = [
         ]
       },
       {
-        title: '성과 및 배운점',
+        title: '과정 & 문제해결',
         info: [
           '**디자이너와 Figma를 통한 협업**을 통해 시각적 웹 개발을 원활하게 진행했습니다. Figma를 활용하여 디자인 파일을 **공유하고 실시간으로 협업**하며, **개발과 디자인 간의 원활한 의사소통**을 도모하여 프로젝트의 일관성과 효율성을 높였습니다.',
           '**Google Login API**를 활용하여 강력한 **사용자 인증 시스템을 구축**했습니다. 사용자 편의성과 보안을 고려하여 **손쉬운 로그인 경험**을 제공하였습니다.',
@@ -389,6 +295,10 @@ export const ProjectResultNew = [
           '**AWS 서비스**를 사용하여 안정적이고 확장 가능한 개발 환경을 조성했습니다. 다양한 **클라우드 기술을 활용**하여 **서버 관리 및 인프라 구축**을 효율적으로 수행하고, 안전한 데이터 저장 및 전송을 보장하였습니다.',
           '**SCSS와 SVG를 결합**하여 Interactive한 개발을 경험했습니다. SCSS를 활용하여 스타일링을 효율적으로 구성하고, SVG를 활용하여 **다양한 그래픽 요소를 삽입하며 상호작용성**을 부여했습니다. 이를 통해 독특하고 다이내믹한 웹 페이지를 만들어 사용자 경험을 높였습니다.',
           '정규표현식을 **사용한 검증을 통해 입력 데이터의 유효성을 강화**했습니다. 사용자의 입력이 지정한 양식과 일치하는지 확인하여 **데이터의 정확성을 보장**하고, 보안 측면에서도 적절한 검증을 수행하여 **안전한 데이터 처리**를 실현했습니다.'
+          // 이전 히스토리 참고
+          // 요구사항에 따른 개발 ex) svg를 사용 - 지도 구현 interactive
+          // 스켈레톤을 이용. 로딩 기다림 개선
+          // 페이지간의 매핑, 연결구성 조직화
         ]
       }
     ],
@@ -409,12 +319,23 @@ export const ProjectResultNew = [
         info: ['개인 프로젝트 (100%)']
       },
       {
-        title: '성과 및 배운점',
+        title: '과정 & 문제해결',
         info: [
           '일부 컴포넌트에 대해 **Style-in-component**를 통해 **재사용성이 높은** 컴포넌트의 일관성있고 **통일된 스타일**을 제공할 수 있도록 하였습니다.',
           '**Redux를 통해** 단순 상태관리보다 해당 **상태에 관한 복잡한 연계기능을 효율적**으로 풀어내어 프로젝트 전반의 사용자경험의 향상을 야기시켰습니다',
           '**Lodash 라이브러리**의 적극적인 사용을 통해 기존 바닐라JS에서 따로 제공하지 않는 다양한 함수를 효과적으로 사용하여 **복잡한 연계성이 있는 데이터들을 보다 효율적으로 가공**할수 있었습니다.',
           '마인드맵의 여러 요소들로 인해 발생하는 **연쇄적인 오류에 대해 해당 원인의 문제점을 파악하고 이를 순차적으로 해결**하는 문제해결 능력을 키우게 되었습니다.'
+          //노드간의 이동 계산
+          /**
+           *
+           */
+          //프레임드랍 개선 - redux를 통해
+          // 연결선 오류작업 - 해결과정
+          // 이미지 다운로드 html to image
+          // 마인드맵 이동 - 해결과정
+          // 마인드맵 이동에의한 연쇄적인 노드 이동 오류 - 해결과정 *연속적인 오류 발견
+          // 노드 이동간의 연쇄적으로 발생되는 이벤트 제어
+          // 연결된 노드간의 삭제
         ]
       }
     ],
@@ -432,12 +353,22 @@ export const ProjectResultNew = [
         info: ['개인 프로젝트 (100%)']
       },
       {
-        title: '성과 및 배운점',
+        title: '과정 & 문제해결',
         info: [
           '**Axios Interceptor**를 통해 반복적인 코드 사용을 줄여 **재사용화 및 공통적인 에러 처리**를 담당하여 **가독성 높은 코드**를 작성',
           '**Redux Toolkit**을 **사용한 상태 관리 및 유지 보수성**을 높이고 **props 복잡도**를 개선 및 redux persist로 사용빈도가 **높은 데이터의 반복적인 데이터통신 회피**',
           '**NodeJS, MySQL, Express를 사용한 백엔드를 구성** 및 CORS 처리, 쿼리를 통한 DB 관리, 이미지 파일 저장 및 데이터 통신 경험',
           '**Lazy, Suspense를 적용한 코드 분할**을 통해 페이지 성능 최적화 및 lighthouse를 통한 웹 페이지 평가를 통해 지속적으로 최적화 방법을 모색'
+          //컴포넌트 세부 분리 제작하여 랜더링을 줄인다 - 코드 간략화 메인페이지 게시물표현기능(-30%),  profile은 (-50%)간축
+          //redux를 통한 상태관리 및 props 복잡도 개선
+          //SCSS를 효과적으로 사용하여 중복코드를 줄임
+          //로그인 구현 - redux-persist를 이용하여 간단하게 로그인 정보를 저장
+          // 백엔드 쿼리,
+          //Lazy, Suspense를 적용한 코드 분할**을 통해 페이지 성능 최적화, ------ 이를통해 서버통신 오류가 나지 않게 함 --- 무한로딩 개선
+          //multer를 사용한 이미지파일전송, formdata를 이용
+          //eslint
+          //styled-component의 사용 장점을 알게됨
+          //
         ]
       }
     ],
@@ -459,10 +390,14 @@ export const ProjectResultNew = [
         info: ['개인 프로젝트 (100%)']
       },
       {
-        title: '성과 및 배운점',
+        title: '과정 & 문제해결',
         info: [
           '사용자에게 유용한 정보를 제공할 수 있는 UI에 대해 깊게 고민하고 구상한 기능을 직접 구현',
           '컴포넌트 간의 상태 값 및 상태 관리 함수의 prop drilling으로 인한 코드 구성 복잡 및 가독성 저하에 대한 대체 기술 필요성으로서 이후 프로젝트에서 Redux 적극 사용 '
+          //localStrage를 사용하여 history제공 - 기능 구현
+          //반응형 웹작업 - responsively
+          //퍼블리싱한 페이지에서는 정상적으로 작동하지 않는 문제 발생 - error
+          //리덕스 필요성
         ]
       }
     ],
@@ -480,11 +415,17 @@ export const ProjectResultNew = [
         info: ['개인 프로젝트 (100%)']
       },
       {
-        title: '성과 및 배운점',
+        title: '과정 & 문제해결',
         info: [
           '수많은 Open API 호출 및 사용을 통해, 데이터 통신 및 비동기적 처리 방식에 대해 학습',
           '클로닝 대상 웹사이트를 분석함으로써 HTML, CSS의 구성 및 작성 이해도를 높이고, 이를 바탕으로 직접 구현',
           'API의 데이터를 일차원적으로 표현하기보다 편집 및 가공을 통해 의도한 데이터로 새로 구성하여 표현'
+          //env설정으로 key숨기기 - dotenv
+          //momentjs 사용
+          //props복잡도 hell - uselocation을 통해 state전달
+          //컴포넌트화 조금..
+          //fetch => axios
+          //url변경시 param이 바뀌어도 페이지가 전환되지 않는 현상 발생 - 문제 usenavigation hook
         ]
       }
     ],
