@@ -68,9 +68,9 @@ export default function ProjectPage() {
           <ProjectSkill project={projectText[0]} />
           <ProjectImage project={projectText[0]} />
           <ProjectResult project={projectText[0]} />
+          <ProjectNext project={projectText[0]} />
           <FooterContact />
         </div>
-        <ProjectNext project={projectText[0]} />
       </div>
     );
   }
