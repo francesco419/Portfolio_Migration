@@ -1,0 +1,28 @@
+.on {
+  transition: all 0.4s;
+  transform: rotate(90deg);
+  transform-origin: center;
+}
+
+.off {
+  transition: all 0.4s;
+  transform-origin: center;
+}
+
+.listComp {
+  padding: 0 0 0 30px;
+  overflow: hidden;
+  transition: all 0.5s linear;
+}
+
+.refa {
+  border-top: 0;
+  max-height: 0;
+  transition: max-height 1.5s cubic-bezier(0, 1, 0, 1);
+}
+
+.refal {
+  border-top: 1px solid;
+  max-height: 1000px;
+  transition: max-height 1.5s ease-in-out;
+}

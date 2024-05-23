@@ -1,13 +1,13 @@
 import styles from './projectPage.module.css';
 import ReactMarkdown from 'react-markdown';
 import { ProjectResultNew } from '../../../../context/ProjectText';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import _ from 'lodash';
+import ListContainer from './comp/listContainer';
 
 export default function ProjectResult({ project }) {
   const [projectResult, setProjectResult] = useState(null);
   const [projectResultNull, setProjectResultNull] = useState(null);
-  const [isClick, setIsClick] = useState(false);
 
   useEffect(() => {
     const filteredData = _.filter(ProjectResultNew, { name: project.name });
@@ -53,28 +53,7 @@ export default function ProjectResult({ project }) {
                 {data.title}(dropdown)
               </h4>
               {data.info.map((o) => {
-                if (ren)
-                  return (
-                    <li
-                      style={{
-                        display: 'flex'
-                      }}
-                    >
-                      <button
-                        style={{
-                          float: 'left',
-                          background: 'none',
-                          height: '32px',
-                          width: '32px',
-                          border: '0',
-                          cursor: 'pointer'
-                        }}
-                      >
-                        ▶
-                      </button>
-                      <ReactMarkdown>{o}</ReactMarkdown>
-                    </li>
-                  );
+                if (ren) return <ListContainer data={o} drop={'__soon__'} />;
                 else {
                   return (
                     <li>
