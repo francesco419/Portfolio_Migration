@@ -23,6 +23,23 @@
 
 .refal {
   border-top: 1px solid;
+  border-bottom: 1px solid;
   max-height: 1000px;
   transition: max-height 1.5s ease-in-out;
+}
+
+.listComp button {
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.listComp a {
+  color: blue;
+  text-decoration: underline;
+}
+
+.listComp div {
+  width: 80%;
+  padding: 20px 0;
 }

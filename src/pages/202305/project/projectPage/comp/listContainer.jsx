@@ -5,6 +5,7 @@ import '../button/test.css';
 
 export default function ListContainer({ data, drop }) {
   const [isClick, setIsClick] = useState(false);
+  const [imgCode, setImgCode] = useState(true);
   const refaa = useRef();
 
   const isClickHandler = () => {
@@ -18,24 +19,57 @@ export default function ListContainer({ data, drop }) {
     setIsClick((isClick) => !isClick);
   };
 
+  const imgCodeHandler = () => {
+    setImgCode((imgCode) => !imgCode);
+  };
+
   return (
     <li
       style={{
-        display: 'flex'
+        display: 'flex',
+        margin: '0 0 30px'
       }}
     >
       <DropDownBtn isClick={isClick} handler={isClickHandler} />
       <div>
-        <ReactMarkdown>{data}</ReactMarkdown>
+        <ReactMarkdown>{data.subtitle}</ReactMarkdown>
         <div
           ref={refaa}
           className={isClick ? 'refal listComp' : 'refa listComp'}
         >
-          <ReactMarkdown>{drop}</ReactMarkdown>
+          {/* <Btns handler={imgCodeHandler} click={imgCode} /> */}
+          <div>
+            <ReactMarkdown>{data.detail}</ReactMarkdown>
+          </div>
           {/* 해당부분은 각 항목에 대한 디테일 설명이다*/}
         </div>
       </div>
     </li>
+  );
+}
+
+function Btns({ click, handler }) {
+  return (
+    <>
+      <button
+        style={{
+          fontWeight: click ? 'bold' : 'normal',
+          color: click ? '#ff0000' : '#000'
+        }}
+        onClick={handler}
+      >
+        Code
+      </button>
+      <button
+        style={{
+          fontWeight: click ? 'normal' : 'bold',
+          color: click ? '#000' : '#ff0000'
+        }}
+        onClick={handler}
+      >
+        IMG
+      </button>
+    </>
   );
 }
 

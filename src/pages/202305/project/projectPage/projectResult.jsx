@@ -25,10 +25,10 @@ export default function ProjectResult({ project }) {
   if (projectResultNull)
     return (
       <div className={styles['my-project-result']}>
-        <ul className={styles['my-project-skill']}>
+        <ul className={styles['my-project-ul']}>
           {projectResultNull.result.map((data, index) => {
             return (
-              <li key={`results_${index}`}>
+              <li className={styles['my-project-li']} key={`results_${index}`}>
                 <ReactMarkdown>{data}</ReactMarkdown>
               </li>
             );
@@ -44,7 +44,7 @@ export default function ProjectResult({ project }) {
           const ren = data.title === '과정 & 문제해결';
           return (
             <ul
-              className={styles['my-project-skill']}
+              className={styles['my-project-ul']}
               key={`skill_${index}`}
               style={{ padding: ren ? '20px' : null }}
             >
@@ -56,7 +56,7 @@ export default function ProjectResult({ project }) {
                 if (ren) return <ListContainer data={o} drop={'__soon__'} />;
                 else {
                   return (
-                    <li>
+                    <li className={styles['my-project-li']}>
                       <ReactMarkdown>{o}</ReactMarkdown>
                     </li>
                   );
