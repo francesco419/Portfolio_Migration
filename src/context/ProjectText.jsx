@@ -299,23 +299,74 @@ export const ProjectResultNew = [
           {
             subtitle:
               '**Kakao Map API**를 활용하여 지리적 **데이터 시각화**를 강화했습니다. 다양한 지도 기능을 통해 사용자에게 직관적이고 효과적인 지리 정보를 제공하며, **애플리케이션의 사용자 경험을 향상**시켰습니다.',
-            detail: ''
+            detail: `Kakao Map API을 활용하여 외국 관광객에게 소개하고자 하는 지역 및 장소에 관한 시각적 정보를 제공하였습니다.
+\`\`\`
+  let container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
+  let options = { //지도를 생성할 때 필요한 기본 옵션
+    center: new window.kakao.maps.LatLng(mapy, mapx), //지도의 중심좌표.
+    level: 3 //지도의 레벨(확대, 축소 정도)
+  };
+
+  let map = new window.kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
+  let count = 0;
+  let bounds = new window.kakao.maps.LatLngBounds(); // 장소 검색 객체를 생성합니다
+  let ps = new window.kakao.maps.services.Places(map); // 키워드로 장소를 검색합니다
+  ps.keywordSearch(inputData[0], placesSearchCB);
+  let marker;
+
+  function placesSearchCB(data: any, status: any, pagination: any) {
+    if (status === window.kakao.maps.services.Status.OK) { // map API load OK
+      displayMarker(data[0]); // marker 생성
+      marker = new window.kakao.maps.LatLng(data[0].y, data[0].x);
+      bounds.extend(marker);
+      if (count < inputData.length) {
+        kewwordSearch(inputData[count]);
+      } else if (count == inputData.length) {
+        setBounds();
+      }
+    }
+  }
+
+  function kewwordSearch(keword: any) {
+    ps.keywordSearch(keword, placesSearchCB);
+    count = count + 1;
+  }
+  function displayMarker(place: any) { // 제공받은 정보를 바탕으로 지도에 표시할 marker를 생성합니다.
+    var marker = new window.kakao.maps.Marker({
+      map: map,
+      position: new window.kakao.maps.LatLng(place.y, place.x)
+    });
+    window.kakao.maps.event.addListener(marker, 'click', function (o: any) {
+      var position = marker.getPosition();
+      var url = 'https://map.kakao.com/link/map/' + place.id;
+      window.open(url, '_blank');
+    }); // marker 클릭시 해당 정보가 담긴 kakao map 페이지로 이동하도록 하여 관광객에게 많은 정보를 제공하였습니다.
+  }
+  function setBounds() {
+    map.setBounds(bounds, 90, 30, 10, 30);
+  }
+
+  var zoomControl = new window.kakao.maps.ZoomControl(); // zoom 기능
+  map.addControl(zoomControl, window.kakao.maps.ControlPosition.RIGHT); // zoom 기능 표시
+\`\`\`
+            `
           },
           {
             subtitle:
               '프론트와 백엔드의 **서버를 분리배포**하여 시스템 유연성을 향상시켰습니다. 클라이언트와 **서버 간의 독립성을 유지**하면서, 효율적인 확장과 업데이트를 가능케 하여 **개발 생산성과 안정성**을 동시에 향상시켰습니다.',
             detail: `프론트 부분을 **Client Side Rendering**, 백 부분을 **API Server**로 사용하였습니다.
 Netlify를 사용하여 자동 빌드 및 배포, 환경변수(env)설정, 구입한 도메인 연결을 했습니다.
-AWS RDS를 사용하여 MySQL 데이터베이스를 서버와 연결하고, S3를 이용해 이미지 등의 저장소를 추가했습니다.
 
 - 이전에 백엔드를 구현한 프로젝트도 있었으나, 개발단계에서만 사용되고 배포 지식이 부족해 정상적인 배포를 하지 못한 경험을 통해 보다 완성된 서버를 제작하고자 노력하였습니다.
-- 비록 완벽한 백엔드 시스템을 구현하지는 못하였지만, 다양한 서비스를 이용해 페이지-서버-데이터베이스-저장소의 정상적인 연동경험을 갖고 어떠한 점을 보완하고 어떻게 구성 해야하는지에 대해 고민하고 학습해보는 경험이었습니다.
+- 다양한 AWS 및 Netlify 서비스를 이용해 페이지-서버-데이터베이스-저장소의 정상적인 연동경험을 갖고 어떠한 점을 보완하고 어떻게 구성 해야하는지에 대해 고민하고 학습해보는 경험이었습니다.
 `
           },
           {
             subtitle:
               '**AWS 서비스**를 사용하여 안정적이고 확장 가능한 개발 환경을 조성했습니다. 다양한 **클라우드 기술을 활용**하여 **서버 관리 및 인프라 구축**을 효율적으로 수행하고, 안전한 데이터 저장 및 전송을 보장하였습니다.',
-            detail: ''
+            detail: `**AWS RDS를 사용하여 MySQL 데이터베이스를 서버와 연결**하고, **S3를 이용해 이미지 등의 저장소**를 추가했습니다.
+**multerS3**를 사용해 multer기능을 이용하여 S3에 파일을 전송을 가능케 했습니다. 또한 AWS와의 연결보안을 위해 **AWS IAM**을 사용, IAM에 따른 역할 엑세스 지정과 해당 엑세스 키를 사용해 메인 ID의 사용을 줄여 **보안을 강화**했습니다.
+            `
           },
           {
             subtitle:
@@ -356,11 +407,6 @@ DOM 조작을 최소화 하면서 원하는 효과를 구현하기 위해서 각
 \`\`\`
 
 #### 결과적으로 SCSS와 SVG를 결합하여 보다 효과적으로 요구사항을 수행했습니다.`
-          },
-          {
-            subtitle:
-              '정규표현식을 **사용한 검증을 통해 입력 데이터의 유효성을 강화**했습니다. 사용자의 입력이 지정한 양식과 일치하는지 확인하여 **데이터의 정확성을 보장**하고, 보안 측면에서도 적절한 검증을 수행하여 **안전한 데이터 처리**를 실현했습니다.',
-            detail: ''
           }
           // 이전 히스토리 참고
           // 요구사항에 따른 개발 ex) svg를 사용 - 지도 구현 interactive

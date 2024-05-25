@@ -24,7 +24,7 @@
 .refal {
   border-top: 1px solid;
   border-bottom: 1px solid;
-  max-height: 1000px;
+  max-height: 1200px;
   transition: max-height 1.5s ease-in-out;
 }
 
