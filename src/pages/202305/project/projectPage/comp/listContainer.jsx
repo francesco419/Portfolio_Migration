@@ -3,7 +3,7 @@ import DropDownBtn from '../button/dropdownBtn';
 import ReactMarkdown from 'react-markdown';
 import '../button/test.css';
 
-export default function ListContainer({ data, drop }) {
+export default function ListContainer({ data }) {
   const [isClick, setIsClick] = useState(false);
   const [imgCode, setImgCode] = useState(true);
   const refaa = useRef();
@@ -33,7 +33,7 @@ export default function ListContainer({ data, drop }) {
       <DropDownBtn isClick={isClick} handler={isClickHandler} />
       <div>
         <ReactMarkdown>{data.subtitle}</ReactMarkdown>
-        <div
+        {data.detail !== '' && <div
           ref={refaa}
           className={isClick ? 'refal listComp' : 'refa listComp'}
         >
@@ -42,7 +42,7 @@ export default function ListContainer({ data, drop }) {
             <ReactMarkdown>{data.detail}</ReactMarkdown>
           </div>
           {/* 해당부분은 각 항목에 대한 디테일 설명이다*/}
-        </div>
+        </div>}
       </div>
     </li>
   );
