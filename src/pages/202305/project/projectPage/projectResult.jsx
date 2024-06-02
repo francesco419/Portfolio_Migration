@@ -11,19 +11,21 @@ export default function ProjectResult({ project }) {
 
   useEffect(() => {
     const filteredData = _.filter(ProjectResultNew, { name: project.name });
-    console.log(filteredData);
     if (filteredData.length === 0) {
       setProjectResultNull(project);
-      console.log(projectResultNull);
       return;
     }
     setProjectResultNull(null);
     setProjectResult(filteredData);
     //project.param과 일치하는 project result 필터링
   }, [project]);
+  
+  const linkTag = (link)=>{
+    return <a href={link} target=''>작업일지</a>
+  }
 
   if (projectResultNull)
-    return (
+    return (    
       <div className={styles['my-project-result']}>
         <ul className={styles['my-project-ul']}>
           {projectResultNull.result.map((data, index) => {
@@ -50,14 +52,18 @@ export default function ProjectResult({ project }) {
             >
               <hr />
               <h4 style={{ padding: ren ? '20px' : null }}>
-                {data.title}(dropdown)
+                {data.title}
+              {projectResult[0].work.map((o,index)=>{
+                if(ren)
+                return <a href={o} target='_blank' style={{margin:'0 0 0 20px',textDecoration:'underline',color:'blue'}}>작업일지{index+1}</a>
+              })}
               </h4>
-              {data.info.map((o) => {
-                if (ren) return <ListContainer data={o} drop={'__soon__'} />;
+              {data.info.map((obj) => {
+                if (ren) return <ListContainer data={obj} />;
                 else {
                   return (
                     <li className={styles['my-project-li']}>
-                      <ReactMarkdown>{o}</ReactMarkdown>
+                      <ReactMarkdown>{obj}</ReactMarkdown>
                     </li>
                   );
                 }
