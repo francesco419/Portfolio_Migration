@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import styles from './project.module.css';
-import Open from '../../../assets/svg/open.svg?react';
+import Open from '@/assets/svg/open.svg?react';
 
 export default function Project({ projects, num }) {
   return (

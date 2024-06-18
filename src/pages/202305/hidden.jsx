@@ -1,3 +1,4 @@
+import Notice from '@/components/notice/notice';
 import styles from './hidden.module.css';
 import { Suspense, lazy, useRef } from 'react';
 
@@ -41,9 +42,7 @@ export default function Hidden() {
               }
             </p>
           </div>
-          <Suspense>
-            <Front />
-          </Suspense>
+          <Front />
           <div className={styles['hidden-intro']}>
             <p>{intro}</p>
           </div>

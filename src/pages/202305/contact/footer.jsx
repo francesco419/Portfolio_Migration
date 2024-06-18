@@ -10,6 +10,11 @@ export default function FooterContact({ refer }) {
       bool: true
     },
     {
+      letter: 'P',
+      text: 'https://leesanghyeon.com/',
+      bool: false
+    },
+    {
       letter: 'G',
       text: 'https://github.com/francesco419',
       bool: false
@@ -21,6 +26,7 @@ export default function FooterContact({ refer }) {
     }
   ];
 
+  /* 
   const onButtonClick = () => {
     // using Java Script method to get PDF file
     fetch('PortfolioPDF.pdf').then((response) => {
@@ -34,7 +40,8 @@ export default function FooterContact({ refer }) {
         alink.click();
       });
     });
-  };
+  }; 
+  */
 
   return (
     <footer ref={refer} className={styles['hidden-contact']}>
