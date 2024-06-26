@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { ProjectDetailText } from '../../context/ProjectText';
 import _ from 'lodash';
+import HeaderButton from '@/components/common/headerButton';
 
 export default function MyHeader({ refer }) {
   const nav = useNavigate();
@@ -14,8 +15,8 @@ export default function MyHeader({ refer }) {
   if (refer === null) {
     return (
       <header className={styles['hidden-header']}>
-        <button onClick={() => nav(`/`)}>MAIN</button>
-        <button className={styles['hidden-header-project']}>
+        <HeaderButton onClick={() => nav(`/`)}>MAIN</HeaderButton>
+        <HeaderButton className={styles['hidden-header-project']}>
           PROJECT
           <div className={styles['hidden-header-link']}>
             {_.reverse(ProjectDetailText).map((o) => {
@@ -27,15 +28,19 @@ export default function MyHeader({ refer }) {
                 );
             })}
           </div>
-        </button>
+        </HeaderButton>
       </header>
     );
   } else {
     return (
       <header className={styles['hidden-header']}>
-        <button onClick={() => onClickHandler(refer.about)}>ABOUT</button>
-        <button onClick={() => onClickHandler(refer.skill)}>SKILL</button>
-        <button
+        <HeaderButton onClick={() => onClickHandler(refer.about)}>
+          ABOUT
+        </HeaderButton>
+        <HeaderButton onClick={() => onClickHandler(refer.skill)}>
+          SKILL
+        </HeaderButton>
+        <HeaderButton
           className={styles['hidden-header-project']}
           onClick={() => onClickHandler(refer.project)}
         >
@@ -50,8 +55,10 @@ export default function MyHeader({ refer }) {
                 );
             })}
           </div>
-        </button>
-        <button onClick={() => onClickHandler(refer.contact)}>CONTACT</button>
+        </HeaderButton>
+        <HeaderButton onClick={() => onClickHandler(refer.contact)}>
+          CONTACT
+        </HeaderButton>
       </header>
     );
   }

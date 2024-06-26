@@ -15,6 +15,9 @@ const INTRO = `끊임없이 변화되는 코드와 함께 성장해나가려고 
 높은 사용자 경험을 제공하기 위해 차별화된 아이디어를 모색하며 다양한 UI/UX를 구현하고자 합니다.
 이와 같은 노력과 목표를 바탕으로 누구나 머무르고 싶은 WEB을 만드는 개발자 되고자 합니다.`;
 
+const FIRSTCOMMENT =
+  '상상에 멈추지 않고 코드를 통해\n현실로 만들어내는 개발자,\n이상현입니다.';
+
 export default function Hidden() {
   const about = useRef(),
     skill = useRef(),
@@ -39,11 +42,7 @@ export default function Hidden() {
         </Suspense>
         <main>
           <div className={styles['hidden-title']}>
-            <p>
-              {
-                '상상에 멈추지 않고 코드를 통해\n현실로 만들어내는 개발자,\n이상현입니다.'
-              }
-            </p>
+            <p>{FIRSTCOMMENT}</p>
           </div>
           <Front />
           <div className={styles['hidden-intro']}>
