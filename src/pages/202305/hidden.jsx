@@ -1,7 +1,5 @@
-import Notice from '@/components/notice/notice';
 import styles from './hidden.module.css';
 import { Suspense, lazy, useRef } from 'react';
-import Personal from './personal/personal';
 
 const ProjectContainer = lazy(() => import('./project/projectContainer'));
 const AboutContainer = lazy(() => import('./about/aboutContainer'));
@@ -49,7 +47,6 @@ export default function Hidden() {
           <div className={styles['hidden-intro']}>
             <p>{INTRO}</p>
           </div>
-          {/* <Personal /> */}
           <AboutContainer forwardRef={about} />
           <Suspense>
             <SKillContainer forwardRef={skill} />
