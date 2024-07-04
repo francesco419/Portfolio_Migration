@@ -1,11 +1,11 @@
 import OutBoxSkill from './outBoxSkill';
 import { skillListSVG } from '../../context/SKillText';
-import _ from 'lodash';
+import shuffle from 'lodash/shuffle';
 
 export default function SKillContainer({ forwardRef }) {
   return (
     <div ref={forwardRef}>
-      <OutBoxSkill skillContents={_.shuffle(skillListSVG)} />
+      <OutBoxSkill skillContents={shuffle(skillListSVG)} />
     </div>
   );
 }

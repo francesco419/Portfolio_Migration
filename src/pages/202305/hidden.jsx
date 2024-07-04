@@ -27,9 +27,7 @@ export default function Hidden() {
     <div className={styles['back']}>
       <Suspense>
         <TopIndicator />
-      </Suspense>
-      <div className={styles['hidden']}>
-        <Suspense>
+        <div className={styles['hidden']}>
           <MyHeader
             refer={{
               about: about,
@@ -38,27 +36,21 @@ export default function Hidden() {
               contact: contact
             }}
           />
-        </Suspense>
-        <main>
-          <div className={styles['hidden-title']}>
-            <p>{FIRSTCOMMENT}</p>
-          </div>
-          <Front />
-          <div className={styles['hidden-intro']}>
-            <p>{INTRO}</p>
-          </div>
-          <AboutContainer forwardRef={about} />
-          <Suspense>
+          <main>
+            <div className={styles['hidden-title']}>
+              <p>{FIRSTCOMMENT}</p>
+            </div>
+            <Front />
+            <div className={styles['hidden-intro']}>
+              <p>{INTRO}</p>
+            </div>
+            <AboutContainer forwardRef={about} />
             <SKillContainer forwardRef={skill} />
-          </Suspense>
-          <Suspense>
             <ProjectContainer forwardRef={project} />
-          </Suspense>
-        </main>
-        <Suspense>
+          </main>
           <FooterContact refer={contact} />
-        </Suspense>
-      </div>
+        </div>
+      </Suspense>
     </div>
   );
 }

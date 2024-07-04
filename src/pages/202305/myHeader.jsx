@@ -2,7 +2,7 @@ import styles from './myHeader.module.css';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { ProjectDetailText } from '../../context/ProjectText';
-import _ from 'lodash';
+import reverse from 'lodash/reverse';
 import HeaderButton from '@/components/common/headerButton';
 
 export default function MyHeader({ refer }) {
@@ -19,7 +19,7 @@ export default function MyHeader({ refer }) {
         <HeaderButton className={styles['hidden-header-project']}>
           PROJECT
           <div className={styles['hidden-header-link']}>
-            {_.reverse(ProjectDetailText).map((o) => {
+            {reverse(ProjectDetailText).map((o) => {
               if (o.show === true)
                 return (
                   <Link to={`/project/${o.param}`} key={o.name}>
@@ -46,7 +46,7 @@ export default function MyHeader({ refer }) {
         >
           PROJECT
           <div className={styles['hidden-header-link']}>
-            {_.reverse(ProjectDetailText).map((o) => {
+            {reverse(ProjectDetailText).map((o) => {
               if (o.show === true)
                 return (
                   <Link to={`/project/${o.param}`} key={o.name}>

@@ -2,7 +2,7 @@ import styles from './projectPage.module.css';
 import ReactMarkdown from 'react-markdown';
 import { ProjectResultNew } from '../../../../context/ProjectText';
 import { useEffect, useRef, useState } from 'react';
-import _ from 'lodash';
+import filter from 'lodash/filter';
 import ListContainer from './comp/listContainer';
 
 export default function ProjectResult({ project }) {
@@ -10,7 +10,7 @@ export default function ProjectResult({ project }) {
   const [projectResultNull, setProjectResultNull] = useState(null);
 
   useEffect(() => {
-    const filteredData = _.filter(ProjectResultNew, { name: project.name });
+    const filteredData = filter(ProjectResultNew, { name: project.name });
     if (filteredData.length === 0) {
       setProjectResultNull(project);
       return;
@@ -19,13 +19,17 @@ export default function ProjectResult({ project }) {
     setProjectResult(filteredData);
     //project.param과 일치하는 project result 필터링
   }, [project]);
-  
-  const linkTag = (link)=>{
-    return <a href={link} target=''>작업일지</a>
-  }
+
+  const linkTag = (link) => {
+    return (
+      <a href={link} target=''>
+        작업일지
+      </a>
+    );
+  };
 
   if (projectResultNull)
-    return (    
+    return (
       <div className={styles['my-project-result']}>
         <ul className={styles['my-project-ul']}>
           {projectResultNull.result.map((data, index) => {
@@ -53,10 +57,22 @@ export default function ProjectResult({ project }) {
               <hr />
               <h4 style={{ padding: ren ? '20px' : null }}>
                 {data.title}
-              {projectResult[0].work.map((o,index)=>{
-                if(ren)
-                return <a href={o} target='_blank' style={{margin:'0 0 0 20px',textDecoration:'underline',color:'blue'}}>작업일지{index+1}</a>
-              })}
+                {projectResult[0].work.map((o, index) => {
+                  if (ren)
+                    return (
+                      <a
+                        href={o}
+                        target='_blank'
+                        style={{
+                          margin: '0 0 0 20px',
+                          textDecoration: 'underline',
+                          color: 'blue'
+                        }}
+                      >
+                        작업일지{index + 1}
+                      </a>
+                    );
+                })}
               </h4>
               {data.info.map((obj) => {
                 if (ren) return <ListContainer data={obj} />;

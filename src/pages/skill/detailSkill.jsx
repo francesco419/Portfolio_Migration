@@ -1,12 +1,12 @@
 import styles from './detail.module.css';
 import { skillDescription } from '../../context/SKillText';
-import _ from 'lodash';
+import filter from 'lodash/filter';
 import { useEffect, useState } from 'react';
 
 export default function DetailSkill({ name }) {
   const [isLink, setIsLink] = useState(false);
   const reget_link = /(http(s)?:\/\/)([a-z0-9\w]+\.*)+[a-z0-9]{2,4}/gi;
-  const description = _.filter(skillDescription, { name: name });
+  const description = filter(skillDescription, { name: name });
 
   useEffect(() => {
     setIsLink(reget_link.test(description[0].description));

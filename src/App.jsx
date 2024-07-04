@@ -12,25 +12,13 @@ function App() {
     <>
       <Notice />
       <HashRouter>
-        <Routes>
-          <Route
-            path={`/project/:id`}
-            element={
-              <Suspense>
-                <ProjectPage />
-              </Suspense>
-            }
-          />
+        <Suspense>
+          <Routes>
+            <Route path={`/project/:id`} element={<ProjectPage />} />
 
-          <Route
-            path={`/`}
-            element={
-              <Suspense>
-                <Hidden />
-              </Suspense>
-            }
-          />
-        </Routes>
+            <Route path={`/`} element={<Hidden />} />
+          </Routes>
+        </Suspense>
       </HashRouter>
     </>
   );

@@ -1,7 +1,7 @@
 import { Suspense, useRef, useState, lazy } from 'react';
 import styles from './front.module.css';
 import useInterval from 'use-interval';
-import _ from 'lodash';
+import map from 'lodash/map';
 
 const Three = lazy(() => import('./frontThree'));
 const ControlButton = lazy(() => import('./controlButton'));
@@ -71,7 +71,7 @@ export default function Front() {
         className={styles['front_cover']}
         style={{ width: '3600px', transform: `translateX(${-swipe * 1200}px)` }}
       >
-        {_.map(models, (o) => {
+        {map(models, (o) => {
           return (
             <Suspense>
               <Three
