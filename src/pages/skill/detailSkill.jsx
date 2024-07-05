@@ -1,5 +1,5 @@
 import styles from './detail.module.css';
-import { skillDescription } from '../../context/SKillText';
+import { skillDescription } from '../../context/SKillText.jsx';
 import filter from 'lodash/filter';
 import { useEffect, useState } from 'react';
 

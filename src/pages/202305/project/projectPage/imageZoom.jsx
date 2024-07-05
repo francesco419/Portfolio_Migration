@@ -1,6 +1,6 @@
-import Right from '../assets/right.svg?react';
-import Left from '../assets/left.svg?react';
-import Close from '../assets/close.svg?react';
+import right from '../assets/right.svg';
+import left from '../assets/left.svg';
+import close from '../assets/close.svg';
 import styles from './projectPage.module.css';
 import { useState } from 'react';
 
@@ -40,7 +40,7 @@ export default function ImageZoom({ slideCount, image, changeZoom }) {
         onClick={() => changeCount(false)}
         style={{ left: 0, zIndex: 99 }}
       >
-        <Left />
+        <img src={left} alt='image to left' />
       </button>
       <button
         style={{
@@ -53,7 +53,7 @@ export default function ImageZoom({ slideCount, image, changeZoom }) {
         }}
         onClick={changeZoom}
       >
-        <Close />
+        <img src={close} alt='close window' />
       </button>
       <img
         src={image[count]}
@@ -64,7 +64,7 @@ export default function ImageZoom({ slideCount, image, changeZoom }) {
         onClick={() => changeCount(true)}
         style={{ right: 0, zIndex: 99 }}
       >
-        <Right />
+        <img src={right} alt='image to right' />
       </button>
     </div>
   );

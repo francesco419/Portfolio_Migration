@@ -1,6 +1,6 @@
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Environment } from '@react-three/drei';
-import { useEffect, useRef, useState } from 'react';
+import { Suspense, useEffect, useRef, useState } from 'react';
 
 export default function Three({
   autoR = true,
@@ -57,7 +57,7 @@ export default function Three({
             color={xy.x ? `#${(xy.x * 13981).toString(16)}` : '#ffffff'}
           />
         )}
-        {model}
+        <Suspense>{model}</Suspense>
       </Canvas>
     </>
   );

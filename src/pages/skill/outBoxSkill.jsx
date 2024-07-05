@@ -1,7 +1,7 @@
 import styles from './skills.module.css';
-import SkillBox from './skillNew';
+import SkillBox from './skillNew.jsx';
 import { useState } from 'react';
-import { MiddleTitle } from '../../components/midTitle';
+import { MiddleTitle } from '../../components/midTitle.jsx';
 
 export default function OutBoxSkill({ skillContents }) {
   const [node, setNode] = useState(null);

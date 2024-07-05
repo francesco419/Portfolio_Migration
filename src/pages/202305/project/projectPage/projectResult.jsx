@@ -1,9 +1,9 @@
 import styles from './projectPage.module.css';
 import ReactMarkdown from 'react-markdown';
-import { ProjectResultNew } from '../../../../context/ProjectText';
-import { useEffect, useRef, useState } from 'react';
+import { ProjectResultNew } from '../../../../context/ProjectText.jsx';
+import { useEffect, useState } from 'react';
 import filter from 'lodash/filter';
-import ListContainer from './comp/listContainer';
+import ListContainer from './comp/listContainer.jsx';
 
 export default function ProjectResult({ project }) {
   const [projectResult, setProjectResult] = useState(null);

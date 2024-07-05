@@ -1,18 +1,18 @@
 import { useEffect, useState } from 'react';
-import MyHeader from '../../myHeader';
+import MyHeader from '../../myHeader.jsx';
 import styles from './projectPage.module.css';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
-import { ProjectDetailText } from '../../../../context/ProjectText';
-import FooterContact from '../../contact/footer';
-import TopIndicator from '../../top/toTop';
+import { ProjectDetailText } from '../../../../context/ProjectText.jsx';
+import FooterContact from '../../contact/footer.jsx';
+import TopIndicator from '../../top/toTop.jsx';
 import { useDispatch, useSelector } from 'react-redux';
-import { setProject } from '../../../../redux/project';
-import ProjectImage from './projectImage';
-import ProjectSkill from './projectSkill';
-import ProjectUpdate from './projectUpdate';
-import ProjectResult from './projectResult';
-import ProjectNext from './projectNext';
+import { setProject } from '../../../../redux/project.js';
+import ProjectImage from './projectImage.jsx';
+import ProjectSkill from './projectSkill.jsx';
+import ProjectUpdate from './projectUpdate.jsx';
+import ProjectResult from './projectResult.jsx';
+import ProjectNext from './projectNext.jsx';
 
 export default function ProjectPage() {
   const param = useParams();

@@ -1,6 +1,6 @@
 import { lazy, Suspense } from 'react';
-import { MiddleTitle } from '../../../components/midTitle';
-import { TEXTARRAY } from '@/context/ProjectText';
+import { MiddleTitle } from '../../../components/midTitle.jsx';
+import { TEXTARRAY } from '@/context/ProjectText.jsx';
 
 const About = lazy(() => import('./about'));
 

@@ -1,13 +1,13 @@
 import styles from './hidden.module.css';
 import { Suspense, lazy, useRef } from 'react';
 
-const ProjectContainer = lazy(() => import('./project/projectContainer'));
-const AboutContainer = lazy(() => import('./about/aboutContainer'));
-const MyHeader = lazy(() => import('./myHeader'));
-const FooterContact = lazy(() => import('./contact/footer'));
-const TopIndicator = lazy(() => import('./top/toTop'));
-const Front = lazy(() => import('./front/front'));
-const SKillContainer = lazy(() => import('../skill/skillContainer'));
+const ProjectContainer = lazy(() => import('./project/projectContainer.jsx'));
+const AboutContainer = lazy(() => import('./about/aboutContainer.jsx'));
+const MyHeader = lazy(() => import('./myHeader.jsx'));
+const FooterContact = lazy(() => import('./contact/footer.jsx'));
+const TopIndicator = lazy(() => import('./top/toTop.jsx'));
+const Front = lazy(() => import('./front/front.jsx'));
+const SKillContainer = lazy(() => import('../skill/skillContainer.jsx'));
 
 const INTRO = `끊임없이 변화되는 코드와 함께 성장해나가려고 노력하는 신입 개발자 이상현입니다.
 복잡한 문제를 쉽게 해결하는 클린코드 작성을 통해 프로덕트의 퍼포먼스를 향상시키고,

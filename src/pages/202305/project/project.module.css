@@ -61,6 +61,11 @@
   box-sizing: border-box;
 }
 
+.hidden-project-front img {
+  width: 30px;
+  height: 30px;
+}
+
 .hidden-project-front p {
   font-weight: 600;
 }

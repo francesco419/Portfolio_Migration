@@ -1,5 +1,5 @@
 import styles from './footer.module.css';
-import Contact from './contact';
+import Contact from './contact.jsx';
 import portfolio from './PortfolioPDF.pdf';
 
 export default function FooterContact({ refer }) {

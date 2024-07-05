@@ -1,5 +1,5 @@
 import styles from './projectPage.module.css';
-import { newDate } from '../../../../function/newDate';
+import { newDate } from '../../../../function/newDate.jsx';
 import Git from '../../../../assets/svg/project/github.svg?react';
 import Url from '../../../../assets/svg/project/url.svg?react';
 

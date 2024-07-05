@@ -1,40 +1,38 @@
 /**portfolio*/
-import port1 from '../assets/image/projectImgNew/portfolio/1.PNG';
-import port2 from '../assets/image/projectImgNew/portfolio/2.PNG';
-import port3 from '../assets/image/projectImgNew/portfolio/3.PNG';
+import port1 from '@projectImage/portfolio/1.PNG';
+import port2 from '@projectImage/portfolio/2.PNG';
+import port3 from '@projectImage/portfolio/3.PNG';
 /**youtube */
-import youtube1 from '../assets/image/projectImgNew/youtube/youtube1.PNG';
-import youtube2 from '../assets/image/projectImgNew/youtube/youtube2.PNG';
-import youtube3 from '../assets/image/projectImgNew/youtube/youtube3.PNG';
+import youtube1 from '@projectImage/youtube/youtube1.PNG';
+import youtube2 from '@projectImage/youtube/youtube2.PNG';
+import youtube3 from '@projectImage/youtube/youtube3.PNG';
 /**travel */
-import travel1 from '../assets/image/projectImgNew/travel/1.PNG';
-import travel2 from '../assets/image/projectImgNew/travel/2.PNG';
-import travel3 from '../assets/image/projectImgNew/travel/3.PNG';
+import travel1 from '@projectImage/travel/1.PNG';
+import travel2 from '@projectImage/travel/2.PNG';
+import travel3 from '@projectImage/travel/3.PNG';
 /**social */
-import social1 from '../assets/image/projectImgNew/sns/1.PNG';
-import social2 from '../assets/image/projectImgNew/sns/2.PNG';
-import social3 from '../assets/image/projectImgNew/sns/3.PNG';
-import social4 from '../assets/image/projectImgNew/sns/4.PNG';
+import social1 from '@projectImage/sns/1.PNG';
+import social2 from '@projectImage/sns/2.PNG';
+import social3 from '@projectImage/sns/3.PNG';
+import social4 from '@projectImage/sns/4.PNG';
 /**mindmap */
-import mindmap1 from '../assets/image/projectImgNew/mindmap/mindmap1.png';
-import mindmap2 from '../assets/image/projectImgNew/mindmap/mindmap2.png';
-import mindmap3 from '../assets/image/projectImgNew/mindmap/mindmap3.png';
+import mindmap1 from '@projectImage/mindmap/mindmap1.png';
+import mindmap2 from '@projectImage/mindmap/mindmap2.png';
+import mindmap3 from '@projectImage/mindmap/mindmap3.png';
 /**finedition */
-import finedition_home from '../assets/image/projectImgNew/finedition/finedition-home.png';
-import finedition_food from '../assets/image/projectImgNew/finedition/finedition-food.png';
-import finedition_place from '../assets/image/projectImgNew/finedition/finedition-place.png';
-import finedition_seoul from '../assets/image/projectImgNew/finedition/finedition-seoul.png';
+import finedition_home from '@projectImage/finedition/finedition-home.png';
+import finedition_food from '@projectImage/finedition/finedition-food.png';
+import finedition_place from '@projectImage/finedition/finedition-place.png';
+import finedition_seoul from '@projectImage/finedition/finedition-seoul.png';
 
 /**image */
-import css from '../assets/svg/icon/css.png';
-import javascript from '../assets/svg/icon/javascript.png';
-import html from '../assets/svg/icon/html.png';
-import react from '../assets/svg/icon/react.png';
-import redux from '../assets/svg/icon/redux.png';
-import typescript from '../assets/svg/icon/typescript.png';
-import scss from '../assets/svg/icon/scss.png';
-
-import ReactMarkdown from 'react-markdown';
+import css from '@assets/svg/icon/css.png';
+import javascript from '@assets/svg/icon/javascript.png';
+import html from '@assets/svg/icon/html.png';
+import react from '@assets/svg/icon/react.png';
+import redux from '@assets/svg/icon/redux.png';
+import typescript from '@assets/svg/icon/typescript.png';
+import scss from '@assets/svg/icon/scss.png';
 
 export const PNGIMAGES = [
   [javascript, html, css],

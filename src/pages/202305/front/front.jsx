@@ -1,13 +1,12 @@
-import { Suspense, useRef, useState, lazy } from 'react';
+import { useRef, useState, lazy } from 'react';
 import styles from './front.module.css';
 import useInterval from 'use-interval';
-import map from 'lodash/map';
 
-const Three = lazy(() => import('./frontThree'));
-const ControlButton = lazy(() => import('./controlButton'));
-const ModelCar = lazy(() => import('./3dModel/Scene'));
-const EightBall = lazy(() => import('./3dModel/eightBall'));
-const Reaper = lazy(() => import('./3dModel/reap'));
+const Three = lazy(() => import('./frontThree.jsx'));
+const ControlButton = lazy(() => import('./controlButton.jsx'));
+const ModelCar = lazy(() => import('./3dModel/Scene.jsx'));
+const EightBall = lazy(() => import('./3dModel/eightBall.jsx'));
+const Reaper = lazy(() => import('./3dModel/reap.jsx'));
 
 const models = [
   {
@@ -71,17 +70,15 @@ export default function Front() {
         className={styles['front_cover']}
         style={{ width: '3600px', transform: `translateX(${-swipe * 1200}px)` }}
       >
-        {map(models, (o) => {
+        {models.map((o) => {
           return (
-            <Suspense>
-              <Three
-                model={o.model}
-                camera={o.camera}
-                autoR={o.autoR}
-                speed={o.speed}
-                lightType={o.lightType}
-              />
-            </Suspense>
+            <Three
+              model={o.model}
+              camera={o.camera}
+              autoR={o.autoR}
+              speed={o.speed}
+              lightType={o.lightType}
+            />
           );
         })}
       </div>

@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import styles from './about.module.css';
 import { useEffect, useRef, useState } from 'react';
-import { setControl } from '../../../redux/aboutControl';
+import { setControl } from '../../../redux/aboutControl.js';
 
 export default function About({ about, count }) {
   const ref = useRef();

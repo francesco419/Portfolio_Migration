@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import styles from './project.module.css';
-import Open from '@/assets/svg/open.svg?react';
+import open from '@/assets/svg/open.svg';
 
 export default function Project({ projects, num }) {
   return (
@@ -15,7 +15,7 @@ export default function Project({ projects, num }) {
           }}
         >
           <p>{projects.name}</p>
-          <Open />
+          <img src={open} alt='open project' />
         </div>
         <p>{projects.text}</p>
         <Link to={`/project/${projects.to}`} className={styles['topleft']} />

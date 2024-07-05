@@ -1,8 +1,8 @@
 import styles from './projectPage.module.css';
 import { useNavigate } from 'react-router-dom';
-import Right from '../../../../assets/svg/right.svg?react';
-import Left from '../../../../assets/svg/left.svg?react';
-import { useEffect, useRef } from 'react';
+import right from '../../../../assets/svg/right.svg';
+import left from '../../../../assets/svg/left.svg';
+import { useRef } from 'react';
 
 export default function ProjectNext({ project }) {
   const nav = useNavigate();
@@ -40,7 +40,7 @@ export default function ProjectNext({ project }) {
   return (
     <div className={styles['my-project-next']} ref={container}>
       <div>
-        <Left />
+        <img src={left} alt='to left' />
         <button
           style={{
             opacity: project.prev ? '0.8' : '0.1',
@@ -63,7 +63,7 @@ export default function ProjectNext({ project }) {
         >
           Next
         </button>
-        <Right />
+        <img src={right} alt='to right' />
       </div>
     </div>
   );

@@ -1,7 +1,8 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, lazy, Suspense } from 'react';
 import styles from './new.module.css';
-import DetailSkill from './detailSkill';
 import { motion } from 'framer-motion';
+
+const DetailSkill = lazy(() => import('./detailSkill'));
 
 export default function SkillBox({ name, svg, index, handler, node }) {
   const [click, setClick] = useState(false);
@@ -48,19 +49,21 @@ export default function SkillBox({ name, svg, index, handler, node }) {
     >
       {svg}
       <p className={styles['skill_content-name']}>{name}</p>
-      {click && (
-        <div
-          className={`${styles['skill_content-absolute']}`}
-          style={setStyleByIndex(index)}
-          onClick={(event) => {
-            changeClick();
-            event.stopPropagation(); //버블링으로 인한 부모의 changeClick이벤트 발생 방지
-          }}
-        >
-          <div className={styles['skill_moveSvg']}>{svg}</div>
-          <DetailSkill name={name} />
-        </div>
-      )}
+      <Suspense>
+        {click && (
+          <div
+            className={`${styles['skill_content-absolute']}`}
+            style={setStyleByIndex(index)}
+            onClick={(event) => {
+              changeClick();
+              event.stopPropagation(); //버블링으로 인한 부모의 changeClick이벤트 발생 방지
+            }}
+          >
+            <div className={styles['skill_moveSvg']}>{svg}</div>
+            <DetailSkill name={name} />
+          </div>
+        )}
+      </Suspense>
     </motion.div>
   );
 }

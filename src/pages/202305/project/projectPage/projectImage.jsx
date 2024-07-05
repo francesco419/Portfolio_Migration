@@ -1,8 +1,8 @@
-import { useRef, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './projectPage.module.css';
-import Right from '../assets/right.svg?react';
-import Left from '../assets/left.svg?react';
-import ImageZoom from './imageZoom';
+import right from '../assets/right.svg';
+import left from '../assets/left.svg';
+import ImageZoom from './imageZoom.jsx';
 
 export default function ProjectImage({ project }) {
   const [slideCount, setSlideCount] = useState(0);
@@ -37,7 +37,7 @@ export default function ProjectImage({ project }) {
         className={styles['my-project-image-button']}
         onClick={() => buttonClick(false)}
       >
-        <Left />
+        <img src={left} alt='image to left' />
       </button>
       <div
         className={styles['my-project-img']}
@@ -53,7 +53,7 @@ export default function ProjectImage({ project }) {
         style={{ right: 0 }}
         onClick={() => buttonClick(true)}
       >
-        <Right />
+        <img src={right} alt='image to right' />
       </button>
     </div>
   );

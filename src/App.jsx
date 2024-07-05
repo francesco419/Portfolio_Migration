@@ -1,11 +1,11 @@
 import { Route, Routes, HashRouter } from 'react-router-dom';
 import React, { lazy, Suspense } from 'react';
-import Notice from './components/notice/notice';
+import Notice from './components/notice/notice.jsx';
 
 const ProjectPage = lazy(() =>
-  import('./pages/202305/project/projectPage/projectPage')
+  import('./pages/202305/project/projectPage/projectPage.jsx')
 );
-const Hidden = lazy(() => import('./pages/202305/hidden'));
+const Hidden = lazy(() => import('./pages/202305/hidden.jsx'));
 
 function App() {
   return (

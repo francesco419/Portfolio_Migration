@@ -21,7 +21,7 @@ vite.config.js
 
 rollup-plugin-visualizer를 사용하여 번들 청크를 확인하여 줄일수 있는 청크에 대해 시각적으로 알아보고 결과를 확인할수 있는 라이브러리를 사용.
 
-- lodash 청크가 크게 나타나 있는것을 확인 `dist/assets/lodash-D9wIYH0h.js  72.02 kB │ gzip:  26.55 kB`
+- lodash 청크가 크게 나타나 있는것을 확인 -`dist/assets/lodash-D9wIYH0h.js  72.02 kB │ gzip:  26.55 kB`
 
   - vite는 pre-bundling 외에는 rollup을 메인 번들링 기능으로 사용한다.
   - rollup에는 manualChunk option을 사용하여 lodash에 대한 chunk를 줄일수 있는 방법을 직접 설명해 주고 있다.
@@ -37,15 +37,16 @@ rollup-plugin-visualizer를 사용하여 번들 청크를 확인하여 줄일수
 
   - 역시 300배 정도는 아니였다.
     - lodash의 기능을 나누어서 import 했기때문에 청크도 나뉘었다.
-      `dist/assets/lodash-Cpj98o6Y.js     0.24 kB │ gzip:   0.18 kB`
-      `dist/assets/filter-CdSLGcDp.js     0.29 kB │ gzip:   0.23 kB`
-      `dist/assets/map-Bh9NcjlJ.js        17.32 kB │ gzip:   7.11 kB`
-      총 18kB로 유의미한 크기 축소는 있지만, map chunk가 굉장히 크다.
+      - `dist/assets/lodash-Cpj98o6Y.js     0.24 kB │ gzip:   0.18 kB`
+      - `dist/assets/filter-CdSLGcDp.js     0.29 kB │ gzip:   0.23 kB`
+      - `dist/assets/map-Bh9NcjlJ.js        17.32 kB │ gzip:   7.11 kB`
+        총 18kB로 유의미한 크기 축소는 있지만, map chunk가 굉장히 크다.
     - lodash의 여러 바닐라에는 없는 메소드가 있어 유용하게 사용했지만, 청크크기를 크게 먹는다면 사용할 필요가 있을까? 특히 map,filter사용에는?
-      - 유의미한 차이가 있는지 검색을 해보았고 `https://dev.to/jrdev_/the-battle-of-the-array-titans-lodash-vs-vanilla-an-experiment-b6g`의 테스트를 바탕으로 현재 사용에는 객체에 대한 map 메소드를 주로 사용하기에 바닐라 메소드로 대체 하였다.
+      - 유의미한 차이가 있는지 검색을 해보았고 아래 url의 테스트를 바탕으로 현재 사용에는 객체에 대한 map 메소드를 주로 사용하기에 바닐라 메소드로 대체 하였다.
+        - `https://dev.to/jrdev_/the-battle-of-the-array-titans-lodash-vs-vanilla-an-experiment-b6g`
     - 모든 map메소드를 대체한 결과, map chunk는 보이지 않았다. 또한 몇번 사용되지 않은 몇몇 메소드는 빌드 청크기록에 너무 작은지 없다.
-      `dist/assets/lodash-Cpj98o6Y.js       0.24 kB │ gzip:   0.18 kB`
-      `dist/assets/filter-Crg9fd2B.js       0.30 kB │ gzip:   0.23 kB`
+      - `dist/assets/lodash-Cpj98o6Y.js       0.24 kB │ gzip:   0.18 kB`
+      - `dist/assets/filter-Crg9fd2B.js       0.30 kB │ gzip:   0.23 kB`
       - 총 0.54 kB
 
 - 현재 threeJS를 사용하고 있는데 이것도 청크크기가 많많치 않다.
@@ -53,3 +54,32 @@ rollup-plugin-visualizer를 사용하여 번들 청크를 확인하여 줄일수
 #### vite bundler, rollupOption, lodash, chunk size, rollup-plugin visualizer
 
 - 한줄 평 : 청크 줄이기 재밌다.
+
+---
+
+index.js파일의 크기에 대해.
+
+- 현재 3d 모델 랜더링을 공부하고 있는 중이라 threejs + three/fiber + three/drei를 사용하고 있다.
+  - threejs에 대한 code-splitting / lazy import / dynamic import 의 검색어로 검색하던중 한국분의 깃헙블로그 발견! 한번 슥 본것만으로도 유용한 정보가 많다
+  - https://joong-sunny.github.io/graphics/graphics3-2/
+  - OffScreenCanvas - https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas
+- 역시 rollup visualizer로 청크 확인중 three가 엄청난 크기의 청크를 index파일에서 차지하고 있다.
+
+---
+
+Vite Speed Up
+
+- vite의 속도를 올리기 위한 작업
+  - vite퍼포먼스[https://vitejs.dev/guide/performance]
+  - Use CSS instead of Sass/Less/Stylus when possible (nesting can be handled by PostCSS)
+  - Don't transform SVGs into UI framework components (React, Vue, etc). Import them as strings or URLs instead.
+    - 나는 모든 프로젝트에서 SVG를 리액트 컴포넌트 형태로 사용하고 있다. 이유는 SVG의 장점은 컴스텀이고 이를 활용하기에 컴포넌트 형태가 좋기 때문이다.
+    - 다만 vite에서는 속도향상을 위해서는 SVG의 컴포넌트 형의 사용을 줄이라고 한다.
+    - 따라서, 컴포넌트 형태가 필요할 때만 사용하고 이외에는 다른 방법으로의 SVG를 사용하도록 한다.
+  - When using @vitejs/plugin-react, avoid configuring the Babel options, so it skips the transformation during build (only esbuild will be used).
+  - Reduce Resolve Operations.
+    - `import './MyBook'`을 하게 되면 vite는 `MyBook`, `MyBook.js`, `MyBook.ts`, ... 을 검색하게 된다.
+    - 즉, 파일 확장명을 기입함으로서 vite가 반복적으로 검색해야 할 일을 줄인다.
+  - Avoid Barrel Files ( ex. export \* from './color.js')
+  - Large dependencies that are only used in certain cases should be dynamically imported
+    - 많이 사용 않하지만, 크기가 큰 라이브러리를 dynamic import를 사용하자.

@@ -18,7 +18,11 @@ export default defineConfig({
   resolve: {
     alias: [
       { find: '@', replacement: '/src' },
-      { find: '@components', replacement: './components' }
+      { find: '@components', replacement: './components' },
+      { find: '@context', replacement: './context' },
+      { find: '@redux', replacement: './redux' },
+      { find: '@assets', replacement: '/src/assets' },
+      { find: '@projectImage', replacement: '/src/assets/image/projectImgNew' }
     ]
   },
   build: {

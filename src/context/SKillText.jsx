@@ -41,21 +41,6 @@ export const SHORTEN = [
  * tool = git,github,netlify,vs code,aws
  */
 
-const temp = [
-  {
-    name: 'AWS'
-  },
-  {
-    name: 'Notion'
-  },
-  {
-    name: 'Npm'
-  },
-  {
-    name: 'NodeJs'
-  }
-];
-
 export const skillListSVG = [
   {
     name: 'HTML',
