@@ -11,9 +11,10 @@
   white-space: break-spaces;
 }
 
-.hidden-title p {
+.hidden-title h1 {
   line-height: 5.3rem;
   font-size: 4rem;
+  font-weight: normal;
 }
 
 .hidden-intro p {
