@@ -1,5 +1,0 @@
-[[redirects]]
-    from = "/*"
-    to = "https://leesanghyeon.com/"
-    status = 301
-    force = true
