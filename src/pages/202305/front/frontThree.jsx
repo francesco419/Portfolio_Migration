@@ -1,6 +1,7 @@
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Environment } from '@react-three/drei';
 import { Suspense, useEffect, useRef, useState } from 'react';
+import debounce from 'lodash/debounce';
 
 export default function Three({
   autoR = true,
@@ -14,13 +15,14 @@ export default function Three({
   const ref = useRef();
 
   const handleMousePosition = (e) => {
-    e.preventDefault();
     setXY({
       x: e.clientX - Math.floor(ref.current.getBoundingClientRect().left),
       y: e.clientY
     });
     //console.warn = console.error = () => {};
   };
+
+  const debounceMouse = debounce(handleMousePosition);
 
   const handleRotateStateTrue = () => {
     setRotate((rotate) => true);
@@ -30,13 +32,11 @@ export default function Three({
     setRotate((rotate) => false);
   };
 
-  useEffect(() => {}, []);
-
   return (
     <>
       <Canvas
         ref={ref}
-        onMouseMove={lightType ? null : handleMousePosition}
+        onMouseMove={lightType ? null : debounceMouse}
         style={{ cursor: 'pointer', width: '1200px' }}
         camera={{ fov: 60, near: 0.1, far: 100, position: camera }}
         onMouseEnter={autoR ? handleRotateStateFalse : null}

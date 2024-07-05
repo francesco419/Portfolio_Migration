@@ -6,8 +6,8 @@ export default function Project({ projects, num }) {
   return (
     <div className={styles['hidden-project-index']}>
       <picture>
-        <source type='image/webp' srcset={projects.img} loading='lazy' />
-        <img src={projects.img} loading='lazy' />
+        <source type='image/webp' src={projects.img} loading='lazy' />
+        <img src={projects.img} loading='lazy' alt='project Smaple image' />
       </picture>
       <div className={`${styles['hidden-project-front']} ${styles['topleft']}`}>
         <div
@@ -21,7 +21,11 @@ export default function Project({ projects, num }) {
           <img src={open} alt='open' loading='lazy' />
         </div>
         <p>{projects.text}</p>
-        <Link to={`/project/${projects.to}`} className={styles['topleft']} />
+        <Link
+          to={`/project/${projects.to}`}
+          className={styles['topleft']}
+          aria-label='for more about project details'
+        />
       </div>
     </div>
   );
