@@ -83,3 +83,37 @@ Vite Speed Up
   - Avoid Barrel Files ( ex. export \* from './color.js')
   - Large dependencies that are only used in certain cases should be dynamically imported
     - 많이 사용 않하지만, 크기가 큰 라이브러리를 dynamic import를 사용하자.
+
+---
+
+LightHouse 점검
+
+- 0705
+
+  - 성능
+    - 81
+    - 개선 진행
+      - 이미지 크기 명시
+        - 이미지 크기를 명시하지 않는 `inherit`에 대해 수정.
+      - 차세대 형식 이미지 사용
+        - PNG,JPG 등의 파일 형식을 WebP 또는 AVIF 형식으로 제공
+      - font-display
+        - 해당 요소를 사용하는 폰트 CSS(@font-face)에 추가 및 swap 속성을 적용함으로서, 지정한 font가 로드되기전에 브라우저 font를 사용하도록 함으로서 font로드 이전에 사용자가 텍스트를 확인 가능하게 함으로서 성능향상.
+        - 다만, 지정폰트를 사용하는 이유는 디자인에 맞춤이기 때문이므로 기본 폰트를 사용하는것은 어떻게 보면 시각적 요소의 퀄리티를 저하 시킬수도 있다고 생각된다.
+        - swap이 아닌 다은 optional 로도 다른 사용 방법을 할 수 있다.
+      - passive 리스너
+        - 휠, 마우스 move 등의 이벤트에 preventDefault() 추가
+      - 오프스크린 이미지 로딩
+        - 스크롤이 이미지에 도착하기 이전에는 로드시간을 늦춤으로서 성능향상
+        - loading="lazy" 속성 (without 라이브러리)
+        - AMP, Drupal, Joomla, Magento, WordPress 등의 라이브러리 참고
+  - 접근성
+    - 76
+  - 권장사항
+    - 100
+  - 검색엔진 최적화
+    - 80
+  - PWA
+    - N/A
+
+- 크롬 개발자 툴의 Coverage(적용범위) 기능을 이용해 사용되지 않고있는 코드를 줄이고 호출된 파일 구성을 분석하여, 해당 페이지에서 사용되는 코드와 그렇지 않은 코드를 분리함으로서 호출되는 파일의 크기를 줄임으로서 성능향상에 도움.

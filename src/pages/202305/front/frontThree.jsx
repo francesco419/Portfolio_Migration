@@ -14,11 +14,12 @@ export default function Three({
   const ref = useRef();
 
   const handleMousePosition = (e) => {
+    e.preventDefault();
     setXY({
       x: e.clientX - Math.floor(ref.current.getBoundingClientRect().left),
       y: e.clientY
     });
-    console.warn = console.error = () => {};
+    //console.warn = console.error = () => {};
   };
 
   const handleRotateStateTrue = () => {

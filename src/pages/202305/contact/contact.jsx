@@ -15,7 +15,9 @@ export default function Contact({ letter, text, bool }) {
       {bool ? (
         <button onClick={onClickHandler}>{text}</button>
       ) : (
-        <a href={text}>{text}</a>
+        <a href={text} aria-label='url'>
+          {text}
+        </a>
       )}
     </div>
   );

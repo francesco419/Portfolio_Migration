@@ -1,17 +1,17 @@
-import NodeJS from '../pages/skill/asset/svg/nodejs.svg?react';
-import CSS from '../pages/skill/asset/svg/css.svg?react';
-import Git from '../pages/skill/asset/svg/git.svg?react';
-import Github from '../pages/skill/asset/svg/github.svg?react';
-import JavaScript from '../pages/skill/asset/svg/js.svg?react';
-import Notion from '../pages/skill/asset/svg/notion.svg?react';
-import Npm from '../pages/skill/asset/svg/npm.svg?react';
-import ReactSVG from '../pages/skill/asset/svg/react.svg?react';
-import Redux from '../pages/skill/asset/svg/redux.svg?react';
-import SASS from '../pages/skill/asset/svg/sass.svg?react';
-import TS from '../pages/skill/asset/svg/typescript.svg?react';
-import AWS from '../pages/skill/asset/svg/aws.svg?react';
-import HTML from '../pages/skill/asset/svg/html.svg?react';
-import Lodash from '../pages/skill/asset/svg/lodash.svg?react';
+import NodeJS from '@assets/svg/skillSvg/nodejs.svg';
+import CSS from '@assets/svg/skillSvg/css.svg';
+import Git from '@assets/svg/skillSvg/git.svg';
+import Github from '@assets/svg/skillSvg/github.svg';
+import JavaScript from '@assets/svg/skillSvg/js.svg';
+import Notion from '@assets/svg/skillSvg/notion.svg';
+import Npm from '@assets/svg/skillSvg/npm.svg';
+import ReactSVG from '@assets/svg/skillSvg/react.svg';
+import Redux from '@assets/svg/skillSvg/redux.svg';
+import SASS from '@assets/svg/skillSvg/sass.svg';
+import TS from '@assets/svg/skillSvg/typescript.svg';
+import AWS from '@assets/svg/skillSvg/aws.svg';
+import HTML from '@assets/svg/skillSvg/html.svg';
+import Lodash from '@assets/svg/skillSvg/lodash.svg';
 
 export const SHORTEN = [
   [
@@ -44,59 +44,59 @@ export const SHORTEN = [
 export const skillListSVG = [
   {
     name: 'HTML',
-    svg: <HTML />
+    svg: <img src={HTML} alt='HTML' loading='lazy' />
   },
   {
     name: 'CSS',
-    svg: <CSS />
+    svg: <img src={CSS} alt='CSS' loading='lazy' />
   },
   {
     name: 'Sass',
-    svg: <SASS />
+    svg: <img src={SASS} alt='SASS' loading='lazy' />
   },
   {
     name: 'JavaScript',
-    svg: <JavaScript />
+    svg: <img src={JavaScript} alt='JavaScript' loading='lazy' />
   },
   {
     name: 'TypeScript',
-    svg: <TS />
+    svg: <img src={TS} alt='TS' loading='lazy' />
   },
   {
     name: 'Redux',
-    svg: <Redux />
+    svg: <img src={Redux} alt='Redux' loading='lazy' />
   },
   {
     name: 'React',
-    svg: <ReactSVG />
+    svg: <img src={ReactSVG} alt='ReactSVG' loading='lazy' />
   },
   {
     name: 'Git',
-    svg: <Git />
+    svg: <img src={Git} alt='Git' loading='lazy' />
   },
   {
     name: 'Github',
-    svg: <Github />
+    svg: <img src={Github} alt='Github' loading='lazy' />
   },
   {
     name: 'AWS',
-    svg: <AWS />
+    svg: <img src={AWS} alt='AWS' loading='lazy' />
   },
   {
     name: 'Lodash',
-    svg: <Lodash />
+    svg: <img src={Lodash} alt='Lodash' loading='lazy' />
   },
   {
     name: 'Notion',
-    svg: <Notion />
+    svg: <img src={Notion} alt='Notion' loading='lazy' />
   },
   {
     name: 'Npm',
-    svg: <Npm />
+    svg: <img src={Npm} alt='Npm' loading='lazy' />
   },
   {
     name: 'NodeJs',
-    svg: <NodeJS />
+    svg: <img src={NodeJS} alt='NodeJS' loading='lazy' />
   }
 ];
 

@@ -25,10 +25,6 @@
   font-size: 18px;
 }
 
-.front_buttons button:hover {
-  color: #ff4000;
-}
-
 .front_cover {
   display: flex;
   transition: all 2s;

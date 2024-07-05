@@ -65,6 +65,7 @@ export default function FooterContact({ refer }) {
           download='PortFolio'
           target='_blank'
           rel='noopener noreferrer'
+          aria-label='download Resume'
         >
           <button>Download resume</button>
         </a>

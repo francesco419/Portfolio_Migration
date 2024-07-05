@@ -1,6 +1,6 @@
 import styles from './projectPage.module.css';
 import ReactMarkdown from 'react-markdown';
-import { ProjectResultNew } from '../../../../context/ProjectText.jsx';
+import { ProjectResultNew } from '@context/ProjectText.jsx';
 import { useEffect, useState } from 'react';
 import filter from 'lodash/filter';
 import ListContainer from './comp/listContainer.jsx';
@@ -19,14 +19,6 @@ export default function ProjectResult({ project }) {
     setProjectResult(filteredData);
     //project.param과 일치하는 project result 필터링
   }, [project]);
-
-  const linkTag = (link) => {
-    return (
-      <a href={link} target=''>
-        작업일지
-      </a>
-    );
-  };
 
   if (projectResultNull)
     return (
@@ -68,6 +60,7 @@ export default function ProjectResult({ project }) {
                           textDecoration: 'underline',
                           color: 'blue'
                         }}
+                        aria-label='to outter link for work timeline'
                       >
                         작업일지{index + 1}
                       </a>

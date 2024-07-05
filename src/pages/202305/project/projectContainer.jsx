@@ -1,7 +1,7 @@
 import styles from './projectContainer.module.css';
-import { myProjects } from '../../../context/ProjectText.jsx';
+import { myProjects } from '@context/mainProjectText.jsx';
 import { lazy, Suspense } from 'react';
-import { MiddleTitle } from '../../../components/midTitle.jsx';
+import { MiddleTitle } from '@components/midTitle.jsx';
 
 const Project = lazy(() => import('./project'));
 

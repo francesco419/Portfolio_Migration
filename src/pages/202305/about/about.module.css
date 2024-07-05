@@ -91,24 +91,6 @@
   transition: all 1s;
 }
 
-@-webkit-keyframes slideOut {
-  0% {
-    height: 0px;
-  }
-  100% {
-    height: 300px;
-  }
-}
-
-@keyframes slideOut {
-  0% {
-    height: 0px;
-  }
-  100% {
-    height: 300px;
-  }
-}
-
 .hidden-about-detail P {
   font-size: 1.5rem;
   margin: 10px 0;

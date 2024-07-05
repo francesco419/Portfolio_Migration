@@ -58,7 +58,8 @@ export default function ImageZoom({ slideCount, image, changeZoom }) {
       <img
         src={image[count]}
         style={{ maxWidth: '80%', objectFit: 'contain' }}
-      ></img>
+        alt={`project${count}`}
+      />
       <button
         className={styles['my-project-image-button']}
         onClick={() => changeCount(true)}

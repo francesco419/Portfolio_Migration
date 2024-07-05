@@ -36,17 +36,6 @@
   cursor: pointer;
 }
 
-.hidden-contact-csv:hover {
-  filter: brightness(0.8);
-}
-
-.hidden-contact-rights {
-  position: absolute;
-  bottom: 20px;
-  font-size: 10px;
-  color: #cfcfcfcc;
-}
-
 .hidden-rem {
   line-height: 1;
   font-size: 3rem;

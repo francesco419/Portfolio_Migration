@@ -45,7 +45,9 @@ export default function ProjectImage({ project }) {
         onClick={changeZoomImage}
       >
         {project.img.map((data, index) => {
-          return <img src={data} key={`img_${index}`} />;
+          return (
+            <img src={data} key={`img_${index}`} alt={`projectImg_${index}`} />
+          );
         })}
       </div>
       <button

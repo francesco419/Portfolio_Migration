@@ -5,6 +5,14 @@ import { visualizer } from 'rollup-plugin-visualizer';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  server: {
+    warmup: {
+      clientFiles: [
+        './src/style.css',
+        './src/components/notice/notice.module.css'
+      ]
+    }
+  },
   plugins: [
     react(),
     svgr(),
@@ -18,9 +26,10 @@ export default defineConfig({
   resolve: {
     alias: [
       { find: '@', replacement: '/src' },
-      { find: '@components', replacement: './components' },
-      { find: '@context', replacement: './context' },
-      { find: '@redux', replacement: './redux' },
+      { find: '@components', replacement: '/src/components' },
+      { find: '@context', replacement: '/src/context' },
+      { find: '@redux', replacement: '/src/redux' },
+      { find: '@function', replacement: '/src/function' },
       { find: '@assets', replacement: '/src/assets' },
       { find: '@projectImage', replacement: '/src/assets/image/projectImgNew' }
     ]

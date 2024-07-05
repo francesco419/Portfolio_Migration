@@ -13,9 +13,10 @@
     rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
 }
 
+.hidden-project-index source,
 .hidden-project-index img {
-  width: inherit;
-  height: inherit;
+  width: 580px;
+  height: 350px;
   -o-object-fit: cover;
   object-fit: cover;
   border-radius: 20px;

@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import styles from './notice.module.css';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -43,7 +43,10 @@ export default function Notice() {
             <button onClick={onClickHandler}>X</button>
           </div>
           <p>혹시 사이트 주소가 netlify.app으로 끝나나요?</p>
-          <a href={NEW_DOMAIN}>여기</a>를 통해 바뀐 도메인을 통해 접속해보세요.
+          <a href={NEW_DOMAIN} aria-label='to New Domain'>
+            여기
+          </a>
+          를 통해 바뀐 도메인을 통해 접속해보세요.
         </motion.div>
       )}
     </AnimatePresence>

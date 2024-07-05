@@ -1,9 +1,9 @@
 import styles from './myHeader.module.css';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import { ProjectDetailText } from '../../context/ProjectText.jsx';
+import { ProjectDetailText } from '@context/ProjectText.jsx';
 import reverse from 'lodash/reverse';
-import HeaderButton from '@/components/common/headerButton.jsx';
+import HeaderButton from '@components/common/headerButton.jsx';
 
 export default function MyHeader({ refer }) {
   const nav = useNavigate();

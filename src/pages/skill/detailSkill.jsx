@@ -1,5 +1,5 @@
 import styles from './detail.module.css';
-import { skillDescription } from '../../context/SKillText.jsx';
+import { skillDescription } from '@context/SKillText.jsx';
 import filter from 'lodash/filter';
 import { useEffect, useState } from 'react';
 
@@ -18,6 +18,7 @@ export default function DetailSkill({ name }) {
         <a
           href={description[0] ? description[0].description : null}
           target='_blank'
+          aria-label='to skill detail'
         >
           <h2>Link : {name}</h2>
         </a>
