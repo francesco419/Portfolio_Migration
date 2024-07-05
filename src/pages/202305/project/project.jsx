@@ -6,7 +6,7 @@ export default function Project({ projects, num }) {
   return (
     <div className={styles['hidden-project-index']}>
       <picture>
-        <source type='image/webp' srcset={projects.img} loading='lazy' />
+        <source type='image/webp' srcSet={projects.img} loading='lazy' />
         <img src={projects.img} loading='lazy' alt='project Smaple image' />
       </picture>
       <div className={`${styles['hidden-project-front']} ${styles['topleft']}`}>

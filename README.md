@@ -125,3 +125,4 @@ LightHouse 점검
 그외 수정
 
 - three 컴포넌트에 mousemove 이벤트 사용에 호출 수를 줄이기 위해 디바운스 적용
+- glb 파일 압축 (8ball 제외)
