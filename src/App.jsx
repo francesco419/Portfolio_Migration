@@ -10,7 +10,7 @@ const Hidden = lazy(() => import('./pages/202305/hidden.jsx'));
 function App() {
   return (
     <>
-      <Notice />
+      {/* <Notice /> */}
       <HashRouter>
         <Suspense>
           <Routes>
