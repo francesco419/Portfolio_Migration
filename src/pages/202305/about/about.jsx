@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import { setControl } from '@redux/aboutControl.js';
 
 export default function About({ about, count }) {
-  const ref = useRef();
+  const ref = useRef(null);
   const refDetail = useRef();
   const refContainer = useRef();
   const [click, setClick] = useState(true);
@@ -23,19 +23,17 @@ export default function About({ about, count }) {
     const index = refContainer.current.classList;
     //전체 컴포넌트 컨테이너
 
-    if (control === count) {
-      //같은 about 연속 클릭시
-      if (click) {
-        contract(text, absolute, index);
-      } else {
-        expand(text, absolute, index);
-      }
-      setClick((click) => !click);
-    }
-
     if (control !== count) {
       //contract상태에서 해당 about클릭시
       dispatch(setControl(count));
+    } else {
+      //같은 about 연속 클릭시
+      if (click) {
+        expand(text, absolute, index);
+      } else {
+        contract(text, absolute, index);
+      }
+      setClick((click) => !click);
     }
   };
 
