@@ -50,7 +50,7 @@ export default function Three({
         // onMouseEnter={autoR ? handleRotateStateFalse : null}
         //onMouseLeave={autoR ? handleRotateStateTrue : null}
       >
-        <Environment preset='dawn' />
+        <Environment preset='dawn' backgroundBlurriness={1} />
         {/* 
         <OrbitControls
           enableDamping

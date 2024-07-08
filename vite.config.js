@@ -53,8 +53,9 @@ export default defineConfig({
           reactRouter: ['react-router-dom'],
           redux: ['react-redux'],
           animations: ['framer-motion'],
-          threeLib: ['@react-three/drei', '@react-three/fiber'],
-          //fiber: ['@react-three/fiber'],
+          //fiber_drei: ['@react-three/drei', '@react-three/fiber'],
+          drei: ['@react-three/drei'],
+          fiber: ['@react-three/fiber'],
           three: ['three']
         }
       }
