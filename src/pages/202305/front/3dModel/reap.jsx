@@ -26,7 +26,7 @@ export default function Reaper(props) {
       {...props}
       dispose={null}
       scale={0.008}
-      rotation={[0, 0.8, 0]}
+      rotation={[0, 0, 0]}
     >
       <group name='Sketchfab_Scene'>
         <primitive object={nodes._rootJoint} />

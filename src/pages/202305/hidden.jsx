@@ -1,13 +1,13 @@
 import styles from './hidden.module.css';
 import { Suspense, lazy, useRef } from 'react';
-import Markdown from 'react-markdown';
+import MyHeader from './myHeader';
+import TopIndicator from './top/toTop';
+import Front from './front/front';
 
 const ProjectContainer = lazy(() => import('./project/projectContainer.jsx'));
 const AboutContainer = lazy(() => import('./about/aboutContainer.jsx'));
-const MyHeader = lazy(() => import('./myHeader.jsx'));
 const FooterContact = lazy(() => import('./contact/footer.jsx'));
-const TopIndicator = lazy(() => import('./top/toTop.jsx'));
-const Front = lazy(() => import('./front/front.jsx'));
+//const Front = lazy(() => import('./front/front.jsx'));
 const SKillContainer = lazy(() => import('../skill/skillContainer.jsx'));
 
 const INTRO = `끊임없이 변화되는 코드와 함께 성장해나가려고 노력하는 신입 개발자 이상현입니다.
@@ -27,32 +27,32 @@ export default function Hidden() {
 
   return (
     <div className={styles['back']}>
-      <Suspense>
-        <TopIndicator />
-        <main className={styles['hidden']}>
-          <MyHeader
-            refer={{
-              about: about,
-              skill: skill,
-              project: project,
-              contact: contact
-            }}
-          />
-          <section>
-            <div className={styles['hidden-title']}>
-              <h1>{FIRSTCOMMENT}</h1>
-            </div>
-            <Front />
-            <div className={styles['hidden-intro']}>
-              <p>{INTRO}</p>
-            </div>
+      <TopIndicator />
+      <main className={styles['hidden']}>
+        <MyHeader
+          refer={{
+            about: about,
+            skill: skill,
+            project: project,
+            contact: contact
+          }}
+        />
+        <section>
+          <div className={styles['hidden-title']}>
+            <h1>{FIRSTCOMMENT}</h1>
+          </div>
+          <Front />
+          <div className={styles['hidden-intro']}>
+            <p>{INTRO}</p>
+          </div>
+          <Suspense>
             <AboutContainer forwardRef={about} />
             <SKillContainer forwardRef={skill} />
             <ProjectContainer forwardRef={project} />
-          </section>
-          <FooterContact refer={contact} />
-        </main>
-      </Suspense>
+          </Suspense>
+        </section>
+        <FooterContact refer={contact} />
+      </main>
     </div>
   );
 }

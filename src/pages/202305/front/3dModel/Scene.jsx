@@ -14,7 +14,7 @@ import { useGLTF } from '@react-three/drei';
 export default function ModelCar(props) {
   const { nodes, materials } = useGLTF(`/scene-transformed.glb`);
   return (
-    <group {...props} dispose={null} scale={1.4}>
+    <group {...props} dispose={null} scale={1} rotation={[0.2, -0.3, 0]}>
       <mesh
         geometry={
           nodes

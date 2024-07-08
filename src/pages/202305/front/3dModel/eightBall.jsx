@@ -8,13 +8,14 @@ Source: https://sketchfab.com/3d-models/eight-ball-24a32adaf6014528ad71a1de9af6b
 Title: Eight Ball
 */
 
-import React, { useRef } from 'react';
+import React from 'react';
 import { useGLTF } from '@react-three/drei';
 
 export default function EightBall(props) {
   const { nodes, materials } = useGLTF(`/eightBall-transformed.glb`);
+
   return (
-    <group {...props} dispose={null}>
+    <group {...props} dispose={null} scale={0.7}>
       <mesh
         geometry={nodes.Billard_Ball_Front_Side_0.geometry}
         material={materials.Front_Side}

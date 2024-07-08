@@ -3,16 +3,17 @@ import react from '@vitejs/plugin-react-swc';
 import svgr from 'vite-plugin-svgr';
 import { visualizer } from 'rollup-plugin-visualizer';
 import compression from 'vite-plugin-compression2';
+import path from 'path';
 
 // https://vitejs.dev/config/
 export default defineConfig({
   server: {
     warmup: {
       //클라이언튼에서 자주 사용하는 파일을 미리 로드 , 우선순위 up
-      clientFiles: [
+      /* clientFiles: [
         './src/style.css',
         './src/components/notice/notice.module.css'
-      ]
+      ] */
     }
   },
   plugins: [
@@ -52,8 +53,8 @@ export default defineConfig({
           reactRouter: ['react-router-dom'],
           redux: ['react-redux'],
           animations: ['framer-motion'],
-          drei: ['@react-three/drei'],
-          fiber: ['@react-three/fiber'],
+          threeLib: ['@react-three/drei', '@react-three/fiber'],
+          //fiber: ['@react-three/fiber'],
           three: ['three']
         }
       }
