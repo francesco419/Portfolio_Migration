@@ -58,7 +58,14 @@ export default defineConfig({
           fiber: ['@react-three/fiber'],
           three: ['three']
         }
-      }
+      },
+      external: [
+        '/src/pages/front/3dModel/reap.jsx',
+        '/src/pages/front/3dModel/Scene.jsx',
+        '/src/pages/front/controlButton.jsx',
+        '/public/reap-transformed.glb',
+        '/public/scene-transformed.glb'
+      ]
     }
   }
 });

@@ -3,13 +3,23 @@ import { Environment } from '@react-three/drei';
 import { useRef, useState } from 'react';
 import debounce from 'lodash/debounce.js';
 import { Vector3 } from 'three';
+import EightBall from './3dModel/eightBall.jsx';
+/* import ModelCar from './3dModel/Scene.jsx';
+import Reaper from './3dModel/reap.jsx';
+ */
+/* const MODELS = [
+  <EightBall position={[0, -1.5, 0]} />,
+  <Reaper position={[0, -3, 0]} />,
+  <ModelCar position={[0, -0.5, 0]} />
+]; */
 
 export default function Three({
   autoR = true,
   model,
   speed,
   lightType,
-  camera = [5, 5, 5]
+  camera = [5, 5, 5],
+  swipe
 }) {
   const [xy, setXY] = useState({ x: 0, y: 0 });
   //const [rotate, setRotate] = useState(autoR);
@@ -68,7 +78,7 @@ export default function Three({
             color={xy.x ? `#${(xy.x * 13981).toString(16)}` : '#ffffff'}
           />
         )}
-        {model}
+        <EightBall position={[0, -1.5, 0]} />
         <Rig />
       </Canvas>
     </>
