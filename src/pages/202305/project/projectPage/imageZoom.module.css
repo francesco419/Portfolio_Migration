@@ -10,3 +10,17 @@
   background-color: #00000088;
   z-index: 99;
 }
+
+.imageZoom_absButton {
+  position: absolute;
+  top: 1%;
+  right: 1%;
+  background-color: #00000000;
+  border: 0;
+  cursor: pointer;
+}
+
+.imageZoom_mainImg {
+  max-width: 80%;
+  object-fit: contain;
+}

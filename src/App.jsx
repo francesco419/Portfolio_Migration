@@ -16,7 +16,6 @@ function App() {
         <Suspense>
           <Routes>
             <Route path={`/project/:id`} element={<ProjectPage />} />
-
             <Route path={`/`} element={<Hidden />} />
           </Routes>
         </Suspense>

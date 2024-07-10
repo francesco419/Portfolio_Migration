@@ -21,6 +21,19 @@ export default function ImageZoom({ slideCount, image, changeZoom }) {
     }
   };
 
+  /*   const ButtonWrapper = (side) => {
+    return (
+      <ImageButton
+        $left={side ? '0' : null}
+        $right={!side ? '0' : null}
+        $zIndex={'99'}
+        onClick={() => changeCount(side ? false : true)}
+      >
+        <img src={side ? left : right} alt={`image to ${sideleft}`} />
+      </ImageButton>
+    );
+  };
+ */
   return (
     <div className={`${styles['imageZoom']}`}>
       <ImageButton
@@ -31,21 +44,14 @@ export default function ImageZoom({ slideCount, image, changeZoom }) {
         <img src={left} alt='image to left' />
       </ImageButton>
       <button
-        style={{
-          position: 'absolute',
-          top: '1%',
-          right: '1%',
-          backgroundColor: '#00000000',
-          border: 0,
-          cursor: 'pointer'
-        }}
+        className={`${styles['imageZoom_absButton']}`}
         onClick={changeZoom}
       >
         <img src={close} alt='close window' />
       </button>
       <img
+        className={`${styles['imageZoom_mainImg']}`}
         src={image[count]}
-        style={{ maxWidth: '80%', objectFit: 'contain' }}
         alt={`project${count}`}
       />
       <ImageButton

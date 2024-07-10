@@ -1,9 +1,10 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, lazy, Suspense } from 'react';
 import styles from './projectPage.module.css';
 import right from '../assets/right.svg';
 import left from '../assets/left.svg';
-import ImageZoom from './imageZoom.jsx';
 import ImageButton from './button/imageButton';
+
+const LazyImageZoom = lazy(() => import('./imageZoom.jsx'));
 
 export default function ProjectImage({ project }) {
   const [slideCount, setSlideCount] = useState(0);
@@ -26,14 +27,16 @@ export default function ProjectImage({ project }) {
 
   return (
     <div className={styles['my-project-image']}>
-      {zoomImage && (
-        <ImageZoom
-          slideCount={slideCount}
-          buttonClick={buttonClick}
-          image={project.img}
-          changeZoom={changeZoomImage}
-        />
-      )}
+      <Suspense>
+        {zoomImage && (
+          <LazyImageZoom
+            slideCount={slideCount}
+            buttonClick={buttonClick}
+            image={project.img}
+            changeZoom={changeZoomImage}
+          />
+        )}
+      </Suspense>
       <ImageButton left={'0'} onClick={() => buttonClick(false)} $left={0}>
         <img src={left} alt='image to left' />
       </ImageButton>

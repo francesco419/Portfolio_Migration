@@ -18,3 +18,6 @@ const ImageButton = styled.button`
 `;
 
 export default ImageButton;
+/* 
+left: ${(props) => (props.$left ? 0 : 'auto')};
+  right: ${(props) => (props.$right ? 0 : 'auto')}; */

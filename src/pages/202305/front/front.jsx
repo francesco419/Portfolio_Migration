@@ -1,4 +1,4 @@
-import { useState, lazy } from 'react';
+import { lazy } from 'react';
 import styles from './front.module.css';
 /* import useInterval from 'use-interval';
 import ControlButton from './controlButton.jsx'; */
