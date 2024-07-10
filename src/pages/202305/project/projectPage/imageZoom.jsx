@@ -1,8 +1,9 @@
 import right from '../assets/right.svg';
 import left from '../assets/left.svg';
 import close from '../assets/close.svg';
-import styles from './projectPage.module.css';
+import styles from './imageZoom.module.css';
 import { useState } from 'react';
+import ImageButton from './button/imageButton';
 
 export default function ImageZoom({ slideCount, image, changeZoom }) {
   const [count, setCount] = useState(Math.abs(slideCount));
@@ -21,27 +22,14 @@ export default function ImageZoom({ slideCount, image, changeZoom }) {
   };
 
   return (
-    <div
-      style={{
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        width: '100vw',
-        height: '100vh',
-        backgroundColor: '#00000088',
-        zIndex: 99
-      }}
-    >
-      <button
-        className={styles['my-project-image-button']}
+    <div className={`${styles['imageZoom']}`}>
+      <ImageButton
+        $left={'0'}
+        $zIndex={'99'}
         onClick={() => changeCount(false)}
-        style={{ left: 0, zIndex: 99 }}
       >
         <img src={left} alt='image to left' />
-      </button>
+      </ImageButton>
       <button
         style={{
           position: 'absolute',
@@ -60,13 +48,13 @@ export default function ImageZoom({ slideCount, image, changeZoom }) {
         style={{ maxWidth: '80%', objectFit: 'contain' }}
         alt={`project${count}`}
       />
-      <button
-        className={styles['my-project-image-button']}
+      <ImageButton
+        $right={'0'}
+        $zIndex={'99'}
         onClick={() => changeCount(true)}
-        style={{ right: 0, zIndex: 99 }}
       >
         <img src={right} alt='image to right' />
-      </button>
+      </ImageButton>
     </div>
   );
 }

@@ -3,6 +3,7 @@ import styles from './projectPage.module.css';
 import right from '../assets/right.svg';
 import left from '../assets/left.svg';
 import ImageZoom from './imageZoom.jsx';
+import ImageButton from './button/imageButton';
 
 export default function ProjectImage({ project }) {
   const [slideCount, setSlideCount] = useState(0);
@@ -33,12 +34,9 @@ export default function ProjectImage({ project }) {
           changeZoom={changeZoomImage}
         />
       )}
-      <button
-        className={styles['my-project-image-button']}
-        onClick={() => buttonClick(false)}
-      >
+      <ImageButton left={'0'} onClick={() => buttonClick(false)} $left={0}>
         <img src={left} alt='image to left' />
-      </button>
+      </ImageButton>
       <div
         className={styles['my-project-img']}
         style={{ transform: `translateX(${slideCount * 100}%)` }}
@@ -50,13 +48,9 @@ export default function ProjectImage({ project }) {
           );
         })}
       </div>
-      <button
-        className={styles['my-project-image-button']}
-        style={{ right: 0 }}
-        onClick={() => buttonClick(true)}
-      >
+      <ImageButton $right={'0'} onClick={() => buttonClick(true)}>
         <img src={right} alt='image to right' />
-      </button>
+      </ImageButton>
     </div>
   );
 }

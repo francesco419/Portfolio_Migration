@@ -1,6 +1,7 @@
 import styles from './footer.module.css';
 import Contact from './contact.jsx';
-import portfolio from './PortfolioPDF.pdf';
+import ResumeButton from './resumeButton';
+import TitleWrapper from '@components/common/titleWrapper';
 
 export default function FooterContact({ refer }) {
   const myContact = [
@@ -26,27 +27,12 @@ export default function FooterContact({ refer }) {
     }
   ];
 
-  /* 
-  const onButtonClick = () => {
-    // using Java Script method to get PDF file
-    fetch('PortfolioPDF.pdf').then((response) => {
-      response.blob().then((blob) => {
-        // Creating new object of PDF file
-        const fileURL = window.URL.createObjectURL(blob);
-        // Setting various property values
-        let alink = document.createElement('a');
-        alink.href = fileURL;
-        alink.download = 'PortfolioPDF.pdf';
-        alink.click();
-      });
-    });
-  }; 
-  */
-
   return (
-    <footer ref={refer} className={styles['hidden-contact']}>
-      <p className={styles['hidden-rem']}>CONTACT</p>
-      <div className={styles['hidden-contact-contact']}>
+    <footer ref={refer} className={styles['footer']}>
+      <TitleWrapper $lineHeight={1} $size={3} $fontWeight={600}>
+        CONTACT
+      </TitleWrapper>
+      <div>
         {myContact.map((data, index) => {
           return (
             <Contact
@@ -58,21 +44,7 @@ export default function FooterContact({ refer }) {
           );
         })}
       </div>
-      <div className={styles['hidden-contact-csv']}>
-        {/* <button onClick={onButtonClick}>download resume</button> */}
-        <a
-          href={portfolio}
-          download='PortFolio'
-          target='_blank'
-          rel='noopener noreferrer'
-          aria-label='download Resume'
-        >
-          <button>Download resume</button>
-        </a>
-      </div>
-      {/*       <p className={styles['hidden-contact-rights']}>
-        2023@LeeSangHean. All Rights Reserved
-      </p> */}
+      <ResumeButton />
     </footer>
   );
 }

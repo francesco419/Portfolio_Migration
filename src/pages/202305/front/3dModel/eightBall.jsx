@@ -9,7 +9,7 @@ Title: Eight Ball
 */
 
 import React from 'react';
-import { useGLTF } from '@react-three/drei';
+import { useGLTF } from '@react-three/drei/core/Gltf';
 
 export default function EightBall(props) {
   const { nodes, materials } = useGLTF(`/eightBall-transformed.glb`);

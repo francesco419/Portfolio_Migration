@@ -9,8 +9,9 @@ export default function Contact({ letter, text, bool }) {
       alert('클립보드 저장 오류');
     }
   };
+
   return (
-    <div className={styles['hidden-contact-list']}>
+    <div className={styles['contact']}>
       <p>{letter}</p>
       {bool ? (
         <button onClick={onClickHandler}>{text}</button>

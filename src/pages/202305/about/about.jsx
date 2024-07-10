@@ -56,29 +56,29 @@ export default function About({ about, count }) {
     //줄어든다
     text.height = '0px';
     absolute.height = '60px';
-    index.remove(styles['hidden-add']);
+    index.remove(styles['add']);
   };
 
   const expand = (text, absolute, index) => {
     //늘어난다
     text.height = '300px';
     absolute.height = '0px';
-    index.add(styles['hidden-add']);
+    index.add(styles['add']);
   };
 
   return (
     <div
       ref={refContainer}
-      className={styles['hidden-about-index']}
+      className={styles['about-index']}
       onMouseEnter={onClickHandler}
       onMouseLeave={onClickHandler}
     >
-      <div ref={ref} className={styles['hidden-about-abs']} />
-      <div className={styles['hidden-about-titles']}>
-        <p className={styles['hidden-about-num']}>{about.num}</p>
-        <p className={styles['hidden-about-text']}>{about.text}</p>
+      <div ref={ref} className={styles['about-abs']} />
+      <div className={styles['about-titles']}>
+        <p className={styles['about-num']}>{about.num}</p>
+        <p className={styles['about-text']}>{about.text}</p>
       </div>
-      <ul ref={refDetail} className={styles['hidden-about-detail']}>
+      <ul ref={refDetail} className={styles['about-detail']}>
         {about.detail.map((detail, index) => {
           return (
             <li key={`${about.text}_${index}`}>

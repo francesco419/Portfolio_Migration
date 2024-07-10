@@ -3,6 +3,7 @@ import { Suspense, lazy, useRef } from 'react';
 import MyHeader from './myHeader';
 import TopIndicator from './top/toTop';
 import Front from './front/front';
+import TitleWrapper from '@components/common/titleWrapper';
 
 const ProjectContainer = lazy(() => import('./project/projectContainer.jsx'));
 const AboutContainer = lazy(() => import('./about/aboutContainer.jsx'));
@@ -26,7 +27,7 @@ export default function Hidden() {
     contact = useRef();
 
   return (
-    <div className={styles['back']}>
+    <div style={{ background: '#f8f8f8' }}>
       <TopIndicator />
       <main className={styles['hidden']}>
         <MyHeader
@@ -38,13 +39,13 @@ export default function Hidden() {
           }}
         />
         <section>
-          <div className={styles['hidden-title']}>
-            <h1>{FIRSTCOMMENT}</h1>
-          </div>
+          <TitleWrapper $margin $lineHeight={5.3} $size={4} $fontWeight={400}>
+            <p>{FIRSTCOMMENT}</p>
+          </TitleWrapper>
           <Front />
-          <div className={styles['hidden-intro']}>
+          <TitleWrapper $margin $lineHeight={2.7} $size={1.5} $fontWeight={600}>
             <p>{INTRO}</p>
-          </div>
+          </TitleWrapper>
           <Suspense>
             <AboutContainer forwardRef={about} />
             <SKillContainer forwardRef={skill} />

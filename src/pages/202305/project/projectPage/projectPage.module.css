@@ -104,25 +104,6 @@
   }
 }
 
-.my-project-image-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  display: flex;
-  justify-content: space-between;
-  z-index: 90;
-  border: 0;
-  width: 50px;
-  height: 100px;
-  background-color: #00000020;
-  cursor: pointer;
-  color: white;
-}
-
-.my-project-image-button svg {
-  fill: white;
-}
-
 .my-project-img {
   display: flex;
   transition: all 1s;
@@ -199,3 +180,5 @@ top: 50%; */
   height: 100px;
   width: 70px;
 }
+
+/* my-project-image-button : left, right, zindex*/

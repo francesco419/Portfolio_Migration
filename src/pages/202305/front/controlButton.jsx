@@ -1,4 +1,4 @@
-import styles from './front.module.css';
+import styles from './controlButton.module.css';
 
 export default function ControlButton({ swipe, swipeHandler }) {
   return (

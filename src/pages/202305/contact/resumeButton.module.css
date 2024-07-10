@@ -1,0 +1,22 @@
+.resumeButton {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 50px;
+  background-color: #c0c0c0;
+  padding: 10px 20px;
+  color: #000;
+}
+
+.resumeButton a {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.resumeButton button {
+  border: 0;
+  background: none;
+  font-weight: 1000;
+  cursor: pointer;
+}

@@ -1,5 +1,5 @@
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
-import { Environment } from '@react-three/drei';
+import { Environment } from '@react-three/drei/core/Environment';
 import { useRef, useState } from 'react';
 import debounce from 'lodash/debounce.js';
 import { Vector3 } from 'three';

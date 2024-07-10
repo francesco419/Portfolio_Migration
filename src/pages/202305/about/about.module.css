@@ -1,4 +1,4 @@
-.hidden-about-index {
+.about-index {
   position: relative;
   padding: 10px;
   border: 3px solid #00000030;
@@ -17,16 +17,16 @@
   color: #00000030;
 }
 
-.hidden-about-index:hover {
+.about-index:hover {
   border-color: #000;
   color: #000;
 }
 
-.hidden-about-index:hover .hidden-about-abs {
+.about-index:hover .about-abs {
   height: 60px;
 }
 
-.hidden-about-abs {
+.about-abs {
   position: absolute;
   left: -1%;
   bottom: -5px;
@@ -41,27 +41,27 @@
   transition: all 1s;
 }
 
-.hidden-add {
+.add {
   border-color: #000;
   color: #000;
 }
 
-.hidden-about-titles {
+.about-titles {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.hidden-about-titles p:first-child {
+.about-titles p:first-child {
   color: #000;
 }
 
-.hidden-about-num {
+.about-num {
   font-size: 2rem;
   z-index: 3;
 }
 
-.hidden-about-text {
+.about-text {
   margin: 0 0 0 50px;
   font-size: 5rem;
   height: -webkit-min-content;
@@ -71,7 +71,7 @@
   z-index: 3;
 }
 
-.hidden-about-detail {
+.about-detail {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -91,7 +91,7 @@
   transition: all 1s;
 }
 
-.hidden-about-detail P {
+.about-detail P {
   font-size: 1.5rem;
   margin: 10px 0;
   font-weight: 600;

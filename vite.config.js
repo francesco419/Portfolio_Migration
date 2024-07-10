@@ -10,10 +10,7 @@ export default defineConfig({
   server: {
     warmup: {
       //클라이언튼에서 자주 사용하는 파일을 미리 로드 , 우선순위 up
-      /* clientFiles: [
-        './src/style.css',
-        './src/components/notice/notice.module.css'
-      ] */
+      clientFiles: ['./src/style.css', './src/main.jsx']
     }
   },
   plugins: [
@@ -39,6 +36,16 @@ export default defineConfig({
   },
   build: {
     rollupOptions: {
+      /* resolve: {
+        extensions: ['.js'],
+        modules: [path, 'node_modules'],
+        alias: {
+          three: path.join(
+            __dirname,
+            'node_modules/three/build/three.module.js'
+          )
+        }
+      }, */
       plugins: [
         visualizer({
           filename: './dist/report.html',

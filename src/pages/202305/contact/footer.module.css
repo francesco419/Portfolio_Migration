@@ -1,4 +1,4 @@
-.hidden-contact {
+.footer {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -11,33 +11,4 @@
   margin: 100px 0 0;
   background-color: #000;
   color: #fff;
-}
-
-.hidden-contact-csv {
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  border-radius: 50px;
-  background-color: #c0c0c0;
-  padding: 10px 20px;
-  color: #000;
-}
-
-.hidden-contact-csv a {
-  font-size: 1rem;
-  font-weight: 600;
-  line-height: 1;
-}
-
-.hidden-contact-csv button {
-  border: 0;
-  background: none;
-  font-weight: 1000;
-  cursor: pointer;
-}
-
-.hidden-rem {
-  line-height: 1;
-  font-size: 3rem;
-  font-weight: 600;
 }

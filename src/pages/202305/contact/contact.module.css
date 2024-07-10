@@ -1,4 +1,4 @@
-.hidden-contact-list {
+.contact {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -8,13 +8,13 @@
   margin: 0 0 5px;
 }
 
-.hidden-contact-list p:first-child {
+.contact p:first-child {
   margin: 0 20px 0 0;
   color: #949494;
   font-style: italic;
 }
 
-.hidden-contact-list button {
+.contact button {
   background: none;
   border: 0;
   color: #fff;
@@ -22,7 +22,7 @@
   padding: 0;
 }
 
-.hidden-contact-list a {
+.contact a {
   text-decoration: none;
   color: #fff;
   font-size: 1rem;
