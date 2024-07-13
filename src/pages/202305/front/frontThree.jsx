@@ -26,14 +26,20 @@ export default function Three({
   const ref = useRef();
 
   const handleMousePosition = (e) => {
+    e.preventDefault();
     setXY({
-      x: e.clientX - Math.floor(ref.current.getBoundingClientRect().left),
-      y: e.clientY
+      x: e.nativeEvent.offsetX,
+      y: e.nativeEvent.offsetY
     });
-    //console.warn = console.error = () => {};
+    //Ymax = 600
+    //Xmax = 1200
+
+    //백그라운드에 컬러팔레트를 구현하기 위해 
+    console.warn = console.error = () => {};
+    //erroe 핸들링
   };
 
-  const debounceMouse = debounce(handleMousePosition);
+  const debounceMouse = debounce(handleMousePosition,5);
 
   /* 
   //이전 마우스 in/out 에 대한 자동회전 기능 off
@@ -70,14 +76,14 @@ export default function Three({
           enableZoom={false}
         /> 
         */}
-        {lightType ? (
+        {/* {lightType ? (
           <ambientLight intensity={2} color={0xffffff} />
         ) : (
-          <ambientLight
-            intensity={lightType ? 2 : 100}
-            color={xy.x ? `#${(xy.x * 13981).toString(16)}` : '#ffffff'}
-          />
-        )}
+        )} */}
+        <ambientLight
+          intensity={lightType ? 2 : 100}
+          color={`#${(xy.x * 13981).toString(16)}`}
+        />
         <EightBall position={[0, -1.5, 0]} />
         <Rig />
       </Canvas>

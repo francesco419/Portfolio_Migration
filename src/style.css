@@ -8,23 +8,6 @@ html {
   background-color: #f8f8f8;
 }
 
-:root {
-  /* --color-beige: #cdbcab;
-  --color-backBlack: #0c0e0c;
-  --color-black: #292929;
-  --color-light-black: #353535;
-  --color-white: #fff;
-  --color-gray: #c0c0c0;
-  --color-base-blue: #5190f4;
-  --color-dark-blue: #0c3184;
-  --color-teal-blue: #005db9;
-  --color-light-sky-blue: #cfe3fb;
-  --color-light-gray: #d5d9e2;
-  --color-yellow: #edd451;
-  --color-bright-blue: #d0e9ef;
-  --color-brown: #3a2d28; */
-}
-
 a {
   text-decoration: none;
   color: var(--color-black);
