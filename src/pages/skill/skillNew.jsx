@@ -45,6 +45,7 @@ export default function SkillBox({ name, svg, index, handler, node }) {
       }}
       className={`${styles['skill_content']}`}
       onClick={changeClick}
+      title={`Click_to_see_${name}`}
     >
       {svg}
       <p className={styles['skill_content-name']}>{name}</p>

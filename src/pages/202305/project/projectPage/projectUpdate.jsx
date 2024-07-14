@@ -10,12 +10,12 @@ export default function ProjectUpdate({ git, project }) {
       <p>|</p>
       <p>{`Created : ${newDate(git.created_at)}`}</p>
       <div className={styles['my-project-link']}>
-        <a href={project.github} aria-label='to github page'>
+        <a href={project.github} aria-label='to github page' title='to github page'>
           <Git />
         </a>
         {project.url && (
-          <a href={project.url} aria-label='to published page'>
-            <Url />
+          <a href={project.url} aria-label='to published page' title='to published page'>
+            <Url/>
           </a>
         )}
       </div>

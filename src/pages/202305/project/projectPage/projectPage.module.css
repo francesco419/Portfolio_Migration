@@ -55,11 +55,11 @@
 .my-project-link svg {
   height: 30px;
   width: 30px;
-  fill: #00000090;
+  fill: #0080ff;
 }
 
 .my-project-link svg:hover {
-  fill: #000;
+  fill: #0080ff6c;
 }
 
 /*-------------------------------------*/
