@@ -2,13 +2,13 @@ import styles from './hidden.module.css';
 import { Suspense, lazy, useRef } from 'react';
 import MyHeader from './myHeader';
 import TopIndicator from './top/toTop';
-import Front from './front/front';
+//import Front from './front/front';
 import TitleWrapper from '@components/common/titleWrapper';
 
 const ProjectContainer = lazy(() => import('./project/projectContainer.jsx'));
 const AboutContainer = lazy(() => import('./about/aboutContainer.jsx'));
 const FooterContact = lazy(() => import('./contact/footer.jsx'));
-//const Front = lazy(() => import('./front/front.jsx'));
+const Front = lazy(() => import('./front/front.jsx'));
 const SKillContainer = lazy(() => import('../skill/skillContainer.jsx'));
 
 const INTRO = `끊임없이 변화되는 코드와 함께 성장해나가려고 노력하는 신입 개발자 이상현입니다.
