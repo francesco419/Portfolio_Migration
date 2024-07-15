@@ -1,14 +1,15 @@
 .footer {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  padding: 40px 40px 20px;
-  height: 150px;
-  margin: 100px 0 0;
-  background-color: #000;
-  color: #fff;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 40px 40px 20px;
+    height: 150px;
+    margin: 100px auto 0;
+    background-color: #000;
+    color: #fff;
+    max-width: 1200px;
 }

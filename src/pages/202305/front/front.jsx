@@ -1,8 +1,8 @@
 import { lazy } from 'react';
 import styles from './front.module.css';
+import Three from './frontThree';
 /* import useInterval from 'use-interval';
 import ControlButton from './controlButton.jsx'; */
-const LazyThree = lazy(() => import('./frontThree.jsx'));
 
 const DARYA = { background: 'linear-gradient(to right, #5f2c82, #49a09d)' };
 /* const TITANIUM = { background: 'linear-gradient(to right, #283048, #859398)' };
@@ -44,7 +44,7 @@ export default function Front() {
       style={DARYA}
     >
       {/* <ControlButton swipe={swipe} swipeHandler={swipeHandler} /> */}
-      <LazyThree />
+      <Three />
     </div>
   );
 }

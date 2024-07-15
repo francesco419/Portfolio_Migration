@@ -1,20 +1,18 @@
 .header {
-  display: flex;
-  justify-content: center;
-  padding: 20px 0;
-  font-family: 'IBMPlexSansKR-Regular';
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    font-family: "IBMPlexSansKR-Regular";
 }
 
-.header ul{
-  display: flex;
-  width:1200px;
-  justify-content: flex-end;
-  margin:0;
-  list-style-type: none;
-  padding:0;
+.header-ul {
+    display: flex;
+    width: 1200px;
+    justify-content: flex-end;
+    margin: 0;
+    list-style-type: none;
+    padding: 0;
 }
-
-
 
 /* .hidden-header button {
   position: relative;
@@ -28,34 +26,34 @@
 } */
 
 .hidden-header-link {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 5px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  padding: 10px 0;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 5px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    padding: 10px 0;
 }
 
 .hidden-header-link * {
-  margin-bottom: 10px;
-  text-align: start;
-  color: #bbbbbb;
+    margin-bottom: 10px;
+    text-align: start;
+    color: #bbbbbb;
 }
 
 .hidden-header-project:hover .hidden-header-link,
 .hidden-header-link:hover {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
 }
 
 .hidden-header-link *:hover {
-  color: #000;
-  text-decoration: underline;
+    color: #000;
+    text-decoration: underline;
 }

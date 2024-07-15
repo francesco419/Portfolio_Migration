@@ -1,18 +1,68 @@
-import styles from './myHeader.module.css';
-import { useNavigate } from 'react-router-dom';
-import { Link } from 'react-router-dom';
-import { ProjectDetailText } from '@context/ProjectText.jsx';
-import reverse from 'lodash/reverse';
-import HeaderButton from '@components/common/headerButton.jsx';
-import LinkRouter from '@components/common/linkRouter';
+import styles from "./myHeader.module.css";
+import { Link, useLocation } from "react-router-dom";
+import { ProjectDetailText } from "@context/ProjectText.jsx";
+import reverse from "lodash/reverse.js";
+import HeaderButton from "@components/common/headerButton.jsx";
+import LinkRouter from "@components/common/linkRouter.jsx";
 
-export default function MyHeader({ refer }) {
+const ABOUT_OFFSETTOP = 1291;
+const SKILL_OFFSETTOP = 2079;
+const PROJECT_OFFSETTOP = 3421;
 
-  const onClickHandler = (ref) => {
-    window.scrollTo(0, ref.current.offsetTop);
-  };
+export default function MyHeader() {
+    const onClickHandler = (ref) => {
+        window.scrollTo(0, ref);
+    };
 
-  if (refer === null) {
+    const loc = useLocation();
+    console.log(loc.pathname === "/");
+
+    return (
+        <nav className={styles["header"]}>
+            <ul className={styles["header-ul"]}>
+                {loc.pathname === "/" ? (
+                    <>
+                        <li>
+                            <HeaderButton onClick={() => onClickHandler(ABOUT_OFFSETTOP)}>
+                                ABOUT
+                            </HeaderButton>
+                        </li>
+                        <li>
+                            <HeaderButton onClick={() => onClickHandler(SKILL_OFFSETTOP)}>
+                                SKILL
+                            </HeaderButton>
+                        </li>
+                    </>
+                ) : (
+                    <li>
+                        <LinkRouter to={`/`}>MAIN</LinkRouter>
+                    </li>
+                )}
+                <li>
+                    <HeaderButton
+                        className={styles["hidden-header-project"]}
+                        onClick={() => onClickHandler(PROJECT_OFFSETTOP)}
+                    >
+                        PROJECT
+                        <ul className={styles["hidden-header-link"]}>
+                            {reverse(ProjectDetailText).map((o) => {
+                                if (o.show === true)
+                                    return (
+                                        <li>
+                                            <Link to={`/project/${o.param}`} key={o.name}>
+                                                {o.name}
+                                            </Link>
+                                        </li>
+                                    );
+                            })}
+                        </ul>
+                    </HeaderButton>
+                </li>
+            </ul>
+        </nav>
+    );
+
+    /* if (refer === null) {
     return (
       <nav className={styles['header']}>
         <ul>
@@ -77,5 +127,5 @@ export default function MyHeader({ refer }) {
         </ul>
       </nav>
     );
-  }
+  } */
 }

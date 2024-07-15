@@ -43,6 +43,10 @@ export const SHORTEN = [
 
 export const skillListSVG = [
   {
+    name: 'JavaScript',
+    svg: <img src={JavaScript} alt='JavaScript' loading='lazy' />
+  },
+  {
     name: 'HTML',
     svg: <img src={HTML} alt='HTML' loading='lazy' />
   },
@@ -51,12 +55,8 @@ export const skillListSVG = [
     svg: <img src={CSS} alt='CSS' loading='lazy' />
   },
   {
-    name: 'Sass',
-    svg: <img src={SASS} alt='SASS' loading='lazy' />
-  },
-  {
-    name: 'JavaScript',
-    svg: <img src={JavaScript} alt='JavaScript' loading='lazy' />
+    name: 'React',
+    svg: <img src={ReactSVG} alt='ReactSVG' loading='lazy' />
   },
   {
     name: 'TypeScript',
@@ -67,8 +67,16 @@ export const skillListSVG = [
     svg: <img src={Redux} alt='Redux' loading='lazy' />
   },
   {
-    name: 'React',
-    svg: <img src={ReactSVG} alt='ReactSVG' loading='lazy' />
+    name: 'SCSS',
+    svg: <img src={SASS} alt='SASS' loading='lazy' />
+  },
+  {
+    name: 'AWS',
+    svg: <img src={AWS} alt='AWS' loading='lazy' />
+  },
+  {
+    name: 'Npm',
+    svg: <img src={Npm} alt='Npm' loading='lazy' />
   },
   {
     name: 'Git',
@@ -79,20 +87,12 @@ export const skillListSVG = [
     svg: <img src={Github} alt='Github' loading='lazy' />
   },
   {
-    name: 'AWS',
-    svg: <img src={AWS} alt='AWS' loading='lazy' />
-  },
-  {
     name: 'Lodash',
     svg: <img src={Lodash} alt='Lodash' loading='lazy' />
   },
   {
     name: 'Notion',
     svg: <img src={Notion} alt='Notion' loading='lazy' />
-  },
-  {
-    name: 'Npm',
-    svg: <img src={Npm} alt='Npm' loading='lazy' />
   },
   {
     name: 'NodeJs',
