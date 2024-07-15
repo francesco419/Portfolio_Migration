@@ -2,11 +2,6 @@
   position: relative;
   display: flex;
   height: 600px;
-  transition: background 1s linear;
   border-radius: 25px;
   overflow: hidden;
-}
-.front_cover {
-  display: flex;
-  transition: all 2s;
 }

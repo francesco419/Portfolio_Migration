@@ -10,7 +10,7 @@ export default defineConfig({
   server: {
     warmup: {
       //클라이언튼에서 자주 사용하는 파일을 미리 로드 , 우선순위 up
-      //clientFiles: ['./src/style.css', './src/main.jsx']
+      //npm run ddeclientFiles: ['./src/style.css', './src/main.jsx']
     }
   },
   plugins: [

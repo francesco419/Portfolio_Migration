@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 import { ProjectDetailText } from '@context/ProjectText.jsx';
 import reverse from 'lodash/reverse';
 import HeaderButton from '@components/common/headerButton.jsx';
+import LinkRouter from '@components/common/linkRouter';
 
 export default function MyHeader({ refer }) {
-  const nav = useNavigate();
 
   const onClickHandler = (ref) => {
     window.scrollTo(0, ref.current.offsetTop);
@@ -14,8 +14,12 @@ export default function MyHeader({ refer }) {
 
   if (refer === null) {
     return (
-      <header className={styles['hidden-header']}>
-        <HeaderButton onClick={() => nav(`/`)}>MAIN</HeaderButton>
+      <nav className={styles['header']}>
+        <ul>
+          <li>
+        <LinkRouter to={`/`}>MAIN</LinkRouter>
+          </li>
+          <li>
         <HeaderButton className={styles['hidden-header-project']}>
           PROJECT
           <div className={styles['hidden-header-link']}>
@@ -29,17 +33,25 @@ export default function MyHeader({ refer }) {
             })}
           </div>
         </HeaderButton>
-      </header>
+          </li>
+        </ul>
+      </nav>
     );
   } else {
     return (
-      <header className={styles['hidden-header']}>
+      <nav className={styles['header']}>
+        <ul>
+          <li>
         <HeaderButton onClick={() => onClickHandler(refer.about)}>
           ABOUT
         </HeaderButton>
+          </li>
+          <li>
         <HeaderButton onClick={() => onClickHandler(refer.skill)}>
           SKILL
         </HeaderButton>
+          </li>
+          <li>
         <HeaderButton
           className={styles['hidden-header-project']}
           onClick={() => onClickHandler(refer.project)}
@@ -56,10 +68,14 @@ export default function MyHeader({ refer }) {
             })}
           </div>
         </HeaderButton>
+          </li>
+          <li>
         <HeaderButton onClick={() => onClickHandler(refer.contact)}>
           CONTACT
         </HeaderButton>
-      </header>
+          </li>
+        </ul>
+      </nav>
     );
   }
 }

@@ -1,13 +1,20 @@
-.hidden-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.header {
   display: flex;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: end;
+  justify-content: center;
   padding: 20px 0;
   font-family: 'IBMPlexSansKR-Regular';
 }
+
+.header ul{
+  display: flex;
+  width:1200px;
+  justify-content: flex-end;
+  margin:0;
+  list-style-type: none;
+  padding:0;
+}
+
+
 
 /* .hidden-header button {
   position: relative;

@@ -5,7 +5,6 @@ import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import { ProjectDetailText } from '@context/ProjectText.jsx';
 import FooterContact from '../../contact/footer.jsx';
-import TopIndicator from '../../top/toTop.jsx';
 import { useDispatch, useSelector } from 'react-redux';
 import { setProject } from '@redux/project.js';
 import ProjectImage from './projectImage.jsx';
@@ -55,7 +54,6 @@ export default function ProjectPage() {
   } else {
     return (
       <div className={styles['my-container']}>
-        <TopIndicator />
         <div className={styles['my-project']}>
           <MyHeader refer={null} />
           <p

@@ -13,13 +13,20 @@ import Reaper from './3dModel/reap.jsx';
   <ModelCar position={[0, -0.5, 0]} />
 ]; */
 
+function Rig() {
+  // 항상 같이 랜더링
+  const { camera, mouse } = useThree();
+  const vec = new Vector3();
+
+  return useFrame(() => {
+    camera.position.lerp(vec.set(-mouse.x, -mouse.y, camera.position.z), 0.05);
+    camera.lookAt(0, 0, 0);
+  });
+}
+
 export default function Three({
-  autoR = true,
-  model,
-  speed,
   lightType,
   camera = [5, 5, 5],
-  swipe
 }) {
   const [xy, setXY] = useState({ x: 0, y: 0 });
   //const [rotate, setRotate] = useState(autoR);
@@ -66,7 +73,7 @@ export default function Three({
         // onMouseEnter={autoR ? handleRotateStateFalse : null}
         //onMouseLeave={autoR ? handleRotateStateTrue : null}
       >
-        <Environment preset='dawn' backgroundBlurriness={1} />
+        <Environment preset='dawn' />
         {/* 
         <OrbitControls
           enableDamping
@@ -89,15 +96,4 @@ export default function Three({
       </Canvas>
     </>
   );
-}
-
-function Rig() {
-  // 항상 같이 랜더링
-  const { camera, mouse } = useThree();
-  const vec = new Vector3();
-
-  return useFrame(() => {
-    camera.position.lerp(vec.set(-mouse.x, -mouse.y, camera.position.z), 0.05);
-    camera.lookAt(0, 0, 0);
-  });
 }

@@ -1,7 +1,5 @@
 import styles from './hidden.module.css';
 import { Suspense, lazy, useRef } from 'react';
-import MyHeader from './myHeader';
-import TopIndicator from './top/toTop';
 //import Front from './front/front';
 import TitleWrapper from '@components/common/titleWrapper';
 
@@ -27,17 +25,7 @@ export default function Hidden() {
     contact = useRef();
 
   return (
-    <div style={{ background: '#f8f8f8' }}>
-      <TopIndicator />
       <main className={styles['hidden']}>
-        <MyHeader
-          refer={{
-            about: about,
-            skill: skill,
-            project: project,
-            contact: contact
-          }}
-        />
         <section>
           <TitleWrapper $margin $lineHeight={5.3} $size={4} $fontWeight={400}>
             <p>{FIRSTCOMMENT}</p>
@@ -46,6 +34,8 @@ export default function Hidden() {
           <TitleWrapper $margin $lineHeight={2.7} $size={1.5} $fontWeight={600}>
             <p>{INTRO}</p>
           </TitleWrapper>
+        </section>
+        <section>
           <Suspense>
             <AboutContainer forwardRef={about} />
             <SKillContainer forwardRef={skill} />
@@ -54,6 +44,5 @@ export default function Hidden() {
         </section>
         <FooterContact refer={contact} />
       </main>
-    </div>
   );
 }
