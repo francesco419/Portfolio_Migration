@@ -15,7 +15,7 @@ export default function EightBall(props) {
     const { nodes, materials } = useGLTF(`/eightBall-transformed.glb`);
 
     return (
-        <group {...props} dispose={null} scale={0.7}>
+        <group {...props} dispose={null} scale={0.6}>
             <mesh
                 geometry={nodes.Billard_Ball_Front_Side_0.geometry}
                 material={materials.Front_Side}
