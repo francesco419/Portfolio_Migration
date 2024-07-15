@@ -29,7 +29,6 @@ function Rig() {
 export default function Three({ camera = [5, 5, 5] }) {
     const [x, setX] = useState("#666fd9");
     //const [rotate, setRotate] = useState(autoR);
-    const ref = useRef();
 
     const handleMousePosition = (e) => {
         e.preventDefault();
@@ -58,13 +57,12 @@ export default function Three({ camera = [5, 5, 5] }) {
     return (
         <div className={styles["front"]}>
             <Canvas
-                ref={ref}
                 onMouseMove={debounceMouse}
                 style={{
                     cursor: "pointer",
                     width: "1200px",
                 }}
-                camera={{ fov: 60, near: 0.1, far: 100, position: camera }}
+                //camera={{ fov: 60, near: 0.1, far: 100, position: camera }}
                 // onMouseEnter={autoR ? handleRotateStateFalse : null}
                 //onMouseLeave={autoR ? handleRotateStateTrue : null}
             >
@@ -83,7 +81,7 @@ export default function Three({ camera = [5, 5, 5] }) {
         ) : (
         )} */}
                 <ambientLight intensity={10} color={x} />
-                <EightBall position={[0, -1.5, 0]} />
+                <EightBall />
                 <Rig />
             </Canvas>
         </div>

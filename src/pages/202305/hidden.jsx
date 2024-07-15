@@ -1,5 +1,5 @@
 import styles from "./hidden.module.css";
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import Three from "./front/frontThree.jsx";
 import TitleWrapper from "@components/common/titleWrapper.jsx";
 import ProjectContainer from "./project/projectContainer.jsx";
