@@ -219,4 +219,4 @@ LightHouse 점검
     -   Project 페이지 진입시 맨 밑으로 자동 스크롤 되는 의도치 않은 동작 발생
 
         -   이미 코드에 `window.scroll()` 사용을 하고 있지만 동작 안됨.
-        -   라우터
+        -   라우터 전환시 바뀌는 `url`의 `param` 항목에 대한 `useEffect`를 따로 구성하여 정상 작동되는 `window.scroll()` 사용.
