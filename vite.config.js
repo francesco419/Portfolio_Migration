@@ -22,7 +22,7 @@ export default defineConfig({
             brotliSize: true,
         }),
     ],
-    assetsInclude: ["**/*.PNG"],
+    assetsInclude: ["**/*.PNG", "**/*.hdr", "**/*.jpg"],
     resolve: {
         alias: [
             { find: "@", replacement: "/src" },

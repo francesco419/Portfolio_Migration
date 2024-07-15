@@ -45,10 +45,10 @@ export default function MyHeader() {
                     >
                         PROJECT
                         <ul className={styles["hidden-header-link"]}>
-                            {reverse(ProjectDetailText).map((o) => {
+                            {reverse(ProjectDetailText).map((o, index) => {
                                 if (o.show === true)
                                     return (
-                                        <li>
+                                        <li key={`header_project_${index}`}>
                                             <Link to={`/project/${o.param}`} key={o.name}>
                                                 {o.name}
                                             </Link>

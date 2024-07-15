@@ -1,9 +1,10 @@
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { Environment } from "@react-three/drei/core/Environment";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import debounce from "lodash/debounce.js";
 import { Vector3 } from "three";
 import EightBall from "./3dModel/eightBall.jsx";
+import hdrFile from "./img/zfile.jpg";
 /* import ModelCar from './3dModel/Scene.jsx';
 import Reaper from './3dModel/reap.jsx';
  */
@@ -39,7 +40,11 @@ export default function Three({ lightType, camera = [5, 5, 5] }) {
         //erroe 핸들링
     };
 
-    const debounceMouse = debounce(handleMousePosition);
+    const debounceMouse = debounce(handleMousePosition, 10);
+
+    useEffect(() => {
+        console.log("three load");
+    }, []);
 
     /* 
   //이전 마우스 in/out 에 대한 자동회전 기능 off
@@ -66,7 +71,7 @@ export default function Three({ lightType, camera = [5, 5, 5] }) {
                 // onMouseEnter={autoR ? handleRotateStateFalse : null}
                 //onMouseLeave={autoR ? handleRotateStateTrue : null}
             >
-                <Environment preset='dawn' />
+                <Environment files={hdrFile} />
                 {/* 
         <OrbitControls
           enableDamping

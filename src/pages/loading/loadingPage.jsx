@@ -8,8 +8,8 @@ export default function LoadingPage() {
             transition={{ duration: 1 }}
             className={styles["loading"]}
         >
-            <span class={styles["loaderOut"]}>
-                <span class={styles["loader"]}></span>
+            <span className={styles["loaderOut"]}>
+                <span className={styles["loader"]}></span>
             </span>
         </motion.div>
     );

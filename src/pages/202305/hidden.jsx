@@ -1,5 +1,5 @@
 import styles from "./hidden.module.css";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import Front from "./front/front";
 import TitleWrapper from "@components/common/titleWrapper.jsx";
 import ProjectContainer from "./project/projectContainer.jsx";
@@ -19,6 +19,9 @@ const FIRSTCOMMENT = `상상에 멈추지 않고 코드를 통해
 이상현입니다.`;
 
 export default function Hidden() {
+    useEffect(() => {
+        console.log("main load");
+    }, []);
     return (
         <main className={styles["hidden"]}>
             <section>

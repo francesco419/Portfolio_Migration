@@ -37,7 +37,7 @@ export default function ProjectImage({ project }) {
                     />
                 )}
             </Suspense>
-            <ImageButton left={"0"} onClick={() => buttonClick(false)} $left={0}>
+            <ImageButton $left={true} onClick={() => buttonClick(false)}>
                 <img src={left} alt='image to left' />
             </ImageButton>
             <div
@@ -49,7 +49,7 @@ export default function ProjectImage({ project }) {
                     return <img src={data} key={`img_${index}`} alt={`projectImg_${index}`} />;
                 })}
             </div>
-            <ImageButton $right={"0"} onClick={() => buttonClick(true)}>
+            <ImageButton $left={false} onClick={() => buttonClick(true)}>
                 <img src={right} alt='image to right' />
             </ImageButton>
         </div>
