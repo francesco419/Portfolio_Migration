@@ -4,7 +4,8 @@ import { useEffect, useRef, useState } from "react";
 import debounce from "lodash/debounce.js";
 import { Vector3 } from "three";
 import EightBall from "./3dModel/eightBall.jsx";
-import hdrFile from "./img/zfile.jpg";
+import hdrFile from "./img/file.hdr";
+import styles from "./front.module.css";
 /* import ModelCar from './3dModel/Scene.jsx';
 import Reaper from './3dModel/reap.jsx';
  */
@@ -25,8 +26,8 @@ function Rig() {
     });
 }
 
-export default function Three({ lightType, camera = [5, 5, 5] }) {
-    const [x, setX] = useState();
+export default function Three({ camera = [5, 5, 5] }) {
+    const [x, setX] = useState("#666fd9");
     //const [rotate, setRotate] = useState(autoR);
     const ref = useRef();
 
@@ -40,11 +41,7 @@ export default function Three({ lightType, camera = [5, 5, 5] }) {
         //erroe 핸들링
     };
 
-    const debounceMouse = debounce(handleMousePosition, 10);
-
-    useEffect(() => {
-        console.log("three load");
-    }, []);
+    const debounceMouse = debounce(handleMousePosition, 20);
 
     /* 
   //이전 마우스 in/out 에 대한 자동회전 기능 off
@@ -59,10 +56,10 @@ export default function Three({ lightType, camera = [5, 5, 5] }) {
   */
 
     return (
-        <>
+        <div className={styles["front"]}>
             <Canvas
                 ref={ref}
-                onMouseMove={lightType ? null : debounceMouse}
+                onMouseMove={debounceMouse}
                 style={{
                     cursor: "pointer",
                     width: "1200px",
@@ -71,7 +68,7 @@ export default function Three({ lightType, camera = [5, 5, 5] }) {
                 // onMouseEnter={autoR ? handleRotateStateFalse : null}
                 //onMouseLeave={autoR ? handleRotateStateTrue : null}
             >
-                <Environment files={hdrFile} />
+                <Environment background files={hdrFile} />
                 {/* 
         <OrbitControls
           enableDamping
@@ -85,10 +82,10 @@ export default function Three({ lightType, camera = [5, 5, 5] }) {
           <ambientLight intensity={2} color={0xffffff} />
         ) : (
         )} */}
-                <ambientLight intensity={lightType ? 2 : 100} color={x} />
+                <ambientLight intensity={10} color={x} />
                 <EightBall position={[0, -1.5, 0]} />
                 <Rig />
             </Canvas>
-        </>
+        </div>
     );
 }

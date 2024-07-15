@@ -1,11 +1,10 @@
 import styles from "./hidden.module.css";
 import { useEffect, useRef } from "react";
-import Front from "./front/front";
+import Three from "./front/frontThree.jsx";
 import TitleWrapper from "@components/common/titleWrapper.jsx";
 import ProjectContainer from "./project/projectContainer.jsx";
 import AboutContainer from "./about/aboutContainer.jsx";
 import SKillContainer from "../skill/skillContainer.jsx";
-import FooterContact from "./contact/footer.jsx";
 
 //const ProjectContainer = lazy(() => import('./project/projectContainer.jsx'));
 
@@ -28,7 +27,7 @@ export default function Hidden() {
                 <TitleWrapper $margin $lineHeight={5.3} $size={4} $fontWeight={400}>
                     <p>{FIRSTCOMMENT}</p>
                 </TitleWrapper>
-                <Front />
+                <Three />
                 <TitleWrapper $margin $lineHeight={2.7} $size={1.5} $fontWeight={600}>
                     <p>{INTRO}</p>
                 </TitleWrapper>

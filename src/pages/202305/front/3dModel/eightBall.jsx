@@ -8,28 +8,25 @@ Source: https://sketchfab.com/3d-models/eight-ball-24a32adaf6014528ad71a1de9af6b
 Title: Eight Ball
 */
 
-import React from 'react';
-import { useGLTF } from '@react-three/drei/core/Gltf';
+import React from "react";
+import { useGLTF } from "@react-three/drei/core/Gltf";
 
 export default function EightBall(props) {
-  const { nodes, materials } = useGLTF(`/eightBall-transformed.glb`);
+    const { nodes, materials } = useGLTF(`/eightBall-transformed.glb`);
 
-  return (
-    <group {...props} dispose={null} scale={0.7}>
-      <mesh
-        geometry={nodes.Billard_Ball_Front_Side_0.geometry}
-        material={materials.Front_Side}
-      />
-      <mesh
-        geometry={nodes.Billard_Ball_lambert1_0.geometry}
-        material={materials.lambert1}
-      />
-      <mesh
-        geometry={nodes.Billard_Ball_Back_Side_0.geometry}
-        material={materials.Back_Side}
-      />
-    </group>
-  );
+    return (
+        <group {...props} dispose={null} scale={0.7}>
+            <mesh
+                geometry={nodes.Billard_Ball_Front_Side_0.geometry}
+                material={materials.Front_Side}
+            />
+            <mesh geometry={nodes.Billard_Ball_lambert1_0.geometry} material={materials.lambert1} />
+            <mesh
+                geometry={nodes.Billard_Ball_Back_Side_0.geometry}
+                material={materials.Back_Side}
+            />
+        </group>
+    );
 }
 
 useGLTF.preload(`/eightBall-transformed.glb`);

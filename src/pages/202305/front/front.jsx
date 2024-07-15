@@ -1,10 +1,10 @@
-import { lazy } from 'react';
-import styles from './front.module.css';
-import Three from './frontThree';
+import { lazy } from "react";
+import styles from "./front.module.css";
+import Three from "./frontThree";
 /* import useInterval from 'use-interval';
 import ControlButton from './controlButton.jsx'; */
 
-const DARYA = { background: 'linear-gradient(to right, #5f2c82, #49a09d)' };
+const DARYA = { background: "linear-gradient(to right, #5f2c82, #49a09d)" };
 /* const TITANIUM = { background: 'linear-gradient(to right, #283048, #859398)' };
 const ARGON = {
   background: 'linear-gradient(to right, #03001e, #7303c0, #ec38bc, #fdeff9)'
@@ -13,10 +13,10 @@ const ARGON = {
 //const MODELLENGTH = 3;
 
 export default function Front() {
-  /* const [swipe, setSwipe] = useState(0);
+    /* const [swipe, setSwipe] = useState(0);
   const [mouseOver, setMouseOver] = useState(false); */
 
-  /* useInterval(() => {
+    /* useInterval(() => {
     if (mouseOver) {
       return;
     }
@@ -36,17 +36,16 @@ export default function Front() {
     setSwipe((swipe) => number);
   }; */
 
-  return (
-    <div
-      className={styles['front']}
-      /* onMouseEnter={changeMouseEnter}
+    return (
+        <div
+            className={styles["front"]}
+            /* onMouseEnter={changeMouseEnter}
       onMouseLeave={changeMouseLeave} */
-      style={DARYA}
-    >
-      {/* <ControlButton swipe={swipe} swipeHandler={swipeHandler} /> */}
-      <Three />
-    </div>
-  );
+        >
+            {/* <ControlButton swipe={swipe} swipeHandler={swipeHandler} /> */}
+            <Three />
+        </div>
+    );
 }
 
 /* const MODELS = [
@@ -73,7 +72,7 @@ export default function Front() {
     }
   ]; */
 
-   /* {MODELS.map((o) => {
+/* {MODELS.map((o) => {
       return (
           <LazyThree
             model={o.model}
