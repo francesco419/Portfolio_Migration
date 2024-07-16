@@ -13,6 +13,12 @@ import { useGLTF } from "@react-three/drei/core/Gltf";
 
 export default function EightBall(props) {
     const { nodes, materials } = useGLTF(`/eightBall-transformed.glb`);
+    /* const [dummy] = useState(() => new THREE.Object3D());
+
+    useFrame((state, dt) => {
+        dummy.lookAt(state.pointer.x, state.pointer.y, 1);
+        easing.dampQ(mesh.current.quaternion, dummy.quaternion, 0.5, dt);
+    }); */
 
     return (
         <group {...props} position={[0, -1.5, 0]} dispose={null} scale={0.7}>

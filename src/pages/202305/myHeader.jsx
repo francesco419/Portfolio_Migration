@@ -1,7 +1,6 @@
 import styles from "./myHeader.module.css";
 import { Link, useLocation } from "react-router-dom";
 import { ProjectDetailText } from "@context/ProjectText.jsx";
-import reverse from "lodash/reverse.js";
 import HeaderButton from "@components/common/headerButton.jsx";
 import LinkRouter from "@components/common/linkRouter.jsx";
 
@@ -45,7 +44,7 @@ export default function MyHeader() {
                     >
                         PROJECT
                         <ul className={styles["hidden-header-link"]}>
-                            {reverse(ProjectDetailText).map((o, index) => {
+                            {ProjectDetailText.map((o, index) => {
                                 if (o.show === true)
                                     return (
                                         <li key={`header_project_${index}`}>

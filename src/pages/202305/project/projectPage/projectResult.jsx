@@ -2,7 +2,6 @@ import styles from "./projectPage.module.css";
 import ReactMarkdown from "react-markdown";
 import { ProjectResultNew } from "@context/ProjectText.jsx";
 import { useEffect, useState } from "react";
-import filter from "lodash/filter";
 import ListContainer from "./comp/listContainer.jsx";
 
 export default function ProjectResult({ project }) {
@@ -10,7 +9,10 @@ export default function ProjectResult({ project }) {
     const [projectResultNull, setProjectResultNull] = useState(null);
 
     useEffect(() => {
-        const filteredData = filter(ProjectResultNew, { name: project.name });
+        const filteredData = ProjectResultNew.filter((o) => {
+            return project.name === o.name;
+        });
+        console.log(filteredData);
         if (filteredData.length === 0) {
             setProjectResultNull(project);
             return;

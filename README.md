@@ -223,3 +223,13 @@ LightHouse 점검
 
         -   이미 코드에 `window.scroll()` 사용을 하고 있지만 동작 안됨.
         -   라우터 전환시 바뀌는 `url`의 `param` 항목에 대한 `useEffect`를 따로 구성하여 정상 작동되는 `window.scroll()` 사용.
+
+---
+
+0716
+
+    - 페이지 입장시 깜빡임 이슈
+
+        - FrontThree 파일의 Rig=> 3d모델이 마우스 포인터를 보는 것과 같은 기능( 모델이 보는것이 아닌 카메라의 이동)
+
+            - `useThree` 에서의 값 `mouse`에 대한 이슈? => three fiber 문서에서는 `mouse`는 더 이상 사용하지 않고, 대신 `pointer`의 사용을 권장 => 테스트 ing
