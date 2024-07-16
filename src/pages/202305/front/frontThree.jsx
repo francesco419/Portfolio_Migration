@@ -3,7 +3,7 @@ import { Environment } from "@react-three/drei/core/Environment";
 import { lazy, Suspense } from "react";
 //import debounce from "lodash/debounce.js";
 import { Vector3 } from "three";
-//import EightBall from "./3dModel/eightBall.jsx";
+import EightBall from "./3dModel/eightBall.jsx";
 import hdrFile from "./img/file.hdr";
 import styles from "./front.module.css";
 /* import ModelCar from './3dModel/Scene.jsx';
@@ -15,7 +15,7 @@ import Reaper from './3dModel/reap.jsx';
   <ModelCar position={[0, -0.5, 0]} />
 ]; */
 
-const EightBall = lazy(() => import("./3dModel/eightBall.jsx"));
+//const EightBall = lazy(() => import("./3dModel/eightBall.jsx"));
 
 function Rig() {
     // 항상 같이 랜더링
@@ -84,9 +84,7 @@ export default function Three() {
         ) : (
         )} */}
                 <ambientLight intensity={10} color={"#666fd9"} />
-                <Suspense fallback={null}>
-                    <EightBall />
-                </Suspense>
+                <EightBall />
                 <Rig />
             </Canvas>
         </div>
