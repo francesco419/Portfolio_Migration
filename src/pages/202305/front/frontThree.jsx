@@ -17,7 +17,7 @@ import Reaper from './3dModel/reap.jsx';
 
 const EightBall = lazy(() => import("./3dModel/eightBall.jsx"));
 
-function Rig() {
+/* function Rig() {
     // 항상 같이 랜더링
     const state = useThree();
     const vec = new Vector3();
@@ -29,7 +29,7 @@ function Rig() {
         );
         state.camera.lookAt(0, 0, 0);
     });
-}
+} */
 
 export default function Three() {
     /*  const [x, setX] = useState("#666fd9");
@@ -87,7 +87,7 @@ export default function Three() {
                 <Suspense fallback={null}>
                     <EightBall />
                 </Suspense>
-                <Rig />
+                {/* <Rig /> */}
             </Canvas>
         </div>
     );
