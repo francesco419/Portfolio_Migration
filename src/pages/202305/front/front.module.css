@@ -1,8 +1,7 @@
 .front {
-    position: relative;
-    display: flex;
-    height: 600px;
-    border-radius: 25px;
-    overflow: hidden;
-    /* background: linear-gradient(to right, #5f2c82, #49a09d); */
+  position: relative;
+  display: flex;
+  height: 600px;
+  border-radius: 25px;
+  overflow: hidden;
 }
