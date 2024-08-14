@@ -4,6 +4,7 @@ import TopIndicator from './pages/202305/top/toTop.jsx';
 import MyHeader from './pages/202305/myHeader.jsx';
 import FooterContact from './pages/202305/contact/footer.jsx';
 import LoadingPage from './pages/loading/loadingPage.jsx';
+import ProjectMain from './pages/202305/project/newProject/projectMain.jsx';
 
 const ProjectPage = lazy(() =>
   import('./pages/202305/project/projectPage/projectPage.jsx')
@@ -18,6 +19,7 @@ function App() {
       <MyHeader />
       <Suspense fallback={<LoadingPage />}>
         <Routes>
+          <Route path={`/project/testNewpage`} element={<ProjectMain />} />
           <Route path={`/project/:id`} element={<ProjectPage />} />
           <Route path={`/`} element={<Hidden />} />
         </Routes>

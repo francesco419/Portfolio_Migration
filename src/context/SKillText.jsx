@@ -83,14 +83,6 @@ export const skillListSVG = [
     svg: <img src={Git} alt='Git' loading='lazy' />
   },
   {
-    name: 'Github',
-    svg: <img src={Github} alt='Github' loading='lazy' />
-  },
-  {
-    name: 'Lodash',
-    svg: <img src={Lodash} alt='Lodash' loading='lazy' />
-  },
-  {
     name: 'Notion',
     svg: <img src={Notion} alt='Notion' loading='lazy' />
   },
@@ -101,12 +93,6 @@ export const skillListSVG = [
 ];
 
 export const skillDescription = [
-  {
-    name: 'Lodash',
-    extra: '',
-    description:
-      'Lodash의 특장점을 잘 이해하고 능숙하게 활용 할 수 있습니다. 배열과 객체를 다루는데 필요한 다양한 함수들을 숙지하고 있으며, 이를 통해 코드를 더 간결하고 효율적으로 작성할 수 있습니다. 또한, Lodash의 성능을 최대한 활용하여 대용량 데이터 처리와 같은 작업을 신속하게 수행할 수 있습니다.'
-  },
   {
     name: 'TypeScript',
     extra: '',
@@ -154,11 +140,6 @@ export const skillDescription = [
     extra: '',
     description:
       'Git을 통한 프로젝트 작업 전반의 효율을 높이고, 브랜치 전략, 코드 리뷰, 충돌 최소화 등의 긍정적인 효과를 경험하며 버전 관리 시스템 사용의 중요성을 알아가게 되었습니다.'
-  },
-  {
-    name: 'Github',
-    extra: '',
-    description: 'https://github.com/francesco419'
   },
   {
     name: 'AWS',
