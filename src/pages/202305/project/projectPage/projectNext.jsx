@@ -40,7 +40,13 @@ export default function ProjectNext({ project }) {
   return (
     <div className={styles['my-project-next']} ref={container}>
       <div>
-        <img src={left} alt='to left' />
+        <img
+          src={left}
+          alt='to left'
+          style={{
+            opacity: project.prev ? '0.8' : '0.1'
+          }}
+        />
         <button
           style={{
             opacity: project.prev ? '0.8' : '0.1',
@@ -63,7 +69,13 @@ export default function ProjectNext({ project }) {
         >
           Next
         </button>
-        <img src={right} alt='to right' />
+        <img
+          src={right}
+          alt='to right'
+          style={{
+            opacity: project.next ? '0.8' : '0.1'
+          }}
+        />
       </div>
     </div>
   );

@@ -31,7 +31,7 @@ export default function ProjectSkill({ project }) {
 
   return (
     <div className={styles['my-project-stack']}>
-      <h2 style={{ fontSize: '1.3rem' }}>Skill Stack</h2>
+      <p style={{ fontSize: '1.5rem', color: '#00000090' }}>Skill Stack</p>
       <div className={styles['my-project-skills']}>
         {project.program.map((data, index) => {
           return (

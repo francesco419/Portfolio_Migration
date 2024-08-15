@@ -11,7 +11,7 @@ import ProjectUpdate from './projectUpdate.jsx';
 import ProjectResult from './projectResult.jsx';
 import ProjectNext from './projectNext.jsx';
 import LoadingPage from '@/pages/loading/loadingPage.jsx';
-import { ProjectList } from '../newProject/projectMain';
+import { ProjectMainInfo } from '../newProject/projectMain';
 
 export default function ProjectPage() {
   const param = useParams();
@@ -19,6 +19,7 @@ export default function ProjectPage() {
   const projectRedux = useSelector((state) => state.project.value);
   const [gitRepo, setGitRepo] = useState();
   const [loading, setLoading] = useState(true);
+
   const projectText = ProjectDetailText.filter(
     (data) => data.param === param.id
   );
@@ -65,33 +66,14 @@ export default function ProjectPage() {
             className={styles['my-project-title']}
           >{`Project ${projectText[0].id} : ${projectText[0].name}`}</p>
           <ProjectUpdate git={gitRepo[0]} project={projectText[0]} />
-          <div>
-            <ProjectList
-              props={{
-                item: 'Participant',
-                itemName: '개발자 1명, 기획/디자인 1명'
-              }}
-            />
-            <ProjectList
-              props={{
-                item: 'Date / Period',
-                itemName: '개발자 1명, 기획/디자인 1명'
-              }}
-            />
-            <ProjectList
-              props={{
-                item: 'Participant',
-                itemName: '개발자 1명, 기획/디자인 1명'
-              }}
-            />
-          </div>
+          <ProjectMainInfo props={projectText[0].info} />
           <ProjectSkill project={projectText[0]} />
           <div className={styles['my-project-intro']}>
             <p>{projectText[0].text2}</p>
           </div>
-          <ProjectResult project={projectText[0]} />
           <ProjectImage project={projectText[0]} />
-          {/*           <ProjectNext project={projectText[0]} /> */}
+          <ProjectResult project={projectText[0]} />
+          <ProjectNext project={projectText[0].next} />
         </div>
       </div>
     );

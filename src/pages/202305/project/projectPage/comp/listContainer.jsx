@@ -2,7 +2,6 @@ import { useRef, useState } from 'react';
 import DropDownBtn from '../button/dropdownBtn.jsx';
 import ReactMarkdown from 'react-markdown';
 import '../button/test.css';
-import styles from './listContainer.module.css';
 
 export default function ListContainer({ data }) {
   const [isClick, setIsClick] = useState(false);
@@ -23,7 +22,8 @@ export default function ListContainer({ data }) {
     <li
       style={{
         display: 'flex',
-        margin: '0 0 30px'
+        margin: '0 0 20px',
+        padding: '0 0 20px'
       }}
     >
       <DropDownBtn isClick={isClick} handler={isClickHandler} />
@@ -34,7 +34,7 @@ export default function ListContainer({ data }) {
             ref={refaa}
             className={isClick ? 'refal listComp' : 'refa listComp'}
           >
-            <div className={styles['list_scrapes']}>
+            <div>
               <ReactMarkdown>{data.detail}</ReactMarkdown>
             </div>
             {/* 해당부분은 각 항목에 대한 디테일 설명이다*/}

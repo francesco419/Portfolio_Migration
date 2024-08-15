@@ -14,6 +14,7 @@ const FlexBox = styled.div`
   display: flex;
   gap: 50px;
   margin: 0 0 20px;
+  align-items: center;
   P {
     &:first-child {
       width: 150px;
@@ -24,13 +25,30 @@ const FlexBox = styled.div`
 export function ProjectList({ props }) {
   return (
     <FlexBox>
-      <ProjectText $size={1.3} $color='#a3a2a2' $bold>
+      <ProjectText $size={1.5} $color='#00000090'>
         {props.item}
       </ProjectText>
-      <ProjectText $size={1.3} $bold>
-        {props.itemName}
-      </ProjectText>
+      <ProjectText $size={1.2}>{props.itemName}</ProjectText>
     </FlexBox>
+  );
+}
+
+export function ProjectMainInfo({ props }) {
+  return (
+    <>
+      <ProjectList
+        props={{
+          item: 'Participant',
+          itemName: props.participant
+        }}
+      />
+      <ProjectList
+        props={{
+          item: 'Period',
+          itemName: props.period
+        }}
+      />
+    </>
   );
 }
 

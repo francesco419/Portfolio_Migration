@@ -34,14 +34,10 @@ export const ProjectDetailText = [
     intro:
       '현직 디자이너와 협업하여 창업을 준비하는 사람의 요구에 맞춰 사업의 기반이 될 수 있는 웹페이지의 프로토타입을 제작, 한국 관광공사에서 진행하는 공모전에서 수상',
     text2:
-      '현재까지 익힌 기술들을 토대로 현직 디자이너와 협업하여 의뢰자의 요구에 맞게 디자인, 기능 등 웹페이지의 모든 요소를 제작하였습니다. 프로젝트 진행과정에 있어 협업에 대한 경험과 이해를 쌓고, 요구사항에 대해서는 이를 어떻게 구현할지에 대한 문제를 토의를 통해 만족할 수 있는 해결책을 찾고, 다양한 오류들을 해결해가는 시간들을 통해 풀어야할 다양한 형태의 문제에 보다 능숙한 처리 능력을 가지고자 임했습니다.',
-    mission: null,
+      '현직 디자이너와 협업하여 의뢰자의 요구에 맞게 디자인, 기능 등 웹페이지의 모든 요소를 제작하였습니다. 프로젝트 진행과정에 있어 협업에 대한 경험과 이해를 쌓고, 요구사항에 대해서는 이를 어떻게 구현할지에 대한 문제를 토의를 통해 만족할 수 있는 해결책을 찾고, 다양한 오류들을 해결해가는 시간들을 통해 풀어야할 다양한 형태의 문제에 보다 능숙한 처리 능력을 가지고자 임했습니다.',
     img: [finedition_home, finedition_food, finedition_place, finedition_seoul],
     url: 'https://finedition.kr/',
     github: 'https://github.com/francesco419/FINEDITION_WORK',
-    contribution: '팀 프로젝트',
-    created: '03.2022',
-    LastUpdate: '04.19.2023',
     program: [
       'React',
       'TypeScript',
@@ -62,8 +58,11 @@ export const ProjectDetailText = [
       '**Scss와 SVG를 결합**하여 Interactive한 개발을 경험했습니다. Scss를 활용하여 스타일링을 효율적으로 구성하고, SVG를 활용하여 **다양한 그래픽 요소를 삽입하며 상호작용성**을 부여했습니다. 이를 통해 독특하고 다이내믹한 웹 페이지를 만들어 사용자 경험을 높였습니다.',
       '정규표현식을 **사용한 검증을 통해 입력 데이터의 유효성을 강화**했습니다. 사용자의 입력이 지정한 양식과 일치하는지 확인하여 **데이터의 정확성을 보장**하고, 보안 측면에서도 적절한 검증을 수행하여 **안전한 데이터 처리**를 실현했습니다.'
     ],
-    prev: 'BrainBomb',
-    next: false
+    next: {
+      prev: 'BrainBomb',
+      next: false
+    },
+    info: { participant: '개발 1명, 기획/디자인 1명', period: '2 month' }
   },
   {
     id: '5',
@@ -74,13 +73,9 @@ export const ProjectDetailText = [
       '사용자와 보다 더 상호작용을 할 수 있는 기능을 가진 마인드맵을 구성할 수 있는 웹사이트 제작, 서로 상관관계에 있는 여러 코드들의 복잡한 구성과 이에대한 연쇄적인 오류 해결능력',
     text2:
       '기존 마인드맵 웹사이트의 회원가입,로그인과 복잡한 가이드 등의 불편함을 해소하고자 남녀노소 누구나 보기에 직관적이고 쉽게 마인드맵을 구성할 수 있도록 해당 프로젝트를 시작하였습니다. 서버통신없이 오직 기능적인 부분만을 고려하여 제작하게 되었고, 이 프로젝트를 진행하면서 일반적인 웹사이트와 다른 기능적인 면을 제공하는 분야에 관심을 가지게 되었고 특히 발생하는 연쇄적인 오류에 문제를 파악하고 능숙하게 해결하는 실력을 크게 향상하는 계기가 되었습니다.',
-    mission: null,
     img: [mindmap1, mindmap2, mindmap3],
     url: 'https://keen-nasturtium-541fc9.netlify.app',
     github: 'https://github.com/francesco419/BrainBomb',
-    contribution: '개인 프로젝트',
-    created: '03.2022',
-    LastUpdate: '04.19.2023',
     program: ['React', 'TypeScript', 'SCSS', 'Redux Toolkit'],
     result: [
       '일부 컴포넌트에 대해 **Style-in-component**를 통해 **재사용성이 높은** 컴포넌트의 일관성있고 **통일된 스타일**을 제공할 수 있도록 하였습니다.',
@@ -88,8 +83,11 @@ export const ProjectDetailText = [
       '**Lodash 라이브러리**의 적극적인 사용을 통해 기존 바닐라JS에서 따로 제공하지 않는 다양한 함수를 효과적으로 사용하여 **복잡한 연계성이 있는 데이터들을 보다 효율적으로 가공**할수 있었습니다.',
       '마인드맵의 여러 요소들로 인해 발생하는 **연쇄적인 오류에 대해 해당 원인의 문제점을 파악하고 이를 순차적으로 해결**하는 문제해결 능력을 키우게 되었습니다.'
     ],
-    prev: 'post_typescript_redux',
-    next: 'FINEDITION_WORK'
+    next: {
+      prev: 'post_typescript_redux',
+      next: 'FINEDITION_WORK'
+    },
+    info: { participant: '개인 프로젝트', period: '4 month' }
   },
   {
     id: '4',
@@ -100,13 +98,11 @@ export const ProjectDetailText = [
       '프론트엔드와 백엔드의 기술을 사용하여 회원가입, 로그인, 게시물 등록 등의 기능을 포함한 SNS 형태의 웹페이지입니다.',
     text2:
       '실제 직무에서는 프론트엔드와 백엔드의 협업이 필수적이기에 기초적인 백엔드의 기술들을 학습하여 프론트엔드에서 서버로 요청, 백엔드에서 받은 요청을 수행, 데이터를 DB에 저장 및 읽어와서 프론트엔드에 표현하는 전체적인 통신 및 데이터 교환에 대한 학습을 목표로 한 프로젝트입니다.\n이를 바탕으로 로그인, 회원가입, 게시물 관리 등 백엔드와의 통신이 비교적 활발한 SNS 형태의 프로젝트를 진행하게 되었습니다.',
-    mission: null,
+
     img: [social1, social2, social3, social4],
     url: '',
     github: 'https://github.com/francesco419/post_typescript_redux',
-    contribution: '개인 프로젝트',
-    created: '01.2023',
-    LastUpdate: '02.28.2023',
+
     program: ['React', 'TypeScript', 'SCSS', 'Redux', 'NodeJS', 'MySQL'],
     result: [
       '**Axios Interceptor**를 통해 반복적인 코드 사용을 줄여 **재사용화 및 공통적인 에러 처리**를 담당하여 **가독성 높은 코드**를 작성',
@@ -114,8 +110,11 @@ export const ProjectDetailText = [
       '**NodeJS, MySQL, Express를 사용한 백엔드를 구성** 및 CORS 처리, 쿼리를 통한 DB 관리, 이미지 파일 저장 및 데이터 통신 경험',
       '**Lazy, Suspense를 적용한 코드 분할**을 통해 페이지 성능 최적화 및 lighthouse를 통한 웹 페이지 평가를 통해 지속적으로 최적화 방법을 모색'
     ],
-    prev: 'Travel',
-    next: 'BrainBomb'
+    next: {
+      prev: 'Travel',
+      next: 'BrainBomb'
+    },
+    info: { participant: '개인 프로젝트', period: '3 month' }
   },
   {
     id: '3',
@@ -126,20 +125,21 @@ export const ProjectDetailText = [
       '코로나 이후 여행 수요의 증가로 각 국가의 기본 정보를 소개할 수 있는 웹페이지를 제작했습니다.',
     text2:
       '코로나 이후 여행 수요의 증가로 여행을 계획하는 사용자들을 위해 제작을 계획하게 된 프로젝트로서, \n각 국가의 여러 정보를 소개하는 웹페이지로 기본 정보, 여행 경보, 환율 등의 정보를 제공하며, 지속적으로 아이템 및 풍부한 정보를 담을 수 있는 웹 페이지가 될 수 있도록 지속적인 업데이트를 실행하고 있습니다.',
-    mission: null,
+
     img: [travel1, travel2, travel3],
     url: 'https://francesco419.github.io/Travel/',
     github: 'https://github.com/francesco419/Travel',
-    contribution: '개인 프로젝트',
-    created: '12.2022',
-    LastUpdate: '02.08.2023',
+
     program: ['React', 'CSS Module'],
     result: [
       '사용자에게 유용한 정보를 제공할 수 있는 UI에 대해 깊게 고민하고 구상한 기능을 직접 구현',
       '컴포넌트 간의 상태 값 및 상태 관리 함수의 prop drilling으로 인한 코드 구성 복잡 및 가독성 저하에 대한 대체 기술 필요성으로서 이후 프로젝트에서 Redux 적극 사용 '
     ],
-    prev: 'Youtube',
-    next: 'post_typescript_redux'
+    next: {
+      prev: 'Youtube',
+      next: 'post_typescript_redux'
+    },
+    info: { participant: '개인 프로젝트', period: '2 month' }
   },
   {
     id: '2',
@@ -150,22 +150,22 @@ export const ProjectDetailText = [
       '유튜브를 클로닝 한 프로젝트입니다. 가장 활발히 사용되는 웹사이트를 클로닝 함으로서 유튜브 UI를 직접 구현했습니다',
     text2:
       '현재 가장 많이 사용되고 있는 페이지 중 하나인 유튜브를 Youtube API를 사용하여 유튜브에 있는 각각의 페이지 및 여러 기능들을 구현한 프로젝트입니다. 이 프로젝트를 통해 API를 다루는 능력을 향상시키게 되었으며, 프로젝트를 진행하면서 이전에 작업했던 프로젝트보다 훨씬 더 많은 오류 및 요구사항에 부딪히고\n이를 능숙하게 해결하여 여러 요구사항에 대해 다양한 방식으로 접근하여 조건을 만족시킬 수 있는 코드를 구현하는 능력을 키운 프로젝트입니다.',
-    mission: null,
 
     img: [youtube1, youtube2, youtube3],
     url: 'https://francesco419.github.io/Youtube/',
     github: 'https://github.com/francesco419/Youtube',
-    contribution: '개인 프로젝트',
-    created: '05.2022',
-    LastUpdate: '06.25.2022',
+
     program: ['React', 'CSS Module'],
     result: [
       '수많은 Open API 호출 및 사용을 통해, 데이터 통신 및 비동기적 처리 방식에 대해 학습',
       '클로닝 대상 웹사이트를 분석함으로써 HTML, CSS의 구성 및 작성 이해도를 높이고, 이를 바탕으로 직접 구현',
       'API의 데이터를 일차원적으로 표현하기보다 편집 및 가공을 통해 의도한 데이터로 새로 구성하여 표현'
     ],
-    prev: 'MainPage',
-    next: 'Travel'
+    next: {
+      prev: 'MainPage',
+      next: 'Travel'
+    },
+    info: { participant: '개인 프로젝트', period: '1 month' }
   },
   {
     id: '1',
@@ -176,13 +176,11 @@ export const ProjectDetailText = [
       '프론트엔드 공부를 하면서 프로젝트마다 어떤 기술을 공부했는지에 대한 사용 기술과 학습 내용을 담은 웹페이지를 제작했습니다.',
     text2:
       'React를 사용한 첫 번째 프로젝트로 저를 소개하는 포트폴리오 웹페이지입니다.\n현재 진행하고 있거나 완료된 프로젝트를 기재하고 관련 이미지와 코드, 페이지 링크를 포함했습니다.\nReact Hooks 및 State, Router 등의 작동 방식을 익히고 이를 직접 사용해 보며 React에 대해 \n가장 많이 학습하게 된 프로젝트이며, 기록하는 웹페이지로서 주기적으로 업데이트를 진행하여 코드의 유지보수를 하고 있습니다.',
-    mission: null,
+
     img: [port1, port2, port3],
     url: 'https://francesco419.github.io/MainPage',
     github: 'https://github.com/francesco419/MainPage',
-    contribution: '개인 프로젝트',
-    created: '04.2022',
-    LastUpdate: '04.19.2023',
+
     program: ['React', 'Redux Toolkit'],
     result: [
       '동적 코드 작성으로 유지 보수 및 수정 작업 중 오류를 사전에 감지하지 못하여 문제에 대한 해결 방안을 찾기까지 불필요한 시간 낭비의 경험으로 정적 타입 언어의 필요성을 자각하여 이후 Typescript 적극 사용하게 되는 계기',
@@ -190,8 +188,11 @@ export const ProjectDetailText = [
       '요구되는 적절한 애니메이션을 CSS의 keyframe / transition 및 자바스크립트 애니메이션을 통해 구현',
       '다양한 사용자 행동에 따라 반응하는 JSX 이벤트 처리'
     ],
-    prev: false,
-    next: 'Youtube'
+    next: {
+      prev: false,
+      next: 'Youtube'
+    },
+    info: { participant: '개발자 1', period: 'On-work' }
   }
 ];
 

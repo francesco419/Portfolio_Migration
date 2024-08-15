@@ -5,11 +5,14 @@ import MyHeader from './pages/202305/myHeader.jsx';
 import FooterContact from './pages/202305/contact/footer.jsx';
 import LoadingPage from './pages/loading/loadingPage.jsx';
 import ProjectMain from './pages/202305/project/newProject/projectMain.jsx';
+import ProjectPage from './pages/202305/project/projectPage/projectPage.jsx';
+import Hidden from './pages/202305/hidden.jsx';
 
+/* 
 const ProjectPage = lazy(() =>
   import('./pages/202305/project/projectPage/projectPage.jsx')
 );
-const Hidden = lazy(() => import('./pages/202305/hidden.jsx'));
+*/
 
 function App() {
   return (

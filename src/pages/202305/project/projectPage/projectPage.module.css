@@ -4,11 +4,12 @@
 
 .my-project {
   color: #000;
-  width: 1200px;
+  width: 1280px;
   margin: 0 auto;
   padding: 0 20px;
   font-family: 'IBMPlexSansKR-Regular';
   white-space: break-spaces;
+  box-sizing: border-box;
 }
 
 .my-project-title {
@@ -38,8 +39,10 @@
 .my-project-intro p {
   word-break: keep-all;
   font-size: 1rem;
-  line-height: 3rem;
+  line-height: 2.5rem;
   font-weight: 500;
+  max-width: 1000px;
+  margin: 0 0 20px;
 }
 
 /*-------------------------------------*/
@@ -65,7 +68,7 @@
 /*-------------------------------------*/
 
 .my-project-stack {
-  margin: 40px 0;
+  margin: 0 0 40px;
 }
 
 .my-project-skills {
@@ -115,7 +118,7 @@
 }
 
 .my-project-ul {
-  margin: 30px 0 0;
+  margin: 50px 0 0;
 }
 
 .my-project-li {
