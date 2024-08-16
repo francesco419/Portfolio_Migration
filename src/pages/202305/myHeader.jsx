@@ -5,8 +5,8 @@ import HeaderButton from '@components/common/headerButton.jsx';
 import LinkRouter from '@components/common/linkRouter.jsx';
 
 const ABOUT_OFFSETTOP = 1291;
-const SKILL_OFFSETTOP = 2079;
-const PROJECT_OFFSETTOP = 3421;
+const SKILL_OFFSETTOP = 1850;
+const PROJECT_OFFSETTOP = 2600;
 
 export default function MyHeader() {
   const onClickHandler = (ref) => {

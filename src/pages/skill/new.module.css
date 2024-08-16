@@ -12,7 +12,7 @@
   border-radius: 15px;
   transition: box-shadow 0.5s;
   cursor: pointer;
-  flex: 1 1 24%;
+  flex: 1 1 15%;
   flex-grow: 0;
   margin: 0;
   flex-shrink: 1;
@@ -26,8 +26,8 @@
 }
 
 .skill_content img {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   object-fit: cover;
 }
 
@@ -36,7 +36,7 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 1000;
 }
 

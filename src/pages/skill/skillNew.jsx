@@ -23,7 +23,7 @@ export default function SkillBox({ name, svg, index, handler, node }) {
 
   const setStyleByIndex = (index) => {
     return {
-      left: index % 4 === 0 ? null : 0,
+      left: index % 3 === 0 ? null : 0,
       bottom: index > 12 ? 0 : null,
       top: index <= 12 ? 0 : null
     };
@@ -40,7 +40,7 @@ export default function SkillBox({ name, svg, index, handler, node }) {
       }}
       transition={{
         type: 'spring',
-        stiffness: 260,
+        stiffness: 300,
         damping: 20
       }}
       className={`${styles['skill_content']}`}
@@ -56,7 +56,8 @@ export default function SkillBox({ name, svg, index, handler, node }) {
           style={setStyleByIndex(index)}
           onClick={(event) => {
             changeClick();
-            event.stopPropagation(); //버블링으로 인한 부모의 changeClick이벤트 발생 방지
+            event.stopPropagation();
+            //버블링으로 인한 부모의 changeClick이벤트 발생 방지
           }}
         >
           <div className={styles['skill_moveSvg']}>{svg}</div>

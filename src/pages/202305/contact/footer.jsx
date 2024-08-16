@@ -29,7 +29,7 @@ export default function FooterContact({ refer }) {
 
   return (
     <footer ref={refer} className={styles['footer']}>
-      <TitleWrapper $lineHeight={1} $size={3} $fontWeight={600}>
+      <TitleWrapper $lineHeight={0} $size={3} $fontWeight={600}>
         CONTACT
       </TitleWrapper>
       <div>

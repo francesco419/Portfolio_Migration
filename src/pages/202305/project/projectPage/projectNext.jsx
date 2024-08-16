@@ -55,7 +55,7 @@ export default function ProjectNext({ project }) {
           onClick={prevHandler}
           ref={refLeft}
         >
-          Prev
+          Previous Project
         </button>
       </div>
       <div>
@@ -67,7 +67,7 @@ export default function ProjectNext({ project }) {
           onClick={nextHandler}
           ref={refRight}
         >
-          Next
+          Next Project
         </button>
         <img
           src={right}

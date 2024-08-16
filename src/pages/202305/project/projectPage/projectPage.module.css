@@ -165,13 +165,17 @@ top: 50%; */
 .my-project-next button {
   border: 0;
   background: none;
-  font-size: 2rem;
+  font-size: 1rem;
   cursor: pointer;
 }
 
+.my-project-next button:hover {
+  font-size: 1.1rem;
+}
+
 .my-project-next img {
-  height: 100px;
-  width: 70px;
+  height: 50px;
+  width: 50px;
 }
 
 /* my-project-image-button : left, right, zindex*/

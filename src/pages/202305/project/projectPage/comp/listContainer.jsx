@@ -26,9 +26,11 @@ export default function ListContainer({ data }) {
         padding: '0 0 20px'
       }}
     >
-      <DropDownBtn isClick={isClick} handler={isClickHandler} />
       <div>
-        <ReactMarkdown>{data.subtitle}</ReactMarkdown>
+        <span className='subtitle' onClick={isClickHandler}>
+          <DropDownBtn isClick={isClick} handler={isClickHandler} />
+          <ReactMarkdown>{data.subtitle}</ReactMarkdown>
+        </span>
         {data.detail !== '' && (
           <div
             ref={refaa}

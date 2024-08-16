@@ -9,6 +9,7 @@ import triangleFront from '@/assets/image/projectFront/triangle.png';
 import personalFront from '@/assets/image/projectFront/personal.png';
 import { Link } from 'react-router-dom';
 import open from '@assets/svg/open.svg';
+import { motion } from 'framer-motion';
 
 const Project = lazy(() => import('./project'));
 
@@ -73,12 +74,14 @@ const ProjectWrapper = styled(Link)`
   &:hover .whiteLayer {
     display: flex;
   }
+  border-radius: 15px;
 `;
 
 const ProjectImage = styled.img`
   object-fit: cover;
   height: auto;
   width: ${(props) => (props.$small ? '50%' : '100%')};
+  border-radius: 15px;
 `;
 
 const ProjectIntro = styled.p`
@@ -141,17 +144,6 @@ function ProjectNew({ props }) {
           </span>
         </div>
       </IntroPosition>
-      <img
-        style={{
-          position: 'absolute',
-          bottom: '5%',
-          right: '2%',
-          zIndex: '90'
-        }}
-        src={open}
-        alt='open'
-        loading='lazy'
-      />
       <ProjectImage src={props.image} style={props.addition} />
     </ProjectWrapper>
   );
@@ -165,6 +157,7 @@ const ProjectWrapperHori = styled(ProjectWrapper)`
   box-shadow: none;
   padding: 20px 0;
   box-sizing: border-box;
+  border-radius: 0;
 `;
 
 const IntroPositionHori = styled(IntroPosition)`
@@ -210,6 +203,7 @@ const ProjectWrapperSmall = styled(ProjectWrapper)`
   padding: 0 0 20px;
   box-sizing: border-box;
   border-bottom: 1px solid #a3a2a2;
+  border-radius: 0;
 
   p {
     color: #000;
@@ -278,7 +272,7 @@ const Grid = styled.div`
   grid-template-rows: repeat(3, minmax(300px, auto));
   grid-template-columns: 1fr 1fr;
   column-gap: 10px;
-  row-gap: 20px;
+  row-gap: 40px;
 
   a {
     &:nth-child(1) {

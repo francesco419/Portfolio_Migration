@@ -43,3 +43,11 @@
   word-break: keep-all;
   line-height: 30px;
 }
+
+.subtitle {
+  cursor: pointer;
+}
+
+.subtitle:hover p {
+  font-weight: 600;
+}

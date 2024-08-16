@@ -1,7 +1,6 @@
 import NodeJS from '@assets/svg/skillSvg/nodejs.svg';
 import CSS from '@assets/svg/skillSvg/css.svg';
 import Git from '@assets/svg/skillSvg/git.svg';
-import Github from '@assets/svg/skillSvg/github.svg';
 import JavaScript from '@assets/svg/skillSvg/js.svg';
 import Notion from '@assets/svg/skillSvg/notion.svg';
 import Npm from '@assets/svg/skillSvg/npm.svg';
@@ -11,25 +10,6 @@ import SASS from '@assets/svg/skillSvg/sass.svg';
 import TS from '@assets/svg/skillSvg/typescript.svg';
 import AWS from '@assets/svg/skillSvg/aws.svg';
 import HTML from '@assets/svg/skillSvg/html.svg';
-import Lodash from '@assets/svg/skillSvg/lodash.svg';
-
-export const SHORTEN = [
-  [
-    '기본이라고 할 수 있는 HTML/CSS를 자유자재로 구현할 수 있습니다. ',
-    '\nES6 이후의 JS를 사용하는것에 능숙하며,',
-    ' 프로덕트에 요구되는 적절한 애니메이션을 Keyframe / transition 등을 통해 구현할 수 있습니다.'
-  ],
-  [
-    '함수형 컴포넌트 형태의 작성을 선호합니다. ',
-    '라이프 사이클을 이해하여 최적의 랜더링을 통한 최고의 프로덕트를 만들고자 합니다. ',
-    'Redux를 사용하여 props 복잡도를 해결하고, 스토어를 통한 프로젝트의 효율적인 상태관리를 할 수 있습니다.'
-  ],
-  [
-    '변수/ 중첩/ 함수 등의 문법을 적절히 사용하여 기존 CSS를 구조화한 형태로 표현할 수 있습니다. ',
-    '정적코드작성 및 타입오류로 인한 에러의 문제해결이 가능합니다. ',
-    'TS로 인해 코드량이 많아지고 복잡해지나, 유지보수 및 코드 퀄리티에서의 장점또한 이해하고 있습니다.'
-  ]
-];
 
 /**
  * MarkUP/Styling Language = HTML, Css
@@ -112,7 +92,7 @@ export const skillDescription = [
       'CSS의 다양한 스타일링 기능을 효과적으로 사용하여 웹페이지를 최신 트랜드에 맞춰 디자인하는데 능숙합니다. 또한 반응형 웹 디자인과 크로스 브라우징을 통해 높은 사용자 경험을 제공하고자 합니다.'
   },
   {
-    name: 'Sass',
+    name: 'SCSS',
     extra: '',
     description:
       '변수, 중첩, 상속 등의 기능을 적극적으로 활용하여 CSS 코드를 보다 모듈화되고 유지보수하기 쉽게 작성하고자 합니다. Mixin과 extends를 통해 코드의 재사용성을 높이고, 코드를 더욱 효율적으로 관리함으로서 읽기 쉽고 유지보수하기 쉽게 작성하여 팀 프로젝트의 효율성을 높이고자 합니다.'
