@@ -137,7 +137,7 @@ export const ProjectDetailText = [
     id: '2',
     param: 'Youtube',
     name: 'Youtube Clone',
-    show: true,
+    show: false,
     text2:
       '현재 가장 많이 사용되고 있는 페이지 중 하나인 유튜브를 Youtube API를 사용하여 유튜브에 있는 각각의 페이지 및 여러 기능들을 구현한 프로젝트입니다. 이 프로젝트를 통해 API를 다루는 능력을 향상시키게 되었으며, 프로젝트를 진행하면서 이전에 작업했던 프로젝트보다 훨씬 더 많은 오류 및 요구사항에 부딪히고\n이를 능숙하게 해결하여 여러 요구사항에 대해 다양한 방식으로 접근하여 조건을 만족시킬 수 있는 코드를 구현하는 능력을 키운 프로젝트입니다.',
 
@@ -161,15 +161,17 @@ export const ProjectDetailText = [
     id: '1',
     param: 'MainPage',
     name: 'Personal Page',
-    show: false,
-    text2:
-      '포트폴리오, 블로그 등 저에대한 이야기를 담고있으며, 지속적으로 배운 기술을 적용하고 개선해 나가는 저의 "실험실"입니다. \n 저만의 페이지인 만큼 더 많은 것을 보여주고 이를 유용하게 담아내기 위한 아이디어를 구현하고자 노력합니다.',
+    show: true,
+    text2: `포트폴리오, 블로그 등 저에대한 이야기를 담고있으며, 지속적으로 배운 기술을 적용하고 개선해 나가는 저의 "실험실"입니다.
+저만의 페이지인 만큼 더 많은 것을 보여주고 이를 유용하게 담아내기 위한 아이디어를 구현하고자 노력합니다.
+현재 Vite와 React로 구성되어 있는 현재 페이지와 함께 자신만의 글을 작성할 수 있는 공간인접 구현하고자  개인 블로그를 직합니다.
+블로그는 Next.js를 사용하여 구축할 예정이며, DB도 함께 구축하여 완성된 포스팅 기능을 제작하고 있습니다.`,
 
     img: [port1, port2, port3],
     url: 'https://francesco419.github.io/MainPage',
     github: 'https://github.com/francesco419/MainPage',
 
-    program: ['React', 'Redux Toolkit'],
+    program: ['React', 'Redux Toolkit', 'Vite', 'Next.js', 'Styled-Components'],
     result: [
       '동적 코드 작성으로 유지 보수 및 수정 작업 중 오류를 사전에 감지하지 못하여 문제에 대한 해결 방안을 찾기까지 불필요한 시간 낭비의 경험으로 정적 타입 언어의 필요성을 자각하여 이후 Typescript 적극 사용하게 되는 계기',
       'Virtual DOM의 작동 이해 및 이를 효과적으로 사용하기 위한 최적의 렌더링 방식에 대해 학습 및 응용',
@@ -180,7 +182,7 @@ export const ProjectDetailText = [
       prev: false,
       next: 'Youtube'
     },
-    info: { participant: '개발자 1', period: 'On-work' }
+    info: { participant: '개인 프로젝트', period: 'On-work' }
   }
 ];
 
@@ -742,6 +744,10 @@ NodeJS, MySQL,Express를 사용해 API서버를 구축, 프런트에서의 API�
             subtitle: '반복적인 코드 개선으로 유지보수 및 문제해결 능력 향상',
             detail:
               '주기적으로 개선점을 찾아 성장하고 있습니다. 항상 최선이라고 생각하고 작성한 코드도 몇일 뒤에는 문제점을 많이 찾게 되어 개선하게 됩니다. 이러한 경험을 통해 작성한 코드를 리뷰하며 분석하여 효율적인 유지보수를 할 수 있는 능력을 키워나가고 있습니다.'
+          },
+          {
+            subtitle: '반복적인 코드 개선으로 유지보수 및 문제해결 능력 향상',
+            detail: ''
           }
         ]
       }

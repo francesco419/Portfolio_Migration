@@ -53,7 +53,7 @@ const INTRODUCTION = [
     to: 'MainPage',
     image: personalFront,
     period: 'On-work',
-    stack: 'React,TypeScript,Vite'
+    stack: 'React,Vite/Next.js'
   }
 ];
 
@@ -259,7 +259,7 @@ function ProjectNewSmall({ props }) {
           </span>
           <span>
             <ProjectIntro $size='1.8rem'>Stack</ProjectIntro>
-            <ProjectIntro $size='1rem'>React, TypeScript</ProjectIntro>
+            <ProjectIntro $size='1rem'>{props.stack}</ProjectIntro>
           </span>
         </div>
       </span>

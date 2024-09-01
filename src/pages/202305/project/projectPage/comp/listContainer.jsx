@@ -19,13 +19,7 @@ export default function ListContainer({ data }) {
   };
 
   return (
-    <li
-      style={{
-        display: 'flex',
-        margin: '0 0 20px',
-        padding: '0 0 20px'
-      }}
-    >
+    <li className='listContainer'>
       <div>
         <span className='subtitle' onClick={isClickHandler}>
           <DropDownBtn isClick={isClick} handler={isClickHandler} />

@@ -9,6 +9,13 @@
   transform-origin: center;
 }
 
+.listContainer {
+  display: flex;
+  margin: 0 0 20px;
+  padding: 0 0 20px;
+  width: max-content;
+}
+
 .listComp {
   padding: 0 0 0 30px;
   overflow: hidden;

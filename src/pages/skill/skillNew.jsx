@@ -48,7 +48,12 @@ export default function SkillBox({ name, svg, index, handler, node }) {
       title={`Click_to_see_${name}`}
     >
       {svg}
-      <p className={styles['skill_content-name']}>{name}</p>
+      <p
+        className={styles['skill_content-name']}
+        style={{ fontSize: name.length > 10 && '15px' }}
+      >
+        {name}
+      </p>
 
       {click && (
         <div

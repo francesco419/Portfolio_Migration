@@ -1,15 +1,15 @@
-import NodeJS from '@assets/svg/skillSvg/nodejs.svg';
 import CSS from '@assets/svg/skillSvg/css.svg';
 import Git from '@assets/svg/skillSvg/git.svg';
 import JavaScript from '@assets/svg/skillSvg/js.svg';
-import Notion from '@assets/svg/skillSvg/notion.svg';
-import Npm from '@assets/svg/skillSvg/npm.svg';
 import ReactSVG from '@assets/svg/skillSvg/react.svg';
 import Redux from '@assets/svg/skillSvg/redux.svg';
 import SASS from '@assets/svg/skillSvg/sass.svg';
 import TS from '@assets/svg/skillSvg/typescript.svg';
 import AWS from '@assets/svg/skillSvg/aws.svg';
 import HTML from '@assets/svg/skillSvg/html.svg';
+import Next from '@assets/svg/skillSvg/next.svg';
+import Vite from '@assets/svg/skillSvg/vite.svg';
+import Styled from '@assets/svg/skillSvg/styled.svg';
 
 /**
  * MarkUP/Styling Language = HTML, Css
@@ -55,20 +55,24 @@ export const skillListSVG = [
     svg: <img src={AWS} alt='AWS' loading='lazy' />
   },
   {
-    name: 'Npm',
-    svg: <img src={Npm} alt='Npm' loading='lazy' />
-  },
-  {
     name: 'Git',
     svg: <img src={Git} alt='Git' loading='lazy' />
   },
-  {
+  /*  {
     name: 'Notion',
     svg: <img src={Notion} alt='Notion' loading='lazy' />
+  }, */
+  {
+    name: 'Next.js',
+    svg: <img src={Next} alt='Next' loading='lazy' />
   },
   {
-    name: 'NodeJs',
-    svg: <img src={NodeJS} alt='NodeJS' loading='lazy' />
+    name: 'Vite',
+    svg: <img src={Vite} alt='Vite' loading='lazy' />
+  },
+  {
+    name: 'Styled-Components',
+    svg: <img src={Styled} alt='Vite' loading='lazy' />
   }
 ];
 
@@ -133,15 +137,27 @@ export const skillDescription = [
     description: ''
   },
   {
-    name: 'Npm',
-    extra: '',
-    description:
-      'npm을 이용하여 프로젝트에 필요한 다양한 라이브러리와 패키지를 쉽게 설치하고 관리합니다.'
-  },
-  {
     name: 'NodeJs',
     extra: '',
     description:
       'Node.js를 이용하여 웹 서버를 구성하는 등 백엔드 개발 경험을 가지고있습니다. 프론트와의 원활한 통신을 위해 CORS 설정하고, Express.js를 비롯한 프레임워크를 활용하여 빠르고 안정적인 웹 애플리케이션을 개발하였습니다.'
+  },
+  {
+    name: 'Next.js',
+    extra: '',
+    description:
+      '리액트 프레임워크인 Next를 사용하여 리액트 활용도를 극대화시키고 SSR에 대한 이해도를 쌓아 다양한 방법으로의 개발 전환 능력을 가지고자 합니다.'
+  },
+  {
+    name: 'Vite',
+    extra: '',
+    description:
+      'Vite 개발환경을 셋팅한 리액트 개발이 가능합니다. Vite의 빠른 빌드와 Rollup을 사용한 번들링을 경험하였고, 이를 통해 어떻게 효과적인 서비스 제공이 가능한지에 대해 관심을 가지고 깊게 배우고 있습니다.'
+  },
+  {
+    name: 'Styled-Components',
+    extra: '',
+    description:
+      'Styled Components를 사용하여 기존 CSS/SCSS 스타일링과 똑같은 스타일을 리액트 컴포넌트에 적용할 수 있습니다. 리액트의 특장점인 컴포넌트의 활용성을 키우고 일관된 스타일작성 및 컴포넌트 재사용성을 극대화하고자 사용하였습니다.'
   }
 ];
