@@ -20,13 +20,11 @@ function App() {
       {/* <Notice /> */}
       <TopIndicator />
       <MyHeader />
-      <Suspense fallback={<LoadingPage />}>
-        <Routes>
-          <Route path={`/project/testNewpage`} element={<ProjectMain />} />
-          <Route path={`/project/:id`} element={<ProjectPage />} />
-          <Route path={`/`} element={<Hidden />} />
-        </Routes>
-      </Suspense>
+      <Routes>
+        <Route path={`/project/testNewpage`} element={<ProjectMain />} />
+        <Route path={`/project/:id`} element={<ProjectPage />} />
+        <Route path={`/`} element={<Hidden />} />
+      </Routes>
       <FooterContact />
     </HashRouter>
   );
